@@ -1,0 +1,111 @@
+<div class="container section-padding">
+  <section class="mb-5 text-center">
+    <h1 class="display-light mb-4 animate__animated animate__fadeInUp">Who I Am</h1>
+    <div class="lead-muted mx-auto animate__animated animate__fadeInUp animate__delay-1s">
+      <p class="mb-4">
+        Hi, I'm Jordan — a UX Designer and Full Stack Developer passionate about creating digital experiences that balance innovation with usability.
+      </p>
+      <p class="mb-4">
+        My journey began while auditing client websites as a Client Relations Executive, where I identified pain points I couldn't fix with copy alone.
+      </p>
+      <p class="mb-0">
+        Now I'm eager to grow as a UX Designer within an ambitious team, bringing unique value through my full-stack development background.
+      </p>
+    </div>
+  </section>
+
+  <section class="mb-5 pb-5">
+    <h2 class="display-light text-center mb-5 animate__animated animate__fadeInUp">Learning Journey</h2>
+    <div class="row g-4 animate__animated animate__fadeInUp animate__delay-1s">
+      <div class="col-lg-6">
+        <div class="content-card p-4 p-md-5 text-center d-flex flex-column">
+          <div class="logo-container mx-auto mb-4">
+            <img src="https://miro.medium.com/v2/resize:fit:300/1*n20iG0XYazuUcYTVgb9gdA.png" alt="Le Wagon logo">
+          </div>
+          <div class="mt-auto">
+            <h4 class="mb-2">Le Wagon</h4>
+            <p class="mb-3 text-danger fw-semibold">Full-Stack Web Development</p>
+            <p class="text-secondary small">
+              Built apps from scratch using Ruby on Rails, JavaScript, CSS, and HTML. Mastered Git workflows, GitHub collaboration, and deployed production applications on Heroku.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="content-card p-4 p-md-5 text-center d-flex flex-column">
+          <div class="logo-container mx-auto mb-4">
+            <img src="https://cdn.asp.events/CLIENT_CloserSt_D86EA381_5056_B739_5482D50A1A831DDD/sites/BDWL-2025/media/libraries/exhibitors/4ca88fab-b3b6-11ef-b52-06bd0f937899-logo.png" alt="General Assembly logo">
+          </div>
+          <div class="mt-auto">
+            <h4 class="mb-2">General Assembly</h4>
+            <p class="mb-3 text-primary fw-semibold">UX Design Immersive</p>
+            <p class="text-secondary small">
+              Mastered the double diamond design process through hands-on client projects. Invested 360+ hours in Figma and FigJam, building end-to-end UX solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="display-light text-center mb-5 animate__animated animate__fadeInUp">My Toolkit</h2>
+    <div class="row g-3 justify-content-center animate__animated animate__fadeInUp">
+      <% tools = {
+        "Figma" => "https://cdn.simpleicons.org/figma/1a1a1a",
+        "Jira" => "https://cdn.simpleicons.org/jira/1a1a1a",
+        "Ruby on Rails" => "https://cdn.simpleicons.org/rubyonrails/1a1a1a",
+        "JavaScript" => "https://cdn.simpleicons.org/javascript/1a1a1a",
+        "HTML5" => "https://cdn.simpleicons.org/html5/1a1a1a",
+        "CSS" => "https://cdn.simpleicons.org/css/1a1a1a",
+        "Notion" => "https://cdn.simpleicons.org/notion/1a1a1a",
+        "Framer" => "https://cdn.simpleicons.org/framer/1a1a1a",
+        "Heroku" => "https://cdn.simpleicons.org/heroku/1a1a1a"
+      } %>
+      <% tools.each do |name, logo_url| %>
+        <div class="col-4 col-md-3 col-lg-2">
+          <div class="tool-card">
+            <img src="<%= logo_url %>" alt="<%= name %> logo" class="tool-logo">
+            <span class="tool-name"><%= name %></span>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </section>
+</div>
+
+<style>
+  .logo-container {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo-container img {
+    max-width: 150px;
+    max-height: 60px;
+    object-fit: contain;
+  }
+  .tool-card {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid #dee2e6;
+  }
+  .tool-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  }
+  .tool-logo {
+    height: 40px;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 0.75rem;
+  }
+  .tool-name {
+    font-size: 0.85rem;
+    color: #6c757d;
+  }
+</style>

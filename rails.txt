@@ -1,0 +1,4574 @@
+app/views/layouts
+-----
+
+
+
+app/views/layouts/application.html.erb
+-----
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Portfolionew</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  </head>
+
+  <body>
+    <%= render 'shared/navbar' %>
+    <%= yield %>
+
+  </body>
+</html>
+
+
+
+app/views/layouts/mailer.html.erb
+-----
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
+
+
+
+app/views/layouts/mailer.text.erb
+-----
+<%= yield %>
+
+
+
+app/views/pages
+-----
+
+
+
+app/views/pages/about.html.erb
+-----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Jordan - UX Designer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; }
+       round: #fafafa;
+        }
+        .section-title {
+            color: #1d1d1f;
+            letter-spacing: -1px;
+            font-weight: 300;
+            margin-bottom: 3rem;
+        }
+        .education-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+            border: none;
+        }
+        .education-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+        }
+        .logo-container {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .logo-container img {
+            max-width: 60px;
+            max-height: 60px;
+            object-fit: contain;
+            filter: brightness(0.8);
+        }
+        .tool-item {
+            background: white;
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
+            text-align: center;
+            border: none;
+            height: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .tool-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        .tool-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: white;
+            font-size: 1.1rem;
+        }
+        .btn-primary {
+            background: #1d1d1f;
+            border: none;
+            border-radius: 50px;
+            padding: 16px 40px;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-primary:hover {
+            background: #333;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .intro-text {
+            font-size: 1.25rem;
+            line-height: 1.7;
+            color: #515154;
+            max-width: 800px;
+        }
+        .education-title {
+            color: #1d1d1f;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .education-subtitle {
+            color: #007AFF;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        .education-description {
+            color: #515154;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container py-5">
+
+    <!-- WHO I AM Section -->
+    <section class="mb-5 pt-4">
+        <div class="text-center mb-5">
+            <h1 class="section-title display-4 animate__animated animate__fadeInUp">Who I Am</h1>
+            <div class="intro-text mx-auto animate__animated animate__fadeInUp animate__delay-1s">
+                <p class="mb-4">
+                    Hi, I'm Jordan — a UX Designer and Full Stack Developer passionate about creating digital experiences that balance innovation with usability.
+                </p>
+                <p class="mb-4">
+                    My journey began while auditing client websites as a Client Relations Executive at a copywriting agency, where I identified pain points I couldn't fix with copy alone.
+                </p>
+                <p class="mb-0">
+                    Now I'm eager to grow as a UX Designer within an ambitious team, bringing unique value through my full-stack development background.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- LEARNING JOURNEY Section -->
+    <section class="mb-5">
+        <div class="text-center mb-5">
+            <h2 class="section-title display-5 animate__animated animate__fadeInUp">Learning Journey</h2>
+        </div>
+
+        <div class="row g-4 animate__animated animate__fadeInUp animate__delay-1s">
+            <!-- Le Wagon -->
+            <div class="col-lg-6">
+                <div class="education-card">
+                    <div class="logo-container" style="background: linear-gradient(135deg, #FF6B6B, #FF8E53);">
+                        <img src="https://miro.medium.com/v2/resize:fit:300/1*n20iG0XYazuUcYTVgb9gdA.png" alt="Le Wagon logo">
+                    </div>
+                    <h4 class="education-title text-center">Le Wagon</h4>
+                    <p class="education-subtitle text-center">Full-Stack Web Development</p>
+                    <p class="education-description text-center">
+                        Built apps from scratch using Ruby on Rails, JavaScript, CSS, and HTML. Mastered Git workflows, GitHub collaboration, and deployed production applications on Heroku with fully functional databases and user authentication.
+                    </p>
+                </div>
+            </div>
+
+            <!-- General Assembly -->
+            <div class="col-lg-6">
+                <div class="education-card">
+                    <div class="logo-container" style="background: linear-gradient(135deg, #007AFF, #5AC8FA);">
+                        <img src="https://cdn.asp.events/CLIENT_CloserSt_D86EA381_5056_B739_5482D50A1A831DDD/sites/BDWL-2025/media/libraries/exhibitors/4ca88fab-b3b6-11ef-b52-06bd0f937899-logo.png" alt="General Assembly logo">
+                    </div>
+                    <h4 class="education-title text-center">General Assembly</h4>
+                    <p class="education-subtitle text-center">UX Design Immersive</p>
+                    <p class="education-description text-center">
+                        Mastered the double diamond design process through hands-on client projects and design sprints. Invested 360+ hours in Figma and FigJam, building comprehensive end-to-end UX solutions and research methodologies.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TOOLS I USE Section -->
+    <section class="mb-5">
+        <div class="text-center mb-5">
+            <h2 class="section-title display-5 animate__animated animate__fadeInUp">Tools & Technologies</h2>
+        </div>
+
+        <div class="row g-3 justify-content-center animate__animated animate__fadeInUp animate__delay-1s">
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="tool-item">
+                    <div class="tool-icon" style="background: linear-gradient(45deg, #F24E1E, #FF7262);">
+                        Fi
+                    </div>
+                    <div style="color: #1d1d1f; font-weight: 500;">Figma</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="tool-item">
+                    <div class="tool-icon" style="background: linear-gradient(45deg, #F7DF1E, #FFED4E);">
+                        JS
+                    </div>
+                    <div style="color: #1d1d1f; font-weight: 500;">JavaScript</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="tool-item">
+                    <div class="tool-icon" style="background: linear-gradient(45deg, #CC342D, #E74C3C);">
+                        Rb
+                    </div>
+                    <div style="color: #1d1d1f; font-weight: 500;">Ruby</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="tool-item">
+                    <div class="tool-icon" style="background: linear-gradient(45deg, #1572B6, #3498DB);">
+                        CS
+                    </div>
+                    <div style="color: #1d1d1f; font-weight: 500;">CSS</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="tool-item">
+                    <div class="tool-icon" style="background: linear-gradient(45deg, #E34F26, #F56565);">
+                        HT
+                    </div>
+                    <div style="color: #1d1d1f; font-weight: 500;">HTML</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Button -->
+    <div class="text-center pt-4 animate__animated animate__fadeInUp animate__delay-2s">
+        <a href="#projects" class="btn btn-primary btn-lg">View My Projects</a>
+    </div>
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Add staggered animation delays to tools
+    const tools = document.querySelectorAll('.tool-item');
+    tools.forEach((tool, index) => {
+        tool.style.animationDelay = `${index * 0.1}s`;
+        tool.classList.add('animate__animated', 'animate__fadeInUp');
+    });
+
+    // Add hover effect enhancement
+    const cards = document.querySelectorAll('.education-card, .tool-item');
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = this.classList.contains('education-card') ? 'translateY(-8px)' : 'translateY(-4px)';
+        });
+
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+});
+</script>
+
+</body>
+</html>
+
+
+
+app/views/pages/contact.html.erb
+-----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bandcamp App Redesign: A UX Case Study</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: white;
+      color: #f5f5f7;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .glass-card {
+      background: rgba(30, 30, 30, 0.7);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .glass-card:hover {
+      background: rgba(40, 40, 40, 0.8);
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .neon-accent {
+      background: linear-gradient(135deg, #00f5ff, #0080ff);
+      padding: 2px 12px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #000;
+      display: inline-block;
+    }
+
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .fade-in-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section-header {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 2rem;
+      background: linear-gradient(135deg, #f5f5f7 0%, #a1a1a6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .metric-card {
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+      border: 1px solid rgba(102, 126, 234, 0.3);
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .metric-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
+    }
+
+    .metric-number {
+      font-size: 3rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #00f5ff, #0080ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .persona-card {
+      background: rgba(30, 30, 30, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .persona-card:hover {
+      background: rgba(40, 40, 40, 0.9);
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .feature-highlight {
+      background: linear-gradient(135deg, rgba(0, 245, 255, 0.1), rgba(0, 128, 255, 0.1));
+      border: 1px solid rgba(0, 245, 255, 0.3);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1rem 0;
+    }
+
+    .floating-elements::before {
+      content: '';
+      position: absolute;
+      top: 20%;
+      left: -10%;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(102, 126, 234, 0.15) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: float 20s infinite linear;
+      z-index: -1;
+    }
+
+    .floating-elements::after {
+      content: '';
+      position: absolute;
+      bottom: 20%;
+      right: -10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(118, 75, 162, 0.1) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: float 25s infinite reverse linear;
+      z-index: -1;
+    }
+
+    @keyframes float {
+      from { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+      to { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+    }
+
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.2s; }
+    .delay-3 { transition-delay: 0.3s; }
+    .delay-4 { transition-delay: 0.4s; }
+    .delay-5 { transition-delay: 0.5s; }
+    .delay-6 { transition-delay: 0.6s; }
+    .delay-7 { transition-delay: 0.7s; }
+
+    .typewriter {
+      border-right: 3px solid #00f5ff;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 3s steps(20, end), blink-caret 1s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: #00f5ff }
+    }
+
+    .cta-button {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 16px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: inline-block;
+      box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    }
+
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .section-header {
+        font-size: 2.5rem;
+      }
+
+      .typewriter {
+        font-size: 2rem !important;
+      }
+    }
+  </style>
+</head>
+<body class="floating-elements" style="position: relative;">
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center justify-center px-4 py-20">
+    <div class="max-w-6xl mx-auto text-center">
+      <div class="fade-in-up">
+        <div class="neon-accent mb-6">UX Case Study</div>
+        <h1 class="typewriter section-header mb-8">
+          Bandcamp Redesign
+        </h1>
+        <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          A comprehensive UX redesign that increased user satisfaction by 26.6% through innovative discovery features and enhanced artist-fan connections.
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-6 mb-12">
+          <div class="metric-card delay-1 fade-in-up">
+            <div class="metric-number">+18.5</div>
+            <div class="text-gray-400">Point SUS Increase</div>
+          </div>
+          <div class="metric-card delay-2 fade-in-up">
+            <div class="metric-number">88/100</div>
+            <div class="text-gray-400">Final SUS Score</div>
+          </div>
+          <div class="metric-card delay-3 fade-in-up">
+            <div class="metric-number">26.6%</div>
+            <div class="text-gray-400">Usability Improvement</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Overview -->
+  <section class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="glass-card p-8 mb-12 fade-in-up">
+        <h2 class="text-4xl font-bold mb-6 gradient-text">01. Project Overview</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-2xl font-semibold mb-4 text-white">The Challenge</h3>
+            <p class="text-gray-300 mb-6">
+              This document outlines a conceptual redesign of the Bandcamp mobile app. It follows a classic, robust UX design process, starting with research to identify a problem and concluding with a validated, high-fidelity prototype that demonstrates significant improvement.
+            </p>
+            <p class="text-gray-300">
+              The project's core objective was to enhance the user experience to increase engagement and satisfaction, while preserving Bandcamp's unique identity as a platform focused on directly supporting independent artists.
+            </p>
+          </div>
+          <div class="space-y-4">
+            <div class="feature-highlight">
+              <strong class="text-white">Company:</strong> Bandcamp (Conceptual Redesign)
+            </div>
+            <div class="feature-highlight">
+              <strong class="text-white">Primary Metric:</strong> System Usability Scale (SUS)
+            </div>
+            <div class="feature-highlight">
+              <strong class="text-white">Key Result:</strong> Final SUS score of <strong class="text-cyan-300">88/100</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Section -->
+  <section class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="glass-card p-8 mb-12 fade-in-up delay-2">
+        <h2 class="text-4xl font-bold mb-6 gradient-text">02. Research</h2>
+        <p class="text-xl text-gray-300 mb-8">
+          The project began with a solid research phase combining quantitative and qualitative methods to establish a baseline and uncover user pain points.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="persona-card">
+            <h3 class="text-2xl font-semibold mb-4 text-cyan-300">Baseline Usability Testing</h3>
+            <h4 class="text-lg font-medium mb-3 text-white">Establishing a Quantitative Baseline</h4>
+            <p class="text-gray-300 mb-4">
+              A baseline System Usability Scale (SUS) score of <strong class="text-cyan-300">69.5</strong> was established. This score is considered "OK" or "Marginal," sitting just below the industry average of 68 and indicating clear room for improvement.
+            </p>
+            <p class="text-gray-300">
+              Key findings from testing showed that core features like <strong>Bandcamp Radio</strong> and <strong>Daily</strong> were ignored, the <strong>UI felt bland</strong>, and the <strong>feed was perceived as irrelevant</strong> by a majority of users tested.
+            </p>
+          </div>
+
+          <div class="persona-card">
+            <h3 class="text-2xl font-semibold mb-4 text-cyan-300">User Interviews</h3>
+            <h4 class="text-lg font-medium mb-3 text-white">Uncovering Qualitative Insights</h4>
+            <p class="text-gray-300 mb-4">
+              Interviews with fans and artists revealed a critical insight: users desire a closer connection to artists and their creative process, which they currently seek on other platforms like Instagram and YouTube.
+            </p>
+            <p class="text-gray-300">
+              A core tension was identified: Bandcamp's "algorithm-free" stance, while central to its brand, hinders music discovery for many users who are accustomed to algorithm-driven recommendations.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem & Personas -->
+  <section class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="glass-card p-8 mb-12 fade-in-up delay-3">
+        <h2 class="text-4xl font-bold mb-6 gradient-text">03. Problem Definition</h2>
+        <p class="text-xl text-gray-300 mb-8">
+          The research was effectively synthesized into user personas and a clear problem statement, ensuring the design process remained focused on user needs. The design centered on two key personas to represent both sides of the platform's community.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-8">
+          <!-- Leon Persona -->
+          <div class="persona-card">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-20 h-20 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center text-2xl font-bold text-black">
+                🎧
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-white">Leon</h3>
+                <p class="text-cyan-300">The Fan, 28</p>
+              </div>
+            </div>
+            <div class="space-y-3">
+              <div>
+                <strong class="text-white">Occupation:</strong> <span class="text-gray-300">Graphic Designer</span><br>
+                <strong class="text-white">Hobby:</strong> <span class="text-gray-300">Record Collector</span>
+              </div>
+              <div>
+                <strong class="text-white">Bio:</strong>
+                <p class="text-gray-300 mt-2">
+                  Leon loves discovering new music, especially from smaller artists. He finds big streaming platforms too repetitive and algorithm-heavy, and wants to feel closer to the people making the music he loves.
+                </p>
+              </div>
+              <div class="feature-highlight border-l-4 border-cyan-400 pl-4">
+                <em class="text-cyan-200">"I want to feel connected to the artists and their creative process."</em>
+              </div>
+            </div>
+          </div>
+
+          <!-- Emma Persona -->
+          <div class="persona-card">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-20 h-20 rounded-full bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center text-2xl font-bold text-black">
+                🎤
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-white">Emma</h3>
+                <p class="text-purple-300">The Artist, 25</p>
+              </div>
+            </div>
+            <div class="space-y-3">
+              <div>
+                <strong class="text-white">Occupation:</strong> <span class="text-gray-300">Independent Musician</span>
+              </div>
+              <div>
+                <strong class="text-white">Bio:</strong>
+                <p class="text-gray-300 mt-2">
+                  Emma loves that Bandcamp gives her financial and creative control, but she wants better tools to actually engage her fans on the platform—beyond just selling them music and merch.
+                </p>
+              </div>
+              <div class="feature-highlight border-l-4 border-purple-400 pl-4">
+                <em class="text-purple-200">"I need better ways to share my journey and connect with fans directly on Bandcamp."</em>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card p-6 text-center">
+          <h3 class="text-2xl font-bold text-white mb-4">Problem Statement</h3>
+          <p class="text-xl text-cyan-300 font-medium">
+            "How might we help Leon connect more with artists and discover new music — while giving Emma better tools to grow her fanbase on Bandcamp?"
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution Section -->
+  <section class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="glass-card p-8 mb-12 fade-in-up delay-4">
+        <h2 class="text-4xl font-bold mb-6 gradient-text">04. Solution</h2>
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-semibold mb-4 text-white">New Features & Redesigns</h3>
+          <p class="text-gray-300 mb-6">The proposed solution addresses the identified problems by revamping existing features and introducing new ones:</p>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="feature-highlight">
+              <h4 class="text-lg font-semibold text-cyan-300 mb-2">Discovery Homepage</h4>
+              <p class="text-gray-300">Makes finding new content the primary focus of the app, using an infinite scroll and better filtering to address the discovery challenge.</p>
+            </div>
+
+            <div class="feature-highlight">
+              <h4 class="text-lg font-semibold text-cyan-300 mb-2">Revamped Artist Profiles</h4>
+              <p class="text-gray-300">Gives artists more control to showcase their work (videos, events), directly addressing Emma's need for better engagement tools and Leon's desire for deeper connection.</p>
+            </div>
+
+            <div class="feature-highlight">
+              <h4 class="text-lg font-semibold text-cyan-300 mb-2">Refreshed Feed</h4>
+              <p class="text-gray-300">Shifts the focus to meaningful updates from followed artists (e.g., behind-the-scenes content), making it more relevant.</p>
+            </div>
+
+            <div class="feature-highlight">
+              <h4 class="text-lg font-semibold text-cyan-300 mb-2">New Feature: Trackfinder</h4>
+              <p class="text-gray-300">An innovative, Tinder-style swiping feature for discovering track previews. This standout idea introduces a playful discovery mechanic without resorting to traditional algorithms, thus staying true to the Bandcamp ethos.</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-2xl font-semibold mb-4 text-white">Information Architecture & Validation</h3>
+          <p class="text-gray-300 mb-6">
+            The navigation was streamlined to be more intuitive (Discovery, Feed, Library). A brand refresh with a richer colour palette and updated typography addressed the "bland UI" complaint.
+          </p>
+          <p class="text-gray-300 mb-4">The project's strength lies in its iterative testing process and the use of the SUS metric to track progress quantitatively:</p>
+
+          <div class="space-y-4">
+            <div class="feature-highlight">
+              <strong class="text-white">Greyscale Prototype Testing:</strong> Early testing allowed for foundational improvements, raising the SUS score significantly to <strong class="text-cyan-300">80.5</strong> (a "Good" to "Excellent" score).
+            </div>
+            <div class="feature-highlight">
+              <strong class="text-white">High-Fidelity Prototype Testing:</strong> Final testing on a polished prototype validated the design choices, resulting in a final SUS score of <strong class="text-cyan-300">88</strong>, which is in the top 10% of all systems tested and is considered "Excellent."
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prototype Section -->
+  <section class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="glass-card p-8 mb-12 fade-in-up delay-5">
+        <h2 class="text-4xl font-bold mb-6 gradient-text">05. The Final Prototype</h2>
+        <p class="text-xl text-gray-300 mb-8">
+          The final prototype incorporates all iterations, resulting in a clean, modern design that doesn't lose Bandcamp's core identity. Key highlights include a visual refresh, clearer UI, and custom artist profiles.
+        </p>
+
+        <div class="glass-card p-6">
+          <iframe
+            style="border: none; border-radius: 12px;"
+            width="100%"
+            height="600"
+            src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/ETVVM3gFD5iUVy5CYvCPMN/Untitled?node-id=434-2014&starting-point-node-id=434%3A1239"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Takeaways -->
+  <section class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="glass-card p-8 mb-12 fade-in-up delay-6">
+        <h2 class="text-4xl font-bold mb-6 gradient-text">06. Key Takeaways</h2>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="persona-card">
+            <h3 class="text-2xl font-semibold mb-4 text-cyan-300">🤝 The User Ecosystem</h3>
+            <p class="text-gray-300">
+              By designing for both the fan (Leon) and the artist (Emma), the solution created a more cohesive and valuable ecosystem. Features that help artists connect with fans ultimately create a better, more engaging experience for those fans.
+            </p>
+          </div>
+
+          <div class="persona-card">
+            <h3 class="text-2xl font-semibold mb-4 text-purple-300">🧠 Revisiting as a Developer</h3>
+            <p class="text-gray-300">
+              My full-stack development course taught me more about UX design than I had expected. I learned that trying to change too much at once is a sign of immaturity. Despite seeing an improvement in our SUS score, we could have made the same improvements whilst maintaining Bandcamp's working brand identity. I will revisit this project at some point, and align Bandcamps old branding with our new features and navigation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Summary -->
+  <section class="py-20 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="glass-card p-12 fade-in-up delay-7">
+        <h2 class="text-4xl font-bold mb-6 gradient-text">The Impact</h2>
+        <p class="text-2xl text-gray-300 mb-8">
+          A Data-Driven Success Story
+        </p>
+        <p class="text-xl text-gray-300 mb-8">
+          The redesign led to a significant, measurable increase in user satisfaction and perceived usability.
+        </p>
+
+        <a href="#" class="cta-button" onclick="window.history.back()">
+          ← Back to Projects
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 text-center">
+    <p class="text-gray-500 text-lg font-mono">©2025</p>
+  </footer>
+
+  <script>
+    // Initialize fade-in animations
+    document.addEventListener("DOMContentLoaded", () => {
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.fade-in-up').forEach(el => {
+        observer.observe(el);
+      });
+    });
+
+    // Add smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+
+app/views/pages/dashboard.html.erb
+-----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jordan - UX Designer</title>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    rel="stylesheet"
+  />
+  <style>
+    /* --- General & Typography --- */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        sans-serif;
+      line-height: 1.6;
+      color: #1d1d1f;
+      background-color: #fafafa;
+    }
+    .display-light {
+      font-weight: 300;
+      letter-spacing: -1.5px;
+    }
+    .lead-muted {
+      color: #86868b;
+      max-width: 600px;
+      margin-inline: auto;
+    }
+    .fw-semibold { font-weight: 600 !important; }
+
+    /* --- Hero Section --- */
+    .hero-section {
+      position: relative;
+      min-height: 72vh;
+      color: white;
+      overflow: hidden;
+    }
+    .hero-video {
+      position: absolute;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: cover;
+      z-index: 0;
+    }
+    .video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .hero-content .h3 {
+      color: rgba(255, 255, 255, 0.9);
+    }
+    .hero-content .btn-dark {
+      background: #1d1d1f;
+      border: none;
+      border-radius: 50px;
+      padding: 12px 32px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    .hero-content .btn-dark:hover {
+      background: #333;
+      transform: translateY(-2px);
+    }
+
+    /* --- Projects Section --- */
+    #work {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+    .filter-btn {
+      transition: all 0.3s ease;
+      border-radius: 50px;
+      font-weight: 500;
+      border: 2px solid #d2d2d7;
+      color: #1d1d1f;
+      padding: 0.5rem 1.5rem;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: #1d1d1f !important;
+      color: white !important;
+      border-color: #1d1d1f !important;
+    }
+    .project-item {
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+    .project-item.fade-out {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    .card {
+      transition: all 0.3s ease;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      border: none;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1) !important;
+    }
+    .card-img-top {
+      height: 280px;
+      object-fit: cover;
+    }
+    .card-body .text-muted { color: #86868b !important; }
+    .card-body .text-body-secondary { color: #515154 !important; }
+    .project-icon {
+      width: 48px;
+      height: 48px;
+      color: white;
+    }
+    .project-icon-bf { background: linear-gradient(45deg, #007aff, #5856d6); }
+    .project-icon-pg { background: linear-gradient(45deg, #ff6b6b, #ff8e53); }
+    .project-icon-bc { background: linear-gradient(45deg, #1db584, #4ac0a6); }
+    .project-icon-ki { background: linear-gradient(45deg, #af52de, #bf5af2); }
+    .project-badge {
+      color: white;
+      border-radius: 20px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+    .badge-ux { background: linear-gradient(45deg, #34c759, #30d158); }
+    .badge-react { background: linear-gradient(45deg, #007aff, #5ac8fa); }
+    .badge-rails { background: linear-gradient(45deg, #af52de, #bf5af2); }
+  </style>
+</head>
+<body>
+<section class="hero-section d-flex align-items-center justify-content-center text-center">
+    <div class="video-overlay"></div>
+<video autoplay muted loop class="hero-video">
+  <source src="<%= asset_path('birds.mp4') %>" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+    <div class="container hero-content">
+      <h1 class="display-2 display-light mb-4 animate__animated animate__fadeInUp">
+        Hi, I'm Jordan
+      </h1>
+      <p class="h3 fw-light mb-5 animate__animated animate__fadeInUp animate__delay-1s">
+        A Junior UX Designer who codes
+      </p>
+      <a href="#work" class="btn btn-dark btn-lg animate__animated animate__fadeInUp animate__delay-2s">
+        View My Work
+      </a>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="display-5 display-light mb-4">Selected Work</h2>
+        <p class="lead lead-muted">
+          Crafting intuitive digital experiences through research, design, and code
+        </p>
+      </div>
+
+      <div class="d-flex justify-content-center gap-3 mb-5 flex-wrap">
+        <button class="btn filter-btn active" data-filter="all" type="button">All</button>
+        <button class="btn filter-btn" data-filter="ux" type="button">UX Design</button>
+        <button class="btn filter-btn" data-filter="web" type="button">Web Dev</button>
+      </div>
+
+      <div class="row g-4" id="projectsGrid">
+        <div class="col-md-6 col-lg-4 project-item" data-category="ux">
+          <div class="card h-100">
+            <img src="https://freight.cargo.site/t/original/i/5b4cc062d685ba39a884774e058e39e1070f33430879e0af609e8a8bc4674a0f/006_Cardsort_Square_1.gif" class="card-img-top" alt="British Fencing Project" />
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex align-items-center mb-3">
+                <div class="project-icon project-icon-bf rounded-circle me-3 d-flex align-items-center justify-content-center">
+                  <span class="fw-bold">BF</span>
+                </div>
+                <div>
+                  <h5 class="mb-1 fw-semibold">British Fencing</h5>
+                  <small class="text-muted">Information Architecture</small>
+                </div>
+              </div>
+              <p class="mb-4 text-body-secondary flex-grow-1">
+                Complete IA overhaul improving member navigation and task success by 45% through card sorting and user journey mapping.
+              </p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="badge project-badge badge-ux px-3 py-2">UX Research</span>
+                <small class="text-muted fw-bold">4 months ago</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 project-item" data-category="web">
+          <div class="card h-100">
+            <img src="https://giffiles.alphacoders.com/474/4748.gif" class="card-img-top" alt="Plan&Go Project" />
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex align-items-center mb-3">
+                <div class="project-icon project-icon-pg rounded-circle me-3 d-flex align-items-center justify-content-center">
+                  <span class="fw-bold">P&G</span>
+                </div>
+                <div>
+                  <h5 class="mb-1 fw-semibold">Plan&Go</h5>
+                  <small class="text-muted">Full-Stack Application</small>
+                </div>
+              </div>
+              <p class="mb-4 text-body-secondary flex-grow-1">
+                AI-powered travel planner built with React and Node.js, featuring intelligent itinerary generation and real-time recommendations.
+              </p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="badge project-badge badge-react px-3 py-2">React + AI</span>
+                <small class="text-muted fw-bold">6 months ago</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 project-item" data-category="ux">
+          <div class="card h-100">
+            <img src="https://cdn.dribbble.com/users/2602405/screenshots/7272043/media/f7a93ac536b771a3e9113a652e0b92cd.gif" class="card-img-top" alt="Bandcamp UX Audit" />
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex align-items-center mb-3">
+                <div class="project-icon project-icon-bc rounded-circle me-3 d-flex align-items-center justify-content-center">
+                  <span class="fw-bold">BC</span>
+                </div>
+                <div>
+                  <h5 class="mb-1 fw-semibold">Bandcamp Redesign</h5>
+                  <small class="text-muted">UX Audit & Prototype</small>
+                </div>
+              </div>
+              <p class="mb-4 text-body-secondary flex-grow-1">
+                Comprehensive UX audit identifying mobile purchase flow friction points, delivered as an interactive prototype with detailed recommendations.
+              </p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="badge project-badge badge-ux px-3 py-2">UX Audit</span>
+                <small class="text-muted fw-bold">1 year ago</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 project-item" data-category="web">
+          <div class="card h-100">
+            <img src="https://cdn.dribbble.com/users/1731253/screenshots/15013363/media/832bd01839a46e6656a09d0f3c0dbe30.gif" class="card-img-top" alt="KnowIt" />
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex align-items-center mb-3">
+                <div class="project-icon project-icon-ki rounded-circle me-3 d-flex align-items-center justify-content-center">
+                  <span class="fw-bold">KI</span>
+                </div>
+                <div>
+                  <h5 class="mb-1 fw-semibold">KnowIt</h5>
+                  <small class="text-muted">Learning Platform</small>
+                </div>
+              </div>
+              <p class="mb-4 text-body-secondary flex-grow-1">
+                Intelligent flashcard platform built with Ruby on Rails, featuring spaced repetition algorithms and personalized learning paths.
+              </p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="badge project-badge badge-rails px-3 py-2">Rails + AI</span>
+                <small class="text-muted fw-bold">9 months ago</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const projects = document.querySelectorAll(".project-item");
+      const projectsGrid = document.getElementById("projectsGrid");
+
+      filterButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const filter = btn.dataset.filter;
+
+          // Update active button state
+          filterButtons.forEach((button) => button.classList.remove("active"));
+          btn.classList.add("active");
+
+          // Animate and filter projects
+          projects.forEach((project) => {
+            project.classList.add("fade-out");
+          });
+
+          // Wait for fade-out animation to complete
+          setTimeout(() => {
+            projects.forEach((project) => {
+              const isVisible = filter === "all" || project.dataset.category === filter;
+              project.style.display = isVisible ? "block" : "none";
+              // Stagger the fade-in animation for a smoother effect
+              setTimeout(() => {
+                if(isVisible) project.classList.remove("fade-out");
+              }, 50);
+            });
+          }, 300); // Should match transition duration
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+
+app/views/pages/projects
+-----
+
+
+
+app/views/pages/projects.html.erb
+-----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jordan's Projects</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --background-color: #f8f9fa;
+      --card-background: #ffffff;
+      --text-primary: #212529;
+      --text-secondary: #6c757d;
+      --primary-blue: #0d6efd;
+      --primary-green: #198754;
+      --border-color: #dee2e6;
+      --shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 8px 25px rgba(0, 0, 0, 0.1);
+      --shadow-lg: 0 12px 35px rgba(0, 0, 0, 0.15);
+      --border-radius: 1rem;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-primary);
+    }
+
+    .navbar {
+      background-color: var(--card-background);
+      box-shadow: var(--shadow-sm);
+    }
+    .navbar-brand {
+      font-weight: 700;
+      font-style: italic;
+    }
+
+    .main-content {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+    .main-content h1 {
+      font-weight: 700;
+      font-size: 2.75rem;
+    }
+    .main-content .lead {
+      color: var(--text-secondary);
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .filter-btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+    }
+    .filter-btn {
+      background: var(--card-background);
+      border: 1px solid var(--border-color);
+      padding: 0.6rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      border-radius: 99px;
+      box-shadow: var(--shadow-sm);
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+    }
+    .filter-btn:hover:not(.active) {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      color: var(--primary-blue);
+    }
+    .filter-btn.active {
+      background-color: var(--primary-blue);
+      color: white;
+      border-color: var(--primary-blue);
+      box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+      transform: translateY(-2px);
+    }
+
+    #projectsGrid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .project-item {
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+    .project-item.hide {
+      transform: scale(0.8);
+      opacity: 0;
+      width: 0 !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      overflow: hidden;
+      transition: transform 0.4s ease, opacity 0.4s ease, width 0.4s 0.4s ease, padding 0.4s 0.4s ease, margin 0.4s 0.4s ease;
+    }
+
+    .project-card {
+      background: var(--card-background);
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      transition: all 0.3s ease;
+    }
+    .project-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-8px);
+    }
+
+    .project-image {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+    }
+
+    .project-info {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .project-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 0.75rem;
+    }
+    .project-logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      object-fit: contain;
+      flex-shrink: 0;
+      padding: 4px;
+      background-color: #f1f3f5;
+    }
+    .project-title {
+      font-weight: 600;
+      font-size: 1.25rem;
+      margin: 0;
+    }
+
+    .project-subtitle {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+
+    .project-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9rem;
+      color: #888;
+    }
+    .category-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      color: white;
+    }
+    .category-ux { background-color: var(--primary-green); }
+    .category-web { background-color: var(--primary-blue); }
+  </style>
+</head>
+<body>
+
+  <main class="container main-content">
+    <div class="text-center mb-5">
+      <h1>My Work</h1>
+      <p class="lead">A selection of my favorite projects, crafted with care and an obsession for detail.</p>
+    </div>
+
+    <div class="filter-btn-group mb-5" id="filter-btn-group">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="web">Web Dev</button>
+      <button class="filter-btn" data-filter="ux">UX Design</button>
+    </div>
+
+    <div id="projectsGrid">
+      <div class="project-item" data-category="ux">
+        <div class="project-card">
+          <img src="https://freight.cargo.site/t/original/i/5b4cc062d685ba39a884774e058e39e1070f33430879e0af609e8a8bc4674a0f/006_Cardsort_Square_1.gif" alt="British Fencing Project" class="project-image">
+          <div class="project-info">
+            <div class="project-header">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3ktAspPp6uilbp7qoG6tyGhDwK4gfQ61HFvqQctwrwaIFU4aHTvbKdmJM70N3vrg-IFs&usqp=CAU" alt="British Fencing Logo" class="project-logo">
+              <h5 class="project-title">British Fencing</h5>
+            </div>
+            <p class="project-subtitle">Information Architecture overhaul to improve navigation and task success for members.</p>
+            <div class="project-footer">
+              <span class="category-label category-ux">UX Design</span>
+              <span>4 months ago</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-item" data-category="web">
+        <div class="project-card">
+          <img src="https://giffiles.alphacoders.com/474/4748.gif" alt="Plan&Go Project" class="project-image">
+          <div class="project-info">
+            <div class="project-header">
+              <img src="https://giffiles.alphacoders.com/474/4748.gif" alt="Plan&Go Logo" class="project-logo">
+              <h5 class="project-title">Plan&Go</h5>
+            </div>
+            <p class="project-subtitle">An AI-powered travel planner built with React and Node.js to generate custom itineraries.</p>
+            <div class="project-footer">
+              <span class="category-label category-web">Web Dev</span>
+              <span>6 months ago</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-item" data-category="ux">
+        <div class="project-card">
+          <img src="https://f4.bcbits.com/img/0027834469_0" alt="Bandcamp Project" class="project-image">
+          <div class="project-info">
+            <div class="project-header">
+              <img src="https://cdn-p.smehost.net/sites/7f9737f2506941499994d771a29ad47a/wp-content/uploads/2025/01/Bandcamp-Logo.jpg" alt="Bandcamp Logo" class="project-logo">
+              <h5 class="project-title">Bandcamp</h5>
+            </div>
+            <p class="project-subtitle">A mobile app redesign concept focused on improving music discovery and user engagement.</p>
+            <div class="project-footer">
+              <span class="category-label category-ux">UX Design</span>
+              <span>3 months ago</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-item" data-category="web">
+        <div class="project-card">
+          <img src="https://media4.giphy.com/media/v1.Y2lkPTZjMDliOTUycnR6MDhpd3JiMms5aGd0djd3OTB5Zmg5czIwam4wbDhodjd2emZiNyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/WvuMTf88aV3FQ4odG5/source.gif" alt="KnowIt Project" class="project-image">
+          <div class="project-info">
+            <div class="project-header">
+              <img src="https://media4.giphy.com/media/v1.Y2lkPTZjMDliOTUycnR6MDhpd3JiMms5aGd0djd3OTB5Zmg5czIwam4wbDhodjd2emZiNyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/WvuMTf88aV3FQ4odG5/source.gif" alt="KnowIt Logo" class="project-logo">
+              <h5 class="project-title">KnowIt</h5>
+            </div>
+            <p class="project-subtitle">An AI-powered quiz generator that creates interactive quizzes from any block of text.</p>
+            <div class="project-footer">
+              <span class="category-label category-web">Web Dev</span>
+              <span>2 months ago</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterButtons = document.querySelectorAll('#filter-btn-group .filter-btn');
+      const projectItems = document.querySelectorAll('#projectsGrid .project-item');
+      const projectsGrid = document.getElementById('projectsGrid');
+
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', function () {
+          filterButtons.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+
+          const filter = this.getAttribute('data-filter');
+
+          projectsGrid.style.pointerEvents = 'none';
+
+          projectItems.forEach(item => {
+            const category = item.getAttribute('data-category');
+            const shouldShow = (filter === 'all' || category === filter);
+
+            if (shouldShow) {
+              item.classList.remove('hide');
+            } else {
+              item.classList.add('hide');
+            }
+          });
+
+          setTimeout(() => {
+              projectsGrid.style.pointerEvents = 'auto';
+          }, 500);
+
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
+
+
+
+app/views/pages/projects/bandcamp.html.erb
+-----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bandcamp App Redesign: A UX Case Study</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #f5f5f7;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .glass-card {
+      background: rgba(30, 30, 30, 0.7);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .glass-card:hover {
+      background: rgba(40, 40, 40, 0.8);
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .neon-accent {
+      background: linear-gradient(135deg, #00f5ff, #0080ff);
+      padding: 2px 12px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #000;
+      display: inline-block;
+    }
+
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .fade-in-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section-header {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 2rem;
+      background: linear-gradient(135deg, #f5f5f7 0%, #a1a1a6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .metric-card {
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+      border: 1px solid rgba(102, 126, 234, 0.3);
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .metric-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
+    }
+
+    .metric-number {
+      font-size: 3rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #00f5ff, #0080ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .persona-card {
+      background: rgba(30, 30, 30, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .persona-card:hover {
+      background: rgba(40, 40, 40, 0.9);
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .feature-highlight {
+      background: linear-gradient(135deg, rgba(0, 245, 255, 0.1), rgba(0, 128, 255, 0.1));
+      border: 1px solid rgba(0, 245, 255, 0.3);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1rem 0;
+    }
+
+    .floating-elements::before {
+      content: '';
+      position: absolute;
+      top: 20%;
+      left: -10%;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(102, 126, 234, 0.15) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: float 20s infinite linear;
+      z-index: -1;
+    }
+
+    .floating-elements::after {
+      content: '';
+      position: absolute;
+      bottom: 20%;
+      right: -10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(118, 75, 162, 0.1) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: float 25s infinite reverse linear;
+      z-index: -1;
+    }
+
+    @keyframes float {
+      from { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+      to { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+    }
+
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.2s; }
+    .delay-3 { transition-delay: 0.3s; }
+    .delay-4 { transition-delay: 0.4s; }
+    .delay-5 { transition-delay: 0.5s; }
+    .delay-6 { transition-delay: 0.6s; }
+    .delay-7 { transition-delay: 0.7s; }
+
+    .typewriter {
+      border-right: 3px solid #00f5ff;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 3s steps(20, end), blink-caret 1s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: #00f5ff }
+    }
+
+    .cta-button {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 16px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: inline-block;
+      box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    }
+
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .section-header {
+        font-size: 2.5rem;
+      }
+
+      .typewriter {
+        font-size: 2rem !important;
+      }
+    }
+  </style>
+</head>
+<body class="floating-elements" style="position: relative;">
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center justify-center px-4 py-20">
+    <div class="max-w-6xl mx-auto text-center">
+      <div class="fade-in-up">
+        <div class="neon-accent mb-6">UX Case Study</div>
+        <h1 class="typewriter section-header mb-8">
+          Bandcamp Redesign
+        </h1>
+        <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          A comprehensive UX redesign that increased user satisfaction by 26.6% through innovative discovery features and enhanced artist-fan connections.
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-6 mb-12">
+          <div class="metric-card delay-1 fade-in-up">
+            <div class="metric-number">+18.5</div>
+            <div class="text-gray-400">Point SUS Increase</div>
+          </div>
+          <div class="metric-card delay-2 fade-in-up">
+            <div class="metric-number">88/100</div>
+            <div class="text-gray-400">Final SUS Score</div>
+          </div>
+          <div class="metric-card delay-3 fade-in-up">
+            <div class="metric-number">26.6%</div>
+            <div class="text-gray-400">Usability Improvement</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Overview -->
+  <section class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="glass-card p-8 mb-12 fade-in-up">
+        <h2 class="text-4xl font-bold mb-6 gradient-text">01. Project Overview</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-2xl font-semibold mb-4 text-white">The Challenge</h3>
+            <p class="text-gray-300 mb-6">
+              This document outlines a conceptual redesign of the Bandcamp mobile app. It follows a classic, robust UX design process, starting with research to identify a problem and concluding with a validated, high-fidelity prototype that demonstrates significant improvement.
+            </p>
+            <p class="text-gray-300">
+              The project's core objective was to enhance the user experience to increase engagement and satisfaction, while preserving Bandcamp's unique identity as a platform focused on directly supporting independent artists.
+            </p>
+          </div>
+          <div class="space-y-4">
+            <div class="feature-highlight">
+              <strong class="text-white">Company:</strong> Bandcamp (Conceptual Redesign)
+            </div>
+            <div class="feature-highlight">
+              <strong class="text-white">Primary Metric:</strong> System Usability Scale (SUS)
+            </div>
+            <div class="feature-highlight">
+              <strong class="text-white">Key Result:</strong> Final SUS score of <strong class="text-cyan-300">88/100</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Section -->
+  <section class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="glass-card p-8 mb-12 fade-in-up delay-2">
+        <h2 class="text-4xl font-bold mb-6 gradient-text">02. Research</h2>
+        <p class="text-xl text-gray-300 mb-8">
+          The project began with a solid research phase combining quantitative and qualitative methods to establish a baseline and uncover user pain points.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="persona-card">
+            <h3 class="text-2xl font-semibold mb-4 text-cyan-300">Baseline Usability Testing</h3>
+            <h4 class="text-lg font-medium mb-3 text-white">Establishing a Quantitative Baseline</h4>
+            <p class="text-gray-300 mb-4">
+              A baseline System Usability Scale (SUS) score of <strong class="text-cyan-300">69.5</strong> was established. This score is considered "OK" or "Marginal," sitting just below the industry average of 68 and indicating clear room for improvement.
+            </p>
+            <p class="text-gray-300">
+              Key findings from testing showed that core features like <strong>Bandcamp Radio</strong> and <strong>Daily</strong> were ignored, the <strong>UI felt bland</strong>, and the <strong>feed was perceived as irrelevant</strong> by a majority of users tested.
+            </p>
+          </div>
+
+          <div class="persona-card">
+            <h3 class="text-2xl font-semibold mb-4 text-cyan-300">User Interviews</h3>
+            <h4 class="text-lg font-medium mb-3 text-white">Uncovering Qualitative Insights</h4>
+            <p class="text-gray-300 mb-4">
+              Interviews with fans and artists revealed a critical insight: users desire a closer connection to artists and their creative process, which they currently seek on other platforms like Instagram and YouTube.
+            </p>
+            <p class="text-gray-300">
+              A core tension was identified: Bandcamp's "algorithm-free" stance, while central to its brand, hinders music discovery for many users who are accustomed to algorithm-driven recommendations.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem & Personas -->
+  <section class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="glass-card p-8 mb-12 fade-in-up delay-3">
+        <h2 class="text-4xl font-bold mb-6 gradient-text">03. Problem Definition</h2>
+        <p class="text-xl text-gray-300 mb-8">
+          The research was effectively synthesized into user personas and a clear problem statement, ensuring the design process remained focused on user needs. The design centered on two key personas to represent both sides of the platform's community.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-8">
+          <!-- Leon Persona -->
+          <div class="persona-card">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-20 h-20 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center text-2xl font-bold text-black">
+                🎧
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-white">Leon</h3>
+                <p class="text-cyan-300">The Fan, 28</p>
+              </div>
+            </div>
+            <div class="space-y-3">
+              <div>
+                <strong class="text-white">Occupation:</strong> <span class="text-gray-300">Graphic Designer</span><br>
+                <strong class="text-white">Hobby:</strong> <span class="text-gray-300">Record Collector</span>
+              </div>
+              <div>
+                <strong class="text-white">Bio:</strong>
+                <p class="text-gray-300 mt-2">
+                  Leon loves discovering new music, especially from smaller artists. He finds big streaming platforms too repetitive and algorithm-heavy, and wants to feel closer to the people making the music he loves.
+                </p>
+              </div>
+              <div class="feature-highlight border-l-4 border-cyan-400 pl-4">
+                <em class="text-cyan-200">"I want to feel connected to the artists and their creative process."</em>
+              </div>
+            </div>
+          </div>
+
+          <!-- Emma Persona -->
+          <div class="persona-card">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-20 h-20 rounded-full bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center text-2xl font-bold text-black">
+                🎤
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-white">Emma</h3>
+                <p class="text-purple-300">The Artist, 25</p>
+              </div>
+            </div>
+            <div class="space-y-3">
+              <div>
+                <strong class="text-white">Occupation:</strong> <span class="text-gray-300">Independent Musician</span>
+              </div>
+              <div>
+                <strong class="text-white">Bio:</strong>
+                <p class="text-gray-300 mt-2">
+                  Emma loves that Bandcamp gives her financial and creative control, but she wants better tools to actually engage her fans on the platform—beyond just selling them music and merch.
+                </p>
+              </div>
+              <div class="feature-highlight border-l-4 border-purple-400 pl-4">
+                <em class="text-purple-200">"I need better ways to share my journey and connect with fans directly on Bandcamp."</em>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card p-6 text-center">
+          <h3 class="text-2xl font-bold text-white mb-4">Problem Statement</h3>
+          <p class="text-xl text-cyan-300 font-medium">
+            "How might we help Leon connect more with artists and discover new music — while giving Emma better tools to grow her fanbase on Bandcamp?"
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution Section -->
+  <section class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="glass-card p-8 mb-12 fade-in-up delay-4">
+        <h2 class="text-4xl font-bold mb-6 gradient-text">04. Solution</h2>
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-semibold mb-4 text-white">New Features & Redesigns</h3>
+          <p class="text-gray-300 mb-6">The proposed solution addresses the identified problems by revamping existing features and introducing new ones:</p>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="feature-highlight">
+              <h4 class="text-lg font-semibold text-cyan-300 mb-2">Discovery Homepage</h4>
+              <p class="text-gray-300">Makes finding new content the primary focus of the app, using an infinite scroll and better filtering to address the discovery challenge.</p>
+            </div>
+
+            <div class="feature-highlight">
+              <h4 class="text-lg font-semibold text-cyan-300 mb-2">Revamped Artist Profiles</h4>
+              <p class="text-gray-300">Gives artists more control to showcase their work (videos, events), directly addressing Emma's need for better engagement tools and Leon's desire for deeper connection.</p>
+            </div>
+
+            <div class="feature-highlight">
+              <h4 class="text-lg font-semibold text-cyan-300 mb-2">Refreshed Feed</h4>
+              <p class="text-gray-300">Shifts the focus to meaningful updates from followed artists (e.g., behind-the-scenes content), making it more relevant.</p>
+            </div>
+
+            <div class="feature-highlight">
+              <h4 class="text-lg font-semibold text-cyan-300 mb-2">New Feature: Trackfinder</h4>
+              <p class="text-gray-300">An innovative, Tinder-style swiping feature for discovering track previews. This standout idea introduces a playful discovery mechanic without resorting to traditional algorithms, thus staying true to the Bandcamp ethos.</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-2xl font-semibold mb-4 text-white">Information Architecture & Validation</h3>
+          <p class="text-gray-300 mb-6">
+            The navigation was streamlined to be more intuitive (Discovery, Feed, Library). A brand refresh with a richer colour palette and updated typography addressed the "bland UI" complaint.
+          </p>
+          <p class="text-gray-300 mb-4">The project's strength lies in its iterative testing process and the use of the SUS metric to track progress quantitatively:</p>
+
+          <div class="space-y-4">
+            <div class="feature-highlight">
+              <strong class="text-white">Greyscale Prototype Testing:</strong> Early testing allowed for foundational improvements, raising the SUS score significantly to <strong class="text-cyan-300">80.5</strong> (a "Good" to "Excellent" score).
+            </div>
+            <div class="feature-highlight">
+              <strong class="text-white">High-Fidelity Prototype Testing:</strong> Final testing on a polished prototype validated the design choices, resulting in a final SUS score of <strong class="text-cyan-300">88</strong>, which is in the top 10% of all systems tested and is considered "Excellent."
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prototype Section -->
+  <section class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="glass-card p-8 mb-12 fade-in-up delay-5">
+        <h2 class="text-4xl font-bold mb-6 gradient-text">05. The Final Prototype</h2>
+        <p class="text-xl text-gray-300 mb-8">
+          The final prototype incorporates all iterations, resulting in a clean, modern design that doesn't lose Bandcamp's core identity. Key highlights include a visual refresh, clearer UI, and custom artist profiles.
+        </p>
+
+        <div class="glass-card p-6">
+          <iframe
+            style="border: none; border-radius: 12px;"
+            width="100%"
+            height="600"
+            src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/ETVVM3gFD5iUVy5CYvCPMN/Untitled?node-id=434-2014&starting-point-node-id=434%3A1239"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Takeaways -->
+  <section class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="glass-card p-8 mb-12 fade-in-up delay-6">
+        <h2 class="text-4xl font-bold mb-6 gradient-text">06. Key Takeaways</h2>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="persona-card">
+            <h3 class="text-2xl font-semibold mb-4 text-cyan-300">🤝 The User Ecosystem</h3>
+            <p class="text-gray-300">
+              By designing for both the fan (Leon) and the artist (Emma), the solution created a more cohesive and valuable ecosystem. Features that help artists connect with fans ultimately create a better, more engaging experience for those fans.
+            </p>
+          </div>
+
+          <div class="persona-card">
+            <h3 class="text-2xl font-semibold mb-4 text-purple-300">🧠 Revisiting as a Developer</h3>
+            <p class="text-gray-300">
+              My full-stack development course taught me more about UX design than I had expected. I learned that trying to change too much at once is a sign of immaturity. Despite seeing an improvement in our SUS score, we could have made the same improvements whilst maintaining Bandcamp's working brand identity. I will revisit this project at some point, and align Bandcamps old branding with our new features and navigation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Summary -->
+  <section class="py-20 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="glass-card p-12 fade-in-up delay-7">
+        <h2 class="text-4xl font-bold mb-6 gradient-text">The Impact</h2>
+        <p class="text-2xl text-gray-300 mb-8">
+          A Data-Driven Success Story
+        </p>
+        <p class="text-xl text-gray-300 mb-8">
+          The redesign led to a significant, measurable increase in user satisfaction and perceived usability.
+        </p>
+
+        <a href="#" class="cta-button" onclick="window.history.back()">
+          ← Back to Projects
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 text-center">
+    <p class="text-gray-500 text-lg font-mono">©2025</p>
+  </footer>
+
+  <script>
+    // Initialize fade-in animations
+    document.addEventListener("DOMContentLoaded", () => {
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.fade-in-up').forEach(el => {
+        observer.observe(el);
+      });
+    });
+
+    // Add smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+
+app/views/shared
+-----
+
+
+
+app/views/shared/_navbar.html.erb
+-----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Navbar</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<nav class="navbar" style="background: rgba(18, 18, 18, 0.95); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding: 1rem 0; position: fixed; top: 0; width: 100%; z-index: 1000; transition: all 0.3s ease;">
+    <div class="container-fluid px-4 d-flex justify-content-between align-items-center">
+
+        <!-- Brand -->
+        <a class="navbar-brand bg-dark rounded d-flex align-items-center gap-3" href="/" style="font-weight: 600; font-size: 1.5rem; color: #f5f5f7; text-decoration: none; transition: all 0.3s ease;">
+            <div style="height: 44px; width: 44px; border-radius: 12px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); font-weight: bold; color: white;">
+            JG
+            </div>
+        </a>
+
+        <!-- Navigation Links -->
+        <ul class="navbar-nav flex-row" style="gap: 2rem;">
+            <li class="nav-item">
+                <a class="nav-link nav-item-link" href="/dashboard" style="color: #a1a1a6; font-weight: 500; font-size: 1rem; text-decoration: none; padding: 12px 20px; border-radius: 50px; transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); position: relative; overflow: hidden;">
+                    My Work
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link nav-item-link" href="/about" style="color: #a1a1a6; font-weight: 500; font-size: 1rem; text-decoration: none; padding: 12px 20px; border-radius: 50px; transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); position: relative; overflow: hidden;">
+                    About
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link nav-item-link" href="/contact" style="color: #a1a1a6; font-weight: 500; font-size: 1rem; text-decoration: none; padding: 12px 20px; border-radius: 50px; transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); position: relative; overflow: hidden;">
+                    Contact
+                </a>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+
+
+<style>
+.navbar-brand:hover {
+    transform: translateY(-2px);
+    color: #f5f5f7 !important;
+}
+
+.nav-item-link::before {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #0A84FF, #64D2FF);
+    border-radius: 1px;
+    transform: translateX(-50%);
+    transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 0 8px rgba(10, 132, 255, 0.4);
+}
+
+.nav-item-link::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50px;
+    transform: scale(0);
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: -1;
+}
+
+.nav-item-link:hover::after {
+    transform: scale(1);
+}
+
+.nav-item-link:hover::before {
+    width: 24px;
+}
+
+.nav-item-link:hover {
+    color: #f5f5f7 !important;
+    transform: translateY(-1px);
+}
+
+.nav-item-link:active {
+    transform: translateY(0) scale(0.98);
+}
+
+.nav-item-link.active::before {
+    width: 24px;
+}
+
+.nav-item-link.active {
+    color: #f5f5f7 !important;
+}
+
+.nav-item-link.active::after {
+    transform: scale(1);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.nav-item-link');
+    const currentPath = window.location.pathname;
+
+    // Set active link based on current page
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+
+        if ((currentPath === '/' && href === '/dashboard') ||
+            (currentPath === '/dashboard' && href === '/dashboard') ||
+            (currentPath === '/about' && href === '/about') ||
+            (currentPath === '/contact' && href === '/contact')) {
+            link.classList.add('active');
+        }
+
+        // Add click handler for smooth active state
+        link.addEventListener('click', function() {
+            navLinks.forEach(l => l.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+
+    // Cool ripple effect on click
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const ripple = document.createElement('span');
+            const rect = this.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = e.clientX - rect.left - size / 2;
+            const y = e.clientY - rect.top - size / 2;
+
+            ripple.style.width = ripple.style.height = size + 'px';
+            ripple.style.left = x + 'px';
+            ripple.style.top = y + 'px';
+            ripple.style.position = 'absolute';
+            ripple.style.background = 'rgba(10, 132, 255, 0.4)';
+            ripple.style.borderRadius = '50%';
+            ripple.style.transform = 'scale(0)';
+            ripple.style.animation = 'ripple 0.6s linear';
+            ripple.style.pointerEvents = 'none';
+
+            this.appendChild(ripple);
+
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        });
+    });
+});
+</script>
+
+</body>
+</html>
+
+
+
+routes.rb
+-----
+
+
+
+app/controllers/pages_controller.rb
+-----
+class PagesController < ApplicationController
+  def dashboard
+  end
+
+  def about
+  end
+
+  def projects
+  end
+
+  def contact
+  end
+end
+
+
+
+app/assets/stylesheets/application.css
+-----
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+
+app/views/shared/_navbar.html.erb
+-----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Navbar</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<nav class="navbar" style="background: rgba(18, 18, 18, 0.95); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding: 1rem 0; position: fixed; top: 0; width: 100%; z-index: 1000; transition: all 0.3s ease;">
+    <div class="container-fluid px-4 d-flex justify-content-between align-items-center">
+
+        <!-- Brand -->
+        <a class="navbar-brand bg-dark rounded d-flex align-items-center gap-3" href="/" style="font-weight: 600; font-size: 1.5rem; color: #f5f5f7; text-decoration: none; transition: all 0.3s ease;">
+            <div style="height: 44px; width: 44px; border-radius: 12px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); font-weight: bold; color: white;">
+            JG
+            </div>
+        </a>
+
+        <!-- Navigation Links -->
+        <ul class="navbar-nav flex-row" style="gap: 2rem;">
+            <li class="nav-item">
+                <a class="nav-link nav-item-link" href="/dashboard" style="color: #a1a1a6; font-weight: 500; font-size: 1rem; text-decoration: none; padding: 12px 20px; border-radius: 50px; transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); position: relative; overflow: hidden;">
+                    My Work
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link nav-item-link" href="/about" style="color: #a1a1a6; font-weight: 500; font-size: 1rem; text-decoration: none; padding: 12px 20px; border-radius: 50px; transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); position: relative; overflow: hidden;">
+                    About
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link nav-item-link" href="/contact" style="color: #a1a1a6; font-weight: 500; font-size: 1rem; text-decoration: none; padding: 12px 20px; border-radius: 50px; transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); position: relative; overflow: hidden;">
+                    Contact
+                </a>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+
+
+<style>
+.navbar-brand:hover {
+    transform: translateY(-2px);
+    color: #f5f5f7 !important;
+}
+
+.nav-item-link::before {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #0A84FF, #64D2FF);
+    border-radius: 1px;
+    transform: translateX(-50%);
+    transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 0 8px rgba(10, 132, 255, 0.4);
+}
+
+.nav-item-link::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50px;
+    transform: scale(0);
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: -1;
+}
+
+.nav-item-link:hover::after {
+    transform: scale(1);
+}
+
+.nav-item-link:hover::before {
+    width: 24px;
+}
+
+.nav-item-link:hover {
+    color: #f5f5f7 !important;
+    transform: translateY(-1px);
+}
+
+.nav-item-link:active {
+    transform: translateY(0) scale(0.98);
+}
+
+.nav-item-link.active::before {
+    width: 24px;
+}
+
+.nav-item-link.active {
+    color: #f5f5f7 !important;
+}
+
+.nav-item-link.active::after {
+    transform: scale(1);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.nav-item-link');
+    const currentPath = window.location.pathname;
+
+    // Set active link based on current page
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+
+        if ((currentPath === '/' && href === '/dashboard') ||
+            (currentPath === '/dashboard' && href === '/dashboard') ||
+            (currentPath === '/about' && href === '/about') ||
+            (currentPath === '/contact' && href === '/contact')) {
+            link.classList.add('active');
+        }
+
+        // Add click handler for smooth active state
+        link.addEventListener('click', function() {
+            navLinks.forEach(l => l.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+
+    // Cool ripple effect on click
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const ripple = document.createElement('span');
+            const rect = this.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = e.clientX - rect.left - size / 2;
+            const y = e.clientY - rect.top - size / 2;
+
+            ripple.style.width = ripple.style.height = size + 'px';
+            ripple.style.left = x + 'px';
+            ripple.style.top = y + 'px';
+            ripple.style.position = 'absolute';
+            ripple.style.background = 'rgba(10, 132, 255, 0.4)';
+            ripple.style.borderRadius = '50%';
+            ripple.style.transform = 'scale(0)';
+            ripple.style.animation = 'ripple 0.6s linear';
+            ripple.style.pointerEvents = 'none';
+
+            this.appendChild(ripple);
+
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        });
+    });
+});
+</script>
+
+</body>
+</html>
+
+
+
+app/views/layouts/application.html.erb
+-----
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Portfolionew</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  </head>
+
+  <body>
+    <%= render 'shared/navbar' %>
+    <%= yield %>
+
+  </body>
+</html>
+
+
+
+app/views/layouts/mailer.html.erb
+-----
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
+
+
+
+app/views/layouts/mailer.text.erb
+-----
+<%= yield %>
+
+
+
+app/views/pages/projects/bandcamp.html.erb
+-----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bandcamp App Redesign: A UX Case Study</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #f5f5f7;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .glass-card {
+      background: rgba(30, 30, 30, 0.7);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .glass-card:hover {
+      background: rgba(40, 40, 40, 0.8);
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .neon-accent {
+      background: linear-gradient(135deg, #00f5ff, #0080ff);
+      padding: 2px 12px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #000;
+      display: inline-block;
+    }
+
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .fade-in-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section-header {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 2rem;
+      background: linear-gradient(135deg, #f5f5f7 0%, #a1a1a6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .metric-card {
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+      border: 1px solid rgba(102, 126, 234, 0.3);
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .metric-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
+    }
+
+    .metric-number {
+      font-size: 3rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #00f5ff, #0080ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .persona-card {
+      background: rgba(30, 30, 30, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .persona-card:hover {
+      background: rgba(40, 40, 40, 0.9);
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .feature-highlight {
+      background: linear-gradient(135deg, rgba(0, 245, 255, 0.1), rgba(0, 128, 255, 0.1));
+      border: 1px solid rgba(0, 245, 255, 0.3);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1rem 0;
+    }
+
+    .floating-elements::before {
+      content: '';
+      position: absolute;
+      top: 20%;
+      left: -10%;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(102, 126, 234, 0.15) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: float 20s infinite linear;
+      z-index: -1;
+    }
+
+    .floating-elements::after {
+      content: '';
+      position: absolute;
+      bottom: 20%;
+      right: -10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(118, 75, 162, 0.1) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: float 25s infinite reverse linear;
+      z-index: -1;
+    }
+
+    @keyframes float {
+      from { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+      to { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+    }
+
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.2s; }
+    .delay-3 { transition-delay: 0.3s; }
+    .delay-4 { transition-delay: 0.4s; }
+    .delay-5 { transition-delay: 0.5s; }
+    .delay-6 { transition-delay: 0.6s; }
+    .delay-7 { transition-delay: 0.7s; }
+
+    .typewriter {
+      border-right: 3px solid #00f5ff;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 3s steps(20, end), blink-caret 1s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: #00f5ff }
+    }
+
+    .cta-button {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 16px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: inline-block;
+      box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    }
+
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .section-header {
+        font-size: 2.5rem;
+      }
+
+      .typewriter {
+        font-size: 2rem !important;
+      }
+    }
+  </style>
+</head>
+<body class="floating-elements" style="position: relative;">
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center justify-center px-4 py-20">
+    <div class="max-w-6xl mx-auto text-center">
+      <div class="fade-in-up">
+        <div class="neon-accent mb-6">UX Case Study</div>
+        <h1 class="typewriter section-header mb-8">
+          Bandcamp Redesign
+        </h1>
+        <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          A comprehensive UX redesign that increased user satisfaction by 26.6% through innovative discovery features and enhanced artist-fan connections.
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-6 mb-12">
+          <div class="metric-card delay-1 fade-in-up">
+            <div class="metric-number">+18.5</div>
+            <div class="text-gray-400">Point SUS Increase</div>
+          </div>
+          <div class="metric-card delay-2 fade-in-up">
+            <div class="metric-number">88/100</div>
+            <div class="text-gray-400">Final SUS Score</div>
+          </div>
+          <div class="metric-card delay-3 fade-in-up">
+            <div class="metric-number">26.6%</div>
+            <div class="text-gray-400">Usability Improvement</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Overview -->
+  <section class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="glass-card p-8 mb-12 fade-in-up">
+        <h2 class="text-4xl font-bold mb-6 gradient-text">01. Project Overview</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-2xl font-semibold mb-4 text-white">The Challenge</h3>
+            <p class="text-gray-300 mb-6">
+              This document outlines a conceptual redesign of the Bandcamp mobile app. It follows a classic, robust UX design process, starting with research to identify a problem and concluding with a validated, high-fidelity prototype that demonstrates significant improvement.
+            </p>
+            <p class="text-gray-300">
+              The project's core objective was to enhance the user experience to increase engagement and satisfaction, while preserving Bandcamp's unique identity as a platform focused on directly supporting independent artists.
+            </p>
+          </div>
+          <div class="space-y-4">
+            <div class="feature-highlight">
+              <strong class="text-white">Company:</strong> Bandcamp (Conceptual Redesign)
+            </div>
+            <div class="feature-highlight">
+              <strong class="text-white">Primary Metric:</strong> System Usability Scale (SUS)
+            </div>
+            <div class="feature-highlight">
+              <strong class="text-white">Key Result:</strong> Final SUS score of <strong class="text-cyan-300">88/100</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Section -->
+  <section class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="glass-card p-8 mb-12 fade-in-up delay-2">
+        <h2 class="text-4xl font-bold mb-6 gradient-text">02. Research</h2>
+        <p class="text-xl text-gray-300 mb-8">
+          The project began with a solid research phase combining quantitative and qualitative methods to establish a baseline and uncover user pain points.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="persona-card">
+            <h3 class="text-2xl font-semibold mb-4 text-cyan-300">Baseline Usability Testing</h3>
+            <h4 class="text-lg font-medium mb-3 text-white">Establishing a Quantitative Baseline</h4>
+            <p class="text-gray-300 mb-4">
+              A baseline System Usability Scale (SUS) score of <strong class="text-cyan-300">69.5</strong> was established. This score is considered "OK" or "Marginal," sitting just below the industry average of 68 and indicating clear room for improvement.
+            </p>
+            <p class="text-gray-300">
+              Key findings from testing showed that core features like <strong>Bandcamp Radio</strong> and <strong>Daily</strong> were ignored, the <strong>UI felt bland</strong>, and the <strong>feed was perceived as irrelevant</strong> by a majority of users tested.
+            </p>
+          </div>
+
+          <div class="persona-card">
+            <h3 class="text-2xl font-semibold mb-4 text-cyan-300">User Interviews</h3>
+            <h4 class="text-lg font-medium mb-3 text-white">Uncovering Qualitative Insights</h4>
+            <p class="text-gray-300 mb-4">
+              Interviews with fans and artists revealed a critical insight: users desire a closer connection to artists and their creative process, which they currently seek on other platforms like Instagram and YouTube.
+            </p>
+            <p class="text-gray-300">
+              A core tension was identified: Bandcamp's "algorithm-free" stance, while central to its brand, hinders music discovery for many users who are accustomed to algorithm-driven recommendations.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem & Personas -->
+  <section class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="glass-card p-8 mb-12 fade-in-up delay-3">
+        <h2 class="text-4xl font-bold mb-6 gradient-text">03. Problem Definition</h2>
+        <p class="text-xl text-gray-300 mb-8">
+          The research was effectively synthesized into user personas and a clear problem statement, ensuring the design process remained focused on user needs. The design centered on two key personas to represent both sides of the platform's community.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-8">
+          <!-- Leon Persona -->
+          <div class="persona-card">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-20 h-20 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center text-2xl font-bold text-black">
+                🎧
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-white">Leon</h3>
+                <p class="text-cyan-300">The Fan, 28</p>
+              </div>
+            </div>
+            <div class="space-y-3">
+              <div>
+                <strong class="text-white">Occupation:</strong> <span class="text-gray-300">Graphic Designer</span><br>
+                <strong class="text-white">Hobby:</strong> <span class="text-gray-300">Record Collector</span>
+              </div>
+              <div>
+                <strong class="text-white">Bio:</strong>
+                <p class="text-gray-300 mt-2">
+                  Leon loves discovering new music, especially from smaller artists. He finds big streaming platforms too repetitive and algorithm-heavy, and wants to feel closer to the people making the music he loves.
+                </p>
+              </div>
+              <div class="feature-highlight border-l-4 border-cyan-400 pl-4">
+                <em class="text-cyan-200">"I want to feel connected to the artists and their creative process."</em>
+              </div>
+            </div>
+          </div>
+
+          <!-- Emma Persona -->
+          <div class="persona-card">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-20 h-20 rounded-full bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center text-2xl font-bold text-black">
+                🎤
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-white">Emma</h3>
+                <p class="text-purple-300">The Artist, 25</p>
+              </div>
+            </div>
+            <div class="space-y-3">
+              <div>
+                <strong class="text-white">Occupation:</strong> <span class="text-gray-300">Independent Musician</span>
+              </div>
+              <div>
+                <strong class="text-white">Bio:</strong>
+                <p class="text-gray-300 mt-2">
+                  Emma loves that Bandcamp gives her financial and creative control, but she wants better tools to actually engage her fans on the platform—beyond just selling them music and merch.
+                </p>
+              </div>
+              <div class="feature-highlight border-l-4 border-purple-400 pl-4">
+                <em class="text-purple-200">"I need better ways to share my journey and connect with fans directly on Bandcamp."</em>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card p-6 text-center">
+          <h3 class="text-2xl font-bold text-white mb-4">Problem Statement</h3>
+          <p class="text-xl text-cyan-300 font-medium">
+            "How might we help Leon connect more with artists and discover new music — while giving Emma better tools to grow her fanbase on Bandcamp?"
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution Section -->
+  <section class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="glass-card p-8 mb-12 fade-in-up delay-4">
+        <h2 class="text-4xl font-bold mb-6 gradient-text">04. Solution</h2>
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-semibold mb-4 text-white">New Features & Redesigns</h3>
+          <p class="text-gray-300 mb-6">The proposed solution addresses the identified problems by revamping existing features and introducing new ones:</p>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="feature-highlight">
+              <h4 class="text-lg font-semibold text-cyan-300 mb-2">Discovery Homepage</h4>
+              <p class="text-gray-300">Makes finding new content the primary focus of the app, using an infinite scroll and better filtering to address the discovery challenge.</p>
+            </div>
+
+            <div class="feature-highlight">
+              <h4 class="text-lg font-semibold text-cyan-300 mb-2">Revamped Artist Profiles</h4>
+              <p class="text-gray-300">Gives artists more control to showcase their work (videos, events), directly addressing Emma's need for better engagement tools and Leon's desire for deeper connection.</p>
+            </div>
+
+            <div class="feature-highlight">
+              <h4 class="text-lg font-semibold text-cyan-300 mb-2">Refreshed Feed</h4>
+              <p class="text-gray-300">Shifts the focus to meaningful updates from followed artists (e.g., behind-the-scenes content), making it more relevant.</p>
+            </div>
+
+            <div class="feature-highlight">
+              <h4 class="text-lg font-semibold text-cyan-300 mb-2">New Feature: Trackfinder</h4>
+              <p class="text-gray-300">An innovative, Tinder-style swiping feature for discovering track previews. This standout idea introduces a playful discovery mechanic without resorting to traditional algorithms, thus staying true to the Bandcamp ethos.</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-2xl font-semibold mb-4 text-white">Information Architecture & Validation</h3>
+          <p class="text-gray-300 mb-6">
+            The navigation was streamlined to be more intuitive (Discovery, Feed, Library). A brand refresh with a richer colour palette and updated typography addressed the "bland UI" complaint.
+          </p>
+          <p class="text-gray-300 mb-4">The project's strength lies in its iterative testing process and the use of the SUS metric to track progress quantitatively:</p>
+
+          <div class="space-y-4">
+            <div class="feature-highlight">
+              <strong class="text-white">Greyscale Prototype Testing:</strong> Early testing allowed for foundational improvements, raising the SUS score significantly to <strong class="text-cyan-300">80.5</strong> (a "Good" to "Excellent" score).
+            </div>
+            <div class="feature-highlight">
+              <strong class="text-white">High-Fidelity Prototype Testing:</strong> Final testing on a polished prototype validated the design choices, resulting in a final SUS score of <strong class="text-cyan-300">88</strong>, which is in the top 10% of all systems tested and is considered "Excellent."
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prototype Section -->
+  <section class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="glass-card p-8 mb-12 fade-in-up delay-5">
+        <h2 class="text-4xl font-bold mb-6 gradient-text">05. The Final Prototype</h2>
+        <p class="text-xl text-gray-300 mb-8">
+          The final prototype incorporates all iterations, resulting in a clean, modern design that doesn't lose Bandcamp's core identity. Key highlights include a visual refresh, clearer UI, and custom artist profiles.
+        </p>
+
+        <div class="glass-card p-6">
+          <iframe
+            style="border: none; border-radius: 12px;"
+            width="100%"
+            height="600"
+            src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/ETVVM3gFD5iUVy5CYvCPMN/Untitled?node-id=434-2014&starting-point-node-id=434%3A1239"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Takeaways -->
+  <section class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="glass-card p-8 mb-12 fade-in-up delay-6">
+        <h2 class="text-4xl font-bold mb-6 gradient-text">06. Key Takeaways</h2>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="persona-card">
+            <h3 class="text-2xl font-semibold mb-4 text-cyan-300">🤝 The User Ecosystem</h3>
+            <p class="text-gray-300">
+              By designing for both the fan (Leon) and the artist (Emma), the solution created a more cohesive and valuable ecosystem. Features that help artists connect with fans ultimately create a better, more engaging experience for those fans.
+            </p>
+          </div>
+
+          <div class="persona-card">
+            <h3 class="text-2xl font-semibold mb-4 text-purple-300">🧠 Revisiting as a Developer</h3>
+            <p class="text-gray-300">
+              My full-stack development course taught me more about UX design than I had expected. I learned that trying to change too much at once is a sign of immaturity. Despite seeing an improvement in our SUS score, we could have made the same improvements whilst maintaining Bandcamp's working brand identity. I will revisit this project at some point, and align Bandcamps old branding with our new features and navigation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Summary -->
+  <section class="py-20 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="glass-card p-12 fade-in-up delay-7">
+        <h2 class="text-4xl font-bold mb-6 gradient-text">The Impact</h2>
+        <p class="text-2xl text-gray-300 mb-8">
+          A Data-Driven Success Story
+        </p>
+        <p class="text-xl text-gray-300 mb-8">
+          The redesign led to a significant, measurable increase in user satisfaction and perceived usability.
+        </p>
+
+        <a href="#" class="cta-button" onclick="window.history.back()">
+          ← Back to Projects
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 text-center">
+    <p class="text-gray-500 text-lg font-mono">©2025</p>
+  </footer>
+
+  <script>
+    // Initialize fade-in animations
+    document.addEventListener("DOMContentLoaded", () => {
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.fade-in-up').forEach(el => {
+        observer.observe(el);
+      });
+    });
+
+    // Add smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+
+app/views/pages/contact.html.erb
+-----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bandcamp App Redesign: A UX Case Study</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: white;
+      color: #f5f5f7;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .glass-card {
+      background: rgba(30, 30, 30, 0.7);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .glass-card:hover {
+      background: rgba(40, 40, 40, 0.8);
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .neon-accent {
+      background: linear-gradient(135deg, #00f5ff, #0080ff);
+      padding: 2px 12px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #000;
+      display: inline-block;
+    }
+
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .fade-in-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section-header {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 2rem;
+      background: linear-gradient(135deg, #f5f5f7 0%, #a1a1a6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .metric-card {
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+      border: 1px solid rgba(102, 126, 234, 0.3);
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .metric-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
+    }
+
+    .metric-number {
+      font-size: 3rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #00f5ff, #0080ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .persona-card {
+      background: rgba(30, 30, 30, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .persona-card:hover {
+      background: rgba(40, 40, 40, 0.9);
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .feature-highlight {
+      background: linear-gradient(135deg, rgba(0, 245, 255, 0.1), rgba(0, 128, 255, 0.1));
+      border: 1px solid rgba(0, 245, 255, 0.3);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1rem 0;
+    }
+
+    .floating-elements::before {
+      content: '';
+      position: absolute;
+      top: 20%;
+      left: -10%;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(102, 126, 234, 0.15) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: float 20s infinite linear;
+      z-index: -1;
+    }
+
+    .floating-elements::after {
+      content: '';
+      position: absolute;
+      bottom: 20%;
+      right: -10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(118, 75, 162, 0.1) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: float 25s infinite reverse linear;
+      z-index: -1;
+    }
+
+    @keyframes float {
+      from { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+      to { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+    }
+
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.2s; }
+    .delay-3 { transition-delay: 0.3s; }
+    .delay-4 { transition-delay: 0.4s; }
+    .delay-5 { transition-delay: 0.5s; }
+    .delay-6 { transition-delay: 0.6s; }
+    .delay-7 { transition-delay: 0.7s; }
+
+    .typewriter {
+      border-right: 3px solid #00f5ff;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 3s steps(20, end), blink-caret 1s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: #00f5ff }
+    }
+
+    .cta-button {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 16px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: inline-block;
+      box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    }
+
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .section-header {
+        font-size: 2.5rem;
+      }
+
+      .typewriter {
+        font-size: 2rem !important;
+      }
+    }
+  </style>
+</head>
+<body class="floating-elements" style="position: relative;">
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center justify-center px-4 py-20">
+    <div class="max-w-6xl mx-auto text-center">
+      <div class="fade-in-up">
+        <div class="neon-accent mb-6">UX Case Study</div>
+        <h1 class="typewriter section-header mb-8">
+          Bandcamp Redesign
+        </h1>
+        <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          A comprehensive UX redesign that increased user satisfaction by 26.6% through innovative discovery features and enhanced artist-fan connections.
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-6 mb-12">
+          <div class="metric-card delay-1 fade-in-up">
+            <div class="metric-number">+18.5</div>
+            <div class="text-gray-400">Point SUS Increase</div>
+          </div>
+          <div class="metric-card delay-2 fade-in-up">
+            <div class="metric-number">88/100</div>
+            <div class="text-gray-400">Final SUS Score</div>
+          </div>
+          <div class="metric-card delay-3 fade-in-up">
+            <div class="metric-number">26.6%</div>
+            <div class="text-gray-400">Usability Improvement</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Overview -->
+  <section class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="glass-card p-8 mb-12 fade-in-up">
+        <h2 class="text-4xl font-bold mb-6 gradient-text">01. Project Overview</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-2xl font-semibold mb-4 text-white">The Challenge</h3>
+            <p class="text-gray-300 mb-6">
+              This document outlines a conceptual redesign of the Bandcamp mobile app. It follows a classic, robust UX design process, starting with research to identify a problem and concluding with a validated, high-fidelity prototype that demonstrates significant improvement.
+            </p>
+            <p class="text-gray-300">
+              The project's core objective was to enhance the user experience to increase engagement and satisfaction, while preserving Bandcamp's unique identity as a platform focused on directly supporting independent artists.
+            </p>
+          </div>
+          <div class="space-y-4">
+            <div class="feature-highlight">
+              <strong class="text-white">Company:</strong> Bandcamp (Conceptual Redesign)
+            </div>
+            <div class="feature-highlight">
+              <strong class="text-white">Primary Metric:</strong> System Usability Scale (SUS)
+            </div>
+            <div class="feature-highlight">
+              <strong class="text-white">Key Result:</strong> Final SUS score of <strong class="text-cyan-300">88/100</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Section -->
+  <section class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="glass-card p-8 mb-12 fade-in-up delay-2">
+        <h2 class="text-4xl font-bold mb-6 gradient-text">02. Research</h2>
+        <p class="text-xl text-gray-300 mb-8">
+          The project began with a solid research phase combining quantitative and qualitative methods to establish a baseline and uncover user pain points.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="persona-card">
+            <h3 class="text-2xl font-semibold mb-4 text-cyan-300">Baseline Usability Testing</h3>
+            <h4 class="text-lg font-medium mb-3 text-white">Establishing a Quantitative Baseline</h4>
+            <p class="text-gray-300 mb-4">
+              A baseline System Usability Scale (SUS) score of <strong class="text-cyan-300">69.5</strong> was established. This score is considered "OK" or "Marginal," sitting just below the industry average of 68 and indicating clear room for improvement.
+            </p>
+            <p class="text-gray-300">
+              Key findings from testing showed that core features like <strong>Bandcamp Radio</strong> and <strong>Daily</strong> were ignored, the <strong>UI felt bland</strong>, and the <strong>feed was perceived as irrelevant</strong> by a majority of users tested.
+            </p>
+          </div>
+
+          <div class="persona-card">
+            <h3 class="text-2xl font-semibold mb-4 text-cyan-300">User Interviews</h3>
+            <h4 class="text-lg font-medium mb-3 text-white">Uncovering Qualitative Insights</h4>
+            <p class="text-gray-300 mb-4">
+              Interviews with fans and artists revealed a critical insight: users desire a closer connection to artists and their creative process, which they currently seek on other platforms like Instagram and YouTube.
+            </p>
+            <p class="text-gray-300">
+              A core tension was identified: Bandcamp's "algorithm-free" stance, while central to its brand, hinders music discovery for many users who are accustomed to algorithm-driven recommendations.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem & Personas -->
+  <section class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="glass-card p-8 mb-12 fade-in-up delay-3">
+        <h2 class="text-4xl font-bold mb-6 gradient-text">03. Problem Definition</h2>
+        <p class="text-xl text-gray-300 mb-8">
+          The research was effectively synthesized into user personas and a clear problem statement, ensuring the design process remained focused on user needs. The design centered on two key personas to represent both sides of the platform's community.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-8">
+          <!-- Leon Persona -->
+          <div class="persona-card">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-20 h-20 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center text-2xl font-bold text-black">
+                🎧
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-white">Leon</h3>
+                <p class="text-cyan-300">The Fan, 28</p>
+              </div>
+            </div>
+            <div class="space-y-3">
+              <div>
+                <strong class="text-white">Occupation:</strong> <span class="text-gray-300">Graphic Designer</span><br>
+                <strong class="text-white">Hobby:</strong> <span class="text-gray-300">Record Collector</span>
+              </div>
+              <div>
+                <strong class="text-white">Bio:</strong>
+                <p class="text-gray-300 mt-2">
+                  Leon loves discovering new music, especially from smaller artists. He finds big streaming platforms too repetitive and algorithm-heavy, and wants to feel closer to the people making the music he loves.
+                </p>
+              </div>
+              <div class="feature-highlight border-l-4 border-cyan-400 pl-4">
+                <em class="text-cyan-200">"I want to feel connected to the artists and their creative process."</em>
+              </div>
+            </div>
+          </div>
+
+          <!-- Emma Persona -->
+          <div class="persona-card">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-20 h-20 rounded-full bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center text-2xl font-bold text-black">
+                🎤
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-white">Emma</h3>
+                <p class="text-purple-300">The Artist, 25</p>
+              </div>
+            </div>
+            <div class="space-y-3">
+              <div>
+                <strong class="text-white">Occupation:</strong> <span class="text-gray-300">Independent Musician</span>
+              </div>
+              <div>
+                <strong class="text-white">Bio:</strong>
+                <p class="text-gray-300 mt-2">
+                  Emma loves that Bandcamp gives her financial and creative control, but she wants better tools to actually engage her fans on the platform—beyond just selling them music and merch.
+                </p>
+              </div>
+              <div class="feature-highlight border-l-4 border-purple-400 pl-4">
+                <em class="text-purple-200">"I need better ways to share my journey and connect with fans directly on Bandcamp."</em>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card p-6 text-center">
+          <h3 class="text-2xl font-bold text-white mb-4">Problem Statement</h3>
+          <p class="text-xl text-cyan-300 font-medium">
+            "How might we help Leon connect more with artists and discover new music — while giving Emma better tools to grow her fanbase on Bandcamp?"
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution Section -->
+  <section class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="glass-card p-8 mb-12 fade-in-up delay-4">
+        <h2 class="text-4xl font-bold mb-6 gradient-text">04. Solution</h2>
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-semibold mb-4 text-white">New Features & Redesigns</h3>
+          <p class="text-gray-300 mb-6">The proposed solution addresses the identified problems by revamping existing features and introducing new ones:</p>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="feature-highlight">
+              <h4 class="text-lg font-semibold text-cyan-300 mb-2">Discovery Homepage</h4>
+              <p class="text-gray-300">Makes finding new content the primary focus of the app, using an infinite scroll and better filtering to address the discovery challenge.</p>
+            </div>
+
+            <div class="feature-highlight">
+              <h4 class="text-lg font-semibold text-cyan-300 mb-2">Revamped Artist Profiles</h4>
+              <p class="text-gray-300">Gives artists more control to showcase their work (videos, events), directly addressing Emma's need for better engagement tools and Leon's desire for deeper connection.</p>
+            </div>
+
+            <div class="feature-highlight">
+              <h4 class="text-lg font-semibold text-cyan-300 mb-2">Refreshed Feed</h4>
+              <p class="text-gray-300">Shifts the focus to meaningful updates from followed artists (e.g., behind-the-scenes content), making it more relevant.</p>
+            </div>
+
+            <div class="feature-highlight">
+              <h4 class="text-lg font-semibold text-cyan-300 mb-2">New Feature: Trackfinder</h4>
+              <p class="text-gray-300">An innovative, Tinder-style swiping feature for discovering track previews. This standout idea introduces a playful discovery mechanic without resorting to traditional algorithms, thus staying true to the Bandcamp ethos.</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-2xl font-semibold mb-4 text-white">Information Architecture & Validation</h3>
+          <p class="text-gray-300 mb-6">
+            The navigation was streamlined to be more intuitive (Discovery, Feed, Library). A brand refresh with a richer colour palette and updated typography addressed the "bland UI" complaint.
+          </p>
+          <p class="text-gray-300 mb-4">The project's strength lies in its iterative testing process and the use of the SUS metric to track progress quantitatively:</p>
+
+          <div class="space-y-4">
+            <div class="feature-highlight">
+              <strong class="text-white">Greyscale Prototype Testing:</strong> Early testing allowed for foundational improvements, raising the SUS score significantly to <strong class="text-cyan-300">80.5</strong> (a "Good" to "Excellent" score).
+            </div>
+            <div class="feature-highlight">
+              <strong class="text-white">High-Fidelity Prototype Testing:</strong> Final testing on a polished prototype validated the design choices, resulting in a final SUS score of <strong class="text-cyan-300">88</strong>, which is in the top 10% of all systems tested and is considered "Excellent."
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prototype Section -->
+  <section class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="glass-card p-8 mb-12 fade-in-up delay-5">
+        <h2 class="text-4xl font-bold mb-6 gradient-text">05. The Final Prototype</h2>
+        <p class="text-xl text-gray-300 mb-8">
+          The final prototype incorporates all iterations, resulting in a clean, modern design that doesn't lose Bandcamp's core identity. Key highlights include a visual refresh, clearer UI, and custom artist profiles.
+        </p>
+
+        <div class="glass-card p-6">
+          <iframe
+            style="border: none; border-radius: 12px;"
+            width="100%"
+            height="600"
+            src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/ETVVM3gFD5iUVy5CYvCPMN/Untitled?node-id=434-2014&starting-point-node-id=434%3A1239"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Takeaways -->
+  <section class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="glass-card p-8 mb-12 fade-in-up delay-6">
+        <h2 class="text-4xl font-bold mb-6 gradient-text">06. Key Takeaways</h2>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="persona-card">
+            <h3 class="text-2xl font-semibold mb-4 text-cyan-300">🤝 The User Ecosystem</h3>
+            <p class="text-gray-300">
+              By designing for both the fan (Leon) and the artist (Emma), the solution created a more cohesive and valuable ecosystem. Features that help artists connect with fans ultimately create a better, more engaging experience for those fans.
+            </p>
+          </div>
+
+          <div class="persona-card">
+            <h3 class="text-2xl font-semibold mb-4 text-purple-300">🧠 Revisiting as a Developer</h3>
+            <p class="text-gray-300">
+              My full-stack development course taught me more about UX design than I had expected. I learned that trying to change too much at once is a sign of immaturity. Despite seeing an improvement in our SUS score, we could have made the same improvements whilst maintaining Bandcamp's working brand identity. I will revisit this project at some point, and align Bandcamps old branding with our new features and navigation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Summary -->
+  <section class="py-20 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="glass-card p-12 fade-in-up delay-7">
+        <h2 class="text-4xl font-bold mb-6 gradient-text">The Impact</h2>
+        <p class="text-2xl text-gray-300 mb-8">
+          A Data-Driven Success Story
+        </p>
+        <p class="text-xl text-gray-300 mb-8">
+          The redesign led to a significant, measurable increase in user satisfaction and perceived usability.
+        </p>
+
+        <a href="#" class="cta-button" onclick="window.history.back()">
+          ← Back to Projects
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 text-center">
+    <p class="text-gray-500 text-lg font-mono">©2025</p>
+  </footer>
+
+  <script>
+    // Initialize fade-in animations
+    document.addEventListener("DOMContentLoaded", () => {
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.fade-in-up').forEach(el => {
+        observer.observe(el);
+      });
+    });
+
+    // Add smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+
+app/views/pages/dashboard.html.erb
+-----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jordan - UX Designer</title>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    rel="stylesheet"
+  />
+  <style>
+    /* --- General & Typography --- */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        sans-serif;
+      line-height: 1.6;
+      color: #1d1d1f;
+      background-color: #fafafa;
+    }
+    .display-light {
+      font-weight: 300;
+      letter-spacing: -1.5px;
+    }
+    .lead-muted {
+      color: #86868b;
+      max-width: 600px;
+      margin-inline: auto;
+    }
+    .fw-semibold { font-weight: 600 !important; }
+
+    /* --- Hero Section --- */
+    .hero-section {
+      position: relative;
+      min-height: 72vh;
+      color: white;
+      overflow: hidden;
+    }
+    .hero-video {
+      position: absolute;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: cover;
+      z-index: 0;
+    }
+    .video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .hero-content .h3 {
+      color: rgba(255, 255, 255, 0.9);
+    }
+    .hero-content .btn-dark {
+      background: #1d1d1f;
+      border: none;
+      border-radius: 50px;
+      padding: 12px 32px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    .hero-content .btn-dark:hover {
+      background: #333;
+      transform: translateY(-2px);
+    }
+
+    /* --- Projects Section --- */
+    #work {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+    .filter-btn {
+      transition: all 0.3s ease;
+      border-radius: 50px;
+      font-weight: 500;
+      border: 2px solid #d2d2d7;
+      color: #1d1d1f;
+      padding: 0.5rem 1.5rem;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: #1d1d1f !important;
+      color: white !important;
+      border-color: #1d1d1f !important;
+    }
+    .project-item {
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+    .project-item.fade-out {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    .card {
+      transition: all 0.3s ease;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      border: none;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1) !important;
+    }
+    .card-img-top {
+      height: 280px;
+      object-fit: cover;
+    }
+    .card-body .text-muted { color: #86868b !important; }
+    .card-body .text-body-secondary { color: #515154 !important; }
+    .project-icon {
+      width: 48px;
+      height: 48px;
+      color: white;
+    }
+    .project-icon-bf { background: linear-gradient(45deg, #007aff, #5856d6); }
+    .project-icon-pg { background: linear-gradient(45deg, #ff6b6b, #ff8e53); }
+    .project-icon-bc { background: linear-gradient(45deg, #1db584, #4ac0a6); }
+    .project-icon-ki { background: linear-gradient(45deg, #af52de, #bf5af2); }
+    .project-badge {
+      color: white;
+      border-radius: 20px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+    .badge-ux { background: linear-gradient(45deg, #34c759, #30d158); }
+    .badge-react { background: linear-gradient(45deg, #007aff, #5ac8fa); }
+    .badge-rails { background: linear-gradient(45deg, #af52de, #bf5af2); }
+  </style>
+</head>
+<body>
+<section class="hero-section d-flex align-items-center justify-content-center text-center">
+    <div class="video-overlay"></div>
+<video autoplay muted loop class="hero-video">
+  <source src="<%= asset_path('birds.mp4') %>" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+    <div class="container hero-content">
+      <h1 class="display-2 display-light mb-4 animate__animated animate__fadeInUp">
+        Hi, I'm Jordan
+      </h1>
+      <p class="h3 fw-light mb-5 animate__animated animate__fadeInUp animate__delay-1s">
+        A Junior UX Designer who codes
+      </p>
+      <a href="#work" class="btn btn-dark btn-lg animate__animated animate__fadeInUp animate__delay-2s">
+        View My Work
+      </a>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="display-5 display-light mb-4">Selected Work</h2>
+        <p class="lead lead-muted">
+          Crafting intuitive digital experiences through research, design, and code
+        </p>
+      </div>
+
+      <div class="d-flex justify-content-center gap-3 mb-5 flex-wrap">
+        <button class="btn filter-btn active" data-filter="all" type="button">All</button>
+        <button class="btn filter-btn" data-filter="ux" type="button">UX Design</button>
+        <button class="btn filter-btn" data-filter="web" type="button">Web Dev</button>
+      </div>
+
+      <div class="row g-4" id="projectsGrid">
+        <div class="col-md-6 col-lg-4 project-item" data-category="ux">
+          <div class="card h-100">
+            <img src="https://freight.cargo.site/t/original/i/5b4cc062d685ba39a884774e058e39e1070f33430879e0af609e8a8bc4674a0f/006_Cardsort_Square_1.gif" class="card-img-top" alt="British Fencing Project" />
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex align-items-center mb-3">
+                <div class="project-icon project-icon-bf rounded-circle me-3 d-flex align-items-center justify-content-center">
+                  <span class="fw-bold">BF</span>
+                </div>
+                <div>
+                  <h5 class="mb-1 fw-semibold">British Fencing</h5>
+                  <small class="text-muted">Information Architecture</small>
+                </div>
+              </div>
+              <p class="mb-4 text-body-secondary flex-grow-1">
+                Complete IA overhaul improving member navigation and task success by 45% through card sorting and user journey mapping.
+              </p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="badge project-badge badge-ux px-3 py-2">UX Research</span>
+                <small class="text-muted fw-bold">4 months ago</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 project-item" data-category="web">
+          <div class="card h-100">
+            <img src="https://giffiles.alphacoders.com/474/4748.gif" class="card-img-top" alt="Plan&Go Project" />
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex align-items-center mb-3">
+                <div class="project-icon project-icon-pg rounded-circle me-3 d-flex align-items-center justify-content-center">
+                  <span class="fw-bold">P&G</span>
+                </div>
+                <div>
+                  <h5 class="mb-1 fw-semibold">Plan&Go</h5>
+                  <small class="text-muted">Full-Stack Application</small>
+                </div>
+              </div>
+              <p class="mb-4 text-body-secondary flex-grow-1">
+                AI-powered travel planner built with React and Node.js, featuring intelligent itinerary generation and real-time recommendations.
+              </p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="badge project-badge badge-react px-3 py-2">React + AI</span>
+                <small class="text-muted fw-bold">6 months ago</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 project-item" data-category="ux">
+          <div class="card h-100">
+            <img src="https://cdn.dribbble.com/users/2602405/screenshots/7272043/media/f7a93ac536b771a3e9113a652e0b92cd.gif" class="card-img-top" alt="Bandcamp UX Audit" />
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex align-items-center mb-3">
+                <div class="project-icon project-icon-bc rounded-circle me-3 d-flex align-items-center justify-content-center">
+                  <span class="fw-bold">BC</span>
+                </div>
+                <div>
+                  <h5 class="mb-1 fw-semibold">Bandcamp Redesign</h5>
+                  <small class="text-muted">UX Audit & Prototype</small>
+                </div>
+              </div>
+              <p class="mb-4 text-body-secondary flex-grow-1">
+                Comprehensive UX audit identifying mobile purchase flow friction points, delivered as an interactive prototype with detailed recommendations.
+              </p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="badge project-badge badge-ux px-3 py-2">UX Audit</span>
+                <small class="text-muted fw-bold">1 year ago</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 project-item" data-category="web">
+          <div class="card h-100">
+            <img src="https://cdn.dribbble.com/users/1731253/screenshots/15013363/media/832bd01839a46e6656a09d0f3c0dbe30.gif" class="card-img-top" alt="KnowIt" />
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex align-items-center mb-3">
+                <div class="project-icon project-icon-ki rounded-circle me-3 d-flex align-items-center justify-content-center">
+                  <span class="fw-bold">KI</span>
+                </div>
+                <div>
+                  <h5 class="mb-1 fw-semibold">KnowIt</h5>
+                  <small class="text-muted">Learning Platform</small>
+                </div>
+              </div>
+              <p class="mb-4 text-body-secondary flex-grow-1">
+                Intelligent flashcard platform built with Ruby on Rails, featuring spaced repetition algorithms and personalized learning paths.
+              </p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="badge project-badge badge-rails px-3 py-2">Rails + AI</span>
+                <small class="text-muted fw-bold">9 months ago</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const projects = document.querySelectorAll(".project-item");
+      const projectsGrid = document.getElementById("projectsGrid");
+
+      filterButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const filter = btn.dataset.filter;
+
+          // Update active button state
+          filterButtons.forEach((button) => button.classList.remove("active"));
+          btn.classList.add("active");
+
+          // Animate and filter projects
+          projects.forEach((project) => {
+            project.classList.add("fade-out");
+          });
+
+          // Wait for fade-out animation to complete
+          setTimeout(() => {
+            projects.forEach((project) => {
+              const isVisible = filter === "all" || project.dataset.category === filter;
+              project.style.display = isVisible ? "block" : "none";
+              // Stagger the fade-in animation for a smoother effect
+              setTimeout(() => {
+                if(isVisible) project.classList.remove("fade-out");
+              }, 50);
+            });
+          }, 300); // Should match transition duration
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+
+app/views/pages/projects.html.erb
+-----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jordan's Projects</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --background-color: #f8f9fa;
+      --card-background: #ffffff;
+      --text-primary: #212529;
+      --text-secondary: #6c757d;
+      --primary-blue: #0d6efd;
+      --primary-green: #198754;
+      --border-color: #dee2e6;
+      --shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 8px 25px rgba(0, 0, 0, 0.1);
+      --shadow-lg: 0 12px 35px rgba(0, 0, 0, 0.15);
+      --border-radius: 1rem;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-primary);
+    }
+
+    .navbar {
+      background-color: var(--card-background);
+      box-shadow: var(--shadow-sm);
+    }
+    .navbar-brand {
+      font-weight: 700;
+      font-style: italic;
+    }
+
+    .main-content {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+    .main-content h1 {
+      font-weight: 700;
+      font-size: 2.75rem;
+    }
+    .main-content .lead {
+      color: var(--text-secondary);
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .filter-btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+    }
+    .filter-btn {
+      background: var(--card-background);
+      border: 1px solid var(--border-color);
+      padding: 0.6rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      border-radius: 99px;
+      box-shadow: var(--shadow-sm);
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+    }
+    .filter-btn:hover:not(.active) {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      color: var(--primary-blue);
+    }
+    .filter-btn.active {
+      background-color: var(--primary-blue);
+      color: white;
+      border-color: var(--primary-blue);
+      box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+      transform: translateY(-2px);
+    }
+
+    #projectsGrid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .project-item {
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+    .project-item.hide {
+      transform: scale(0.8);
+      opacity: 0;
+      width: 0 !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      overflow: hidden;
+      transition: transform 0.4s ease, opacity 0.4s ease, width 0.4s 0.4s ease, padding 0.4s 0.4s ease, margin 0.4s 0.4s ease;
+    }
+
+    .project-card {
+      background: var(--card-background);
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      transition: all 0.3s ease;
+    }
+    .project-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-8px);
+    }
+
+    .project-image {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+    }
+
+    .project-info {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .project-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 0.75rem;
+    }
+    .project-logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      object-fit: contain;
+      flex-shrink: 0;
+      padding: 4px;
+      background-color: #f1f3f5;
+    }
+    .project-title {
+      font-weight: 600;
+      font-size: 1.25rem;
+      margin: 0;
+    }
+
+    .project-subtitle {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+
+    .project-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9rem;
+      color: #888;
+    }
+    .category-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      color: white;
+    }
+    .category-ux { background-color: var(--primary-green); }
+    .category-web { background-color: var(--primary-blue); }
+  </style>
+</head>
+<body>
+
+  <main class="container main-content">
+    <div class="text-center mb-5">
+      <h1>My Work</h1>
+      <p class="lead">A selection of my favorite projects, crafted with care and an obsession for detail.</p>
+    </div>
+
+    <div class="filter-btn-group mb-5" id="filter-btn-group">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="web">Web Dev</button>
+      <button class="filter-btn" data-filter="ux">UX Design</button>
+    </div>
+
+    <div id="projectsGrid">
+      <div class="project-item" data-category="ux">
+        <div class="project-card">
+          <img src="https://freight.cargo.site/t/original/i/5b4cc062d685ba39a884774e058e39e1070f33430879e0af609e8a8bc4674a0f/006_Cardsort_Square_1.gif" alt="British Fencing Project" class="project-image">
+          <div class="project-info">
+            <div class="project-header">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3ktAspPp6uilbp7qoG6tyGhDwK4gfQ61HFvqQctwrwaIFU4aHTvbKdmJM70N3vrg-IFs&usqp=CAU" alt="British Fencing Logo" class="project-logo">
+              <h5 class="project-title">British Fencing</h5>
+            </div>
+            <p class="project-subtitle">Information Architecture overhaul to improve navigation and task success for members.</p>
+            <div class="project-footer">
+              <span class="category-label category-ux">UX Design</span>
+              <span>4 months ago</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-item" data-category="web">
+        <div class="project-card">
+          <img src="https://giffiles.alphacoders.com/474/4748.gif" alt="Plan&Go Project" class="project-image">
+          <div class="project-info">
+            <div class="project-header">
+              <img src="https://giffiles.alphacoders.com/474/4748.gif" alt="Plan&Go Logo" class="project-logo">
+              <h5 class="project-title">Plan&Go</h5>
+            </div>
+            <p class="project-subtitle">An AI-powered travel planner built with React and Node.js to generate custom itineraries.</p>
+            <div class="project-footer">
+              <span class="category-label category-web">Web Dev</span>
+              <span>6 months ago</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-item" data-category="ux">
+        <div class="project-card">
+          <img src="https://f4.bcbits.com/img/0027834469_0" alt="Bandcamp Project" class="project-image">
+          <div class="project-info">
+            <div class="project-header">
+              <img src="https://cdn-p.smehost.net/sites/7f9737f2506941499994d771a29ad47a/wp-content/uploads/2025/01/Bandcamp-Logo.jpg" alt="Bandcamp Logo" class="project-logo">
+              <h5 class="project-title">Bandcamp</h5>
+            </div>
+            <p class="project-subtitle">A mobile app redesign concept focused on improving music discovery and user engagement.</p>
+            <div class="project-footer">
+              <span class="category-label category-ux">UX Design</span>
+              <span>3 months ago</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-item" data-category="web">
+        <div class="project-card">
+          <img src="https://media4.giphy.com/media/v1.Y2lkPTZjMDliOTUycnR6MDhpd3JiMms5aGd0djd3OTB5Zmg5czIwam4wbDhodjd2emZiNyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/WvuMTf88aV3FQ4odG5/source.gif" alt="KnowIt Project" class="project-image">
+          <div class="project-info">
+            <div class="project-header">
+              <img src="https://media4.giphy.com/media/v1.Y2lkPTZjMDliOTUycnR6MDhpd3JiMms5aGd0djd3OTB5Zmg5czIwam4wbDhodjd2emZiNyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/WvuMTf88aV3FQ4odG5/source.gif" alt="KnowIt Logo" class="project-logo">
+              <h5 class="project-title">KnowIt</h5>
+            </div>
+            <p class="project-subtitle">An AI-powered quiz generator that creates interactive quizzes from any block of text.</p>
+            <div class="project-footer">
+              <span class="category-label category-web">Web Dev</span>
+              <span>2 months ago</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterButtons = document.querySelectorAll('#filter-btn-group .filter-btn');
+      const projectItems = document.querySelectorAll('#projectsGrid .project-item');
+      const projectsGrid = document.getElementById('projectsGrid');
+
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', function () {
+          filterButtons.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+
+          const filter = this.getAttribute('data-filter');
+
+          projectsGrid.style.pointerEvents = 'none';
+
+          projectItems.forEach(item => {
+            const category = item.getAttribute('data-category');
+            const shouldShow = (filter === 'all' || category === filter);
+
+            if (shouldShow) {
+              item.classList.remove('hide');
+            } else {
+              item.classList.add('hide');
+            }
+          });
+
+          setTimeout(() => {
+              projectsGrid.style.pointerEvents = 'auto';
+          }, 500);
+
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
+
+
+
+app/views/pages/about.html.erb
+-----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Jordan - UX Designer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; }
+       round: #fafafa;
+        }
+        .section-title {
+            color: #1d1d1f;
+            letter-spacing: -1px;
+            font-weight: 300;
+            margin-bottom: 3rem;
+        }
+        .education-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+            border: none;
+        }
+        .education-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+        }
+        .logo-container {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .logo-container img {
+            max-width: 60px;
+            max-height: 60px;
+            object-fit: contain;
+            filter: brightness(0.8);
+        }
+        .tool-item {
+            background: white;
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
+            text-align: center;
+            border: none;
+            height: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .tool-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        .tool-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: white;
+            font-size: 1.1rem;
+        }
+        .btn-primary {
+            background: #1d1d1f;
+            border: none;
+            border-radius: 50px;
+            padding: 16px 40px;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-primary:hover {
+            background: #333;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .intro-text {
+            font-size: 1.25rem;
+            line-height: 1.7;
+            color: #515154;
+            max-width: 800px;
+        }
+        .education-title {
+            color: #1d1d1f;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .education-subtitle {
+            color: #007AFF;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        .education-description {
+            color: #515154;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container py-5">
+
+    <!-- WHO I AM Section -->
+    <section class="mb-5 pt-4">
+        <div class="text-center mb-5">
+            <h1 class="section-title display-4 animate__animated animate__fadeInUp">Who I Am</h1>
+            <div class="intro-text mx-auto animate__animated animate__fadeInUp animate__delay-1s">
+                <p class="mb-4">
+                    Hi, I'm Jordan — a UX Designer and Full Stack Developer passionate about creating digital experiences that balance innovation with usability.
+                </p>
+                <p class="mb-4">
+                    My journey began while auditing client websites as a Client Relations Executive at a copywriting agency, where I identified pain points I couldn't fix with copy alone.
+                </p>
+                <p class="mb-0">
+                    Now I'm eager to grow as a UX Designer within an ambitious team, bringing unique value through my full-stack development background.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- LEARNING JOURNEY Section -->
+    <section class="mb-5">
+        <div class="text-center mb-5">
+            <h2 class="section-title display-5 animate__animated animate__fadeInUp">Learning Journey</h2>
+        </div>
+
+        <div class="row g-4 animate__animated animate__fadeInUp animate__delay-1s">
+            <!-- Le Wagon -->
+            <div class="col-lg-6">
+                <div class="education-card">
+                    <div class="logo-container" style="background: linear-gradient(135deg, #FF6B6B, #FF8E53);">
+                        <img src="https://miro.medium.com/v2/resize:fit:300/1*n20iG0XYazuUcYTVgb9gdA.png" alt="Le Wagon logo">
+                    </div>
+                    <h4 class="education-title text-center">Le Wagon</h4>
+                    <p class="education-subtitle text-center">Full-Stack Web Development</p>
+                    <p class="education-description text-center">
+                        Built apps from scratch using Ruby on Rails, JavaScript, CSS, and HTML. Mastered Git workflows, GitHub collaboration, and deployed production applications on Heroku with fully functional databases and user authentication.
+                    </p>
+                </div>
+            </div>
+
+            <!-- General Assembly -->
+            <div class="col-lg-6">
+                <div class="education-card">
+                    <div class="logo-container" style="background: linear-gradient(135deg, #007AFF, #5AC8FA);">
+                        <img src="https://cdn.asp.events/CLIENT_CloserSt_D86EA381_5056_B739_5482D50A1A831DDD/sites/BDWL-2025/media/libraries/exhibitors/4ca88fab-b3b6-11ef-b52-06bd0f937899-logo.png" alt="General Assembly logo">
+                    </div>
+                    <h4 class="education-title text-center">General Assembly</h4>
+                    <p class="education-subtitle text-center">UX Design Immersive</p>
+                    <p class="education-description text-center">
+                        Mastered the double diamond design process through hands-on client projects and design sprints. Invested 360+ hours in Figma and FigJam, building comprehensive end-to-end UX solutions and research methodologies.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TOOLS I USE Section -->
+    <section class="mb-5">
+        <div class="text-center mb-5">
+            <h2 class="section-title display-5 animate__animated animate__fadeInUp">Tools & Technologies</h2>
+        </div>
+
+        <div class="row g-3 justify-content-center animate__animated animate__fadeInUp animate__delay-1s">
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="tool-item">
+                    <div class="tool-icon" style="background: linear-gradient(45deg, #F24E1E, #FF7262);">
+                        Fi
+                    </div>
+                    <div style="color: #1d1d1f; font-weight: 500;">Figma</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="tool-item">
+                    <div class="tool-icon" style="background: linear-gradient(45deg, #F7DF1E, #FFED4E);">
+                        JS
+                    </div>
+                    <div style="color: #1d1d1f; font-weight: 500;">JavaScript</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="tool-item">
+                    <div class="tool-icon" style="background: linear-gradient(45deg, #CC342D, #E74C3C);">
+                        Rb
+                    </div>
+                    <div style="color: #1d1d1f; font-weight: 500;">Ruby</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="tool-item">
+                    <div class="tool-icon" style="background: linear-gradient(45deg, #1572B6, #3498DB);">
+                        CS
+                    </div>
+                    <div style="color: #1d1d1f; font-weight: 500;">CSS</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="tool-item">
+                    <div class="tool-icon" style="background: linear-gradient(45deg, #E34F26, #F56565);">
+                        HT
+                    </div>
+                    <div style="color: #1d1d1f; font-weight: 500;">HTML</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Button -->
+    <div class="text-center pt-4 animate__animated animate__fadeInUp animate__delay-2s">
+        <a href="#projects" class="btn btn-primary btn-lg">View My Projects</a>
+    </div>
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Add staggered animation delays to tools
+    const tools = document.querySelectorAll('.tool-item');
+    tools.forEach((tool, index) => {
+        tool.style.animationDelay = `${index * 0.1}s`;
+        tool.classList.add('animate__animated', 'animate__fadeInUp');
+    });
+
+    // Add hover effect enhancement
+    const cards = document.querySelectorAll('.education-card, .tool-item');
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = this.classList.contains('education-card') ? 'translateY(-8px)' : 'translateY(-4px)';
+        });
+
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+});
+</script>
+
+</body>
+</html>
+
+
+
+config/routes.rb
+-----
+Rails.application.routes.draw do
+  # Set homepage
+  root 'pages#dashboard'
+
+  # Friendly URLs
+  get 'about', to: 'pages#about'
+  get 'projects', to: 'pages#projects'
+  get 'contact', to: 'pages#contact'
+
+  # Health check route
+  get 'up' => 'rails/health#show', as: :rails_health_check
+end
+
+
+
+app/controllers/pages_controller.rb
+-----
+class PagesController < ApplicationController
+  def dashboard
+  end
+
+  def about
+  end
+
+  def projects
+  end
+
+  def contact
+  end
+end
+
+
+
+app/assets/stylesheets/application.css
+-----
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+

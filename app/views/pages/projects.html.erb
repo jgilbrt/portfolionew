@@ -1,0 +1,96 @@
+<div class="container section-padding">
+  <div class="text-center mb-5">
+    <h1 class="display-light mb-4">Selected Work</h1>
+    <p class="lead lead-muted">Crafting intuitive digital experiences through research, design, and code.</p>
+  </div>
+
+  <div class="d-flex justify-content-center gap-3 mb-5">
+    <button class="btn filter-btn active" data-filter="all" type="button">All</button>
+    <button class="btn filter-btn" data-filter="ux" type="button">UX Design</button>
+    <button class="btn filter-btn" data-filter="web" type="button">Web Dev</button>
+  </div>
+
+  <div class="row g-4">
+    <div class="col-md-6 project-item" data-category="ux">
+      <%= link_to bandcamp_project_path, class: "project-link" do %>
+        <div class="content-card h-100">
+          <img src="https://f4.bcbits.com/img/0027834469_0" class="card-img-top" alt="Bandcamp UX Audit" />
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="d-flex align-items-center mb-3">
+              <div class="project-icon project-icon-bc rounded-circle me-3 d-flex align-items-center justify-content-center"><span class="fw-bold">BC</span></div>
+              <div><h5 class="mb-1 fw-semibold">Bandcamp Redesign</h5><small class="text-muted">UX Audit & Prototype</small></div>
+            </div>
+            <p class="text-secondary flex-grow-1">Comprehensive UX audit and redesign concept that increased user satisfaction by 26.6%.</p>
+            <div class="d-flex justify-content-between align-items-center mt-auto"><span class="badge project-badge badge-ux px-3 py-2">UX Case Study</span><small class="text-muted fw-bold">1 year ago</small></div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="col-md-6 project-item" data-category="ux">
+      <%= link_to british_fencing_project_path, class: "project-link" do %>
+        <div class="content-card h-100">
+          <img src="https://freight.cargo.site/t/original/i/5b4cc062d685ba39a884774e058e39e1070f33430879e0af609e8a8bc4674a0f/006_Cardsort_Square_1.gif" class="card-img-top" alt="British Fencing Project" />
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="d-flex align-items-center mb-3">
+              <div class="project-icon project-icon-bf rounded-circle me-3 d-flex align-items-center justify-content-center"><span class="fw-bold">BF</span></div>
+              <div><h5 class="mb-1 fw-semibold">British Fencing</h5><small class="text-muted">Information Architecture</small></div>
+            </div>
+            <p class="text-secondary flex-grow-1">Complete IA overhaul improving member navigation and task success by 45%.</p>
+            <div class="d-flex justify-content-between align-items-center mt-auto"><span class="badge project-badge badge-ux px-3 py-2">UX Case Study</span><small class="text-muted fw-bold">4 months ago</small></div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="col-md-6 project-item" data-category="web">
+      <%= link_to plan_and_go_project_path, class: "project-link" do %>
+        <div class="content-card h-100">
+          <img src="https://giffiles.alphacoders.com/474/4748.gif" class="card-img-top" alt="Plan&Go Project" />
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="d-flex align-items-center mb-3">
+              <div class="project-icon project-icon-pg rounded-circle me-3 d-flex align-items-center justify-content-center"><span class="fw-bold">P&G</span></div>
+              <div><h5 class="mb-1 fw-semibold">Plan&Go</h5><small class="text-muted">Full-Stack Application</small></div>
+            </div>
+            <p class="text-secondary flex-grow-1">AI-powered travel planner built with React and Node.js, featuring intelligent itinerary generation.</p>
+            <div class="d-flex justify-content-between align-items-center mt-auto"><span class="badge project-badge badge-react px-3 py-2">Web Dev</span><small class="text-muted fw-bold">6 months ago</small></div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="col-md-6 project-item" data-category="web">
+      <%= link_to knowit_project_path, class: "project-link" do %>
+        <div class="content-card h-100">
+          <img src="https://i.giphy.com/WvuMTf88aV3FQ4odG5.webp" class="card-img-top" alt="KnowIt" />
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="d-flex align-items-center mb-3">
+              <div class="project-icon project-icon-ki rounded-circle me-3 d-flex align-items-center justify-content-center"><span class="fw-bold">KI</span></div>
+              <div><h5 class="mb-1 fw-semibold">KnowIt</h5><small class="text-muted">Learning Platform</small></div>
+            </div>
+            <p class="text-secondary flex-grow-1">Intelligent flashcard platform built with Ruby on Rails, featuring spaced repetition algorithms.</p>
+            <div class="d-flex justify-content-between align-items-center mt-auto"><span class="badge project-badge badge-rails px-3 py-2">Web Dev</span><small class="text-muted fw-bold">9 months ago</small></div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<style>
+  .project-link { text-decoration: none; }
+  .content-card { overflow: hidden; } /* This is the fix for the rounded corners */
+  .card-img-top { height: 280px; object-fit: cover; }
+  .project-icon { width: 48px; height: 48px; color: white; flex-shrink: 0; }
+  .project-icon-bf { background: linear-gradient(45deg, #007aff, #5856d6); }
+  .project-icon-bc { background: linear-gradient(45deg, #1db584, #4ac0a6); }
+  .project-icon-pg { background: linear-gradient(45deg, #ff6b6b, #ff8e53); }
+  .project-icon-ki { background: linear-gradient(45deg, #af52de, #bf5af2); }
+  .project-badge { color: white; border-radius: 20px; font-weight: 500; letter-spacing: 0.5px; }
+  .badge-ux { background: linear-gradient(45deg, #34c759, #30d158); }
+  .badge-react { background: linear-gradient(45deg, #007aff, #5ac8fa); }
+  .badge-rails { background: linear-gradient(45deg, #af52de, #bf5af2); }
+
+  .filter-btn { transition: all 0.3s ease; border-radius: 50px; font-weight: 500; border: 2px solid #d2d2d7; color: #5a5a5a; padding: 0.5rem 1.5rem; background: white; }
+  .filter-btn.active, .filter-btn:hover { background: #1d1d1f !important; color: white !important; border-color: #1d1d1f !important; }
+
+  .project-item { transition: opacity 0.4s ease, transform 0.4s ease; }
+  .project-item.hide { opacity: 0; transform: scale(0.95); display: none; }
+</style>
