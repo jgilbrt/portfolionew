@@ -1,0 +1,1496 @@
+app/views/pages/about.html.erb
+
+<div class="container section-padding">
+
+  <section class="mb-5 pb-5">
+    <div class="content-card p-4 p-md-5 animate__animated animate__fadeInUp">
+      <div class="row align-items-center g-4 g-lg-5">
+        <div class="col-md-4 text-center">
+          <img src="https://media.licdn.com/dms/image/v2/D4E03AQHk4nx9SmKlUw/profile-displayphoto-crop_800_800/B4EZepAP5DHgAM-/0/1750887104471?e=1758153600&v=beta&t=cp_5d55DrK_Lr_1qi9DNAFFVcViLR1I7EqEF942iMwM" class="profile-picture" alt="Portrait of Jordan">
+        </div>
+        <div class="col-md-8">
+          <h2 class="display-light mb-3">Jordan Gilbert</h2>
+          <p class="lead text-secondary">
+            I'm a UX Designer and Full Stack Developer passionate about crafting digital experiences that bridge the gap between user needs and business goals.
+          </p>
+          <hr class="my-4">
+          <div class="d-flex gap-4">
+            <div>
+              <h6 class="small text-muted mb-1">LOCATION</h6>
+              <p class="fw-semibold mb-0">Bournemouth, UK</p>
+            </div>
+            <div>
+              <h6 class="small text-muted mb-1">STATUS</h6>
+              <p class="fw-semibold mb-0">Available for Hire</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-5 pb-5">
+    <h2 class="display-light text-center mb-4 animate__animated animate__fadeInUp">Learning Journey</h2>
+    <p class="lead-muted text-center mb-5 animate__animated animate__fadeInUp">
+      My journey into UX began while auditing client websites as a Client Relations Executive, where I identified pain points I couldn't fix with copy alone. This inspired me to pursue the skills to solve those deeper, structural problems.
+    </p>
+    <div class="row g-4">
+      <div class="col-lg-6 d-flex">
+        <div class="content-card education-card p-4 w-100 animate__animated animate__fadeInUp" style="animation-delay: 0.1s;">
+          <div class="d-flex align-items-center mb-3">
+            <img src="https://miro.medium.com/v2/resize:fit:300/1*n20iG0XYazuUcYTVgb9gdA.png" alt="Le Wagon logo" class="education-logo">
+            <div class="ms-3">
+              <h5 class="mb-0">Le Wagon</h5>
+              <p class="mb-0 text-danger fw-semibold small">Full-Stack Web Development</p>
+            </div>
+          </div>
+          <hr>
+          <p class="text-secondary small mb-3">Key Modules:</p>
+          <ul class="list-unstyled module-list">
+            <li><i class="bi bi-gem text-danger"></i>Ruby & Object-Oriented Programming</li>
+            <li><i class="bi bi-database-fill-gear text-danger"></i>SQL & Databases</li>
+            <li><i class="bi bi-filetype-html text-danger"></i>Frontend (HTML, CSS, JavaScript)</li>
+            <li><i class="bi bi-train-front-fill text-danger"></i>Ruby on Rails (MVC)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-6 d-flex">
+        <div class="content-card education-card p-4 w-100 animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+          <div class="d-flex align-items-center mb-3">
+            <img src="https://cdn.asp.events/CLIENT_CloserSt_D86EA381_5056_B739_5482D50A1A831DDD/sites/BDWL-2025/media/libraries/exhibitors/4ca88fab-b3b6-11ef-b52-06bd0f937899-logo.png" alt="General Assembly logo" class="education-logo">
+            <div class="ms-3">
+              <h5 class="mb-0">General Assembly</h5>
+              <p class="mb-0 text-primary fw-semibold small">UX Design Immersive</p>
+            </div>
+          </div>
+          <hr>
+          <p class="text-secondary small mb-3">Key Modules:</p>
+          <ul class="list-unstyled module-list">
+            <li><i class="bi bi-people-fill text-primary"></i>User Research & Synthesis</li>
+            <li><i class="bi bi-lightbulb-fill text-primary"></i>Ideation & Interaction Design</li>
+            <li><i class="bi bi-palette-fill text-primary"></i>UI Design & Figma Prototyping</li>
+            <li><i class="bi bi-search text-primary"></i>Usability Testing</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="display-light text-center mb-5 animate__animated animate__fadeInUp">My Toolkit</h2>
+    <div class="row g-3 justify-content-center animate__animated animate__fadeInUp">
+      <% tools = {
+        "Figma" => "https://cdn.simpleicons.org/figma/1a1a1a",
+        "Jira" => "https://cdn.simpleicons.org/jira/1a1a1a",
+        "Ruby on Rails" => "https://cdn.simpleicons.org/rubyonrails/1a1a1a",
+        "JavaScript" => "https://cdn.simpleicons.org/javascript/1a1a1a",
+        "HTML5" => "https://cdn.simpleicons.org/html5/1a1a1a",
+        "CSS" => "https://cdn.simpleicons.org/css/1a1a1a",
+        "Notion" => "https://cdn.simpleicons.org/notion/1a1a1a",
+        "Framer" => "https://cdn.simpleicons.org/framer/1a1a1a",
+        "Heroku" => "https://cdn.simpleicons.org/heroku/1a1a1a"
+      } %>
+      <% tools.each do |name, logo_url| %>
+        <div class="col-4 col-md-3 col-lg-2">
+          <div class="tool-card">
+            <img src="<%= logo_url %>" alt="<%= name %> logo" class="tool-logo">
+            <span class="tool-name"><%= name %></span>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </section>
+</div>
+
+<style>
+  .profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }
+  .education-card {
+    transition: all 0.3s ease;
+  }
+  .education-card:hover {
+    border-color: var(--bs-primary);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+  }
+  .education-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+  .module-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+  }
+  .module-list i {
+    font-size: 1rem;
+  }
+  .tool-card {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+  }
+  .tool-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+  }
+  .tool-logo {
+    height: 40px;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 0.75rem;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+  }
+  .tool-card:hover .tool-logo {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  .tool-name {
+    font-size: 0.85rem;
+    color: #6c757d;
+  }
+</style>
+
+
+app/views/pages/contact.html.erb
+
+<div class="container section-padding">
+  <div class="text-center mb-5">
+    <h1 class="display-light mb-4 animate__animated animate__fadeInUp">Let's Connect</h1>
+    <p class="lead lead-muted animate__animated animate__fadeInUp animate__delay-1s">
+      Have a project in mind, a question, or just want to say hello? I’d love to hear from you.
+    </p>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="content-card p-4 p-md-5">
+        <div class="row g-4 align-items-center">
+          <div class="col-md-6 text-center text-md-start">
+            <h4 class="fw-semibold">Jordan Gilbert</h4>
+            <p class="text-secondary">UX Designer & Developer</p>
+            <hr class="my-4">
+            <div>
+              <p class="mb-2"><strong>EMAIL</strong></p>
+              <a href="mailto:jordan.gilbert@hotmail.co.uk" class="text-decoration-none">jordan.gilbert@hotmail.co.uk</a>
+            </div>
+            <div class="mt-4">
+              <p class="mb-2"><strong>SOCIALS</strong></p>
+              <a href="#" class="text-decoration-none me-3">LinkedIn</a>
+              <a href="#" class="text-decoration-none">GitHub</a>
+            </div>
+          </div>
+          <div class="col-md-6 text-center">
+            <a href="mailto:jordan.gilbert@hotmail.co.uk" class="cta-button">
+              Send an Email
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+app/views/pages/home.html.erb
+
+<section class="hero-full-video">
+  <div class="video-overlay"></div>
+  <video autoplay muted loop class="hero-video">
+    <source src="<%= asset_path('birds.mp4') %>" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="container h-100">
+    <div class="row h-100 align-items-center">
+      <div class="col-lg-6">
+        <div class="hero-text-content text-white">
+          <h1 class="display-3 text-light display-light mb-3" style="font-weight: 600; font-style: italic; letter-spacing: -0.05em; white-space: nowrap;">Hi, I'm Jordan</h1>
+          <p class="h3 fw-light mb-4">A UX designer that codes.</p>
+          <p class="lead lead-custom">
+            Passionate about creating digital experiences that balance innovation with usability.
+          </p>
+          <div class="mt-4">
+            <%= link_to "More about me", about_path, class: "btn-glass" %>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <h4 class="fw-light text-light mb-4">Selected Work</h4>
+        <div class="vstack gap-3">
+          <%= link_to bandcamp_project_path, class: "glass-card-home" do %>
+            <img src="https://f4.bcbits.com/img/0027834469_0" alt="Bandcamp Project Image" class="project-card-image">
+            <div class="project-text-wrapper">
+              <h6 class="mb-1 text-light fw-semibold">Bandcamp Redesign</h6>
+              <small class="text-white-50">UX Case Study</small>
+            </div>
+            <i class="bi bi-arrow-right-short fs-4 icon-arrow ms-auto"></i>
+          <% end %>
+
+          <%= link_to british_fencing_project_path, class: "glass-card-home" do %>
+            <img src="https://freight.cargo.site/t/original/i/5b4cc062d685ba39a884774e058e39e1070f33430879e0af609e8a8bc4674a0f/006_Cardsort_Square_1.gif" alt="British Fencing Project Image" class="project-card-image">
+            <div class="project-text-wrapper">
+              <h6 class="mb-1 text-light fw-semibold">British Fencing</h6>
+              <small class="text-white-50">Information Architecture</small>
+            </div>
+            <i class="bi bi-arrow-right-short fs-4 icon-arrow ms-auto"></i>
+          <% end %>
+
+          <%= link_to plan_and_go_project_path, class: "glass-card-home" do %>
+            <img src="https://giffiles.alphacoders.com/474/4748.gif" alt="Plan&Go Project Image" class="project-card-image">
+            <div class="project-text-wrapper">
+              <h6 class="mb-1 text-light fw-semibold">Plan&Go</h6>
+              <small class="text-white-50">Full-Stack Application</small>
+            </div>
+            <i class="bi bi-arrow-right-short fs-4 icon-arrow ms-auto"></i>
+          <% end %>
+        </div>
+        <div class="text-center mt-4">
+          <%= link_to "See all work", projects_path, class: "btn-glass" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-full-video {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    margin-top: -88px;
+  }
+  .hero-video {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    object-fit: cover; z-index: 1;
+  }
+  .video-overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5); z-index: 2;
+  }
+  .hero-full-video .container {
+    position: relative;
+    z-index: 3;
+  }
+  .hero-text-content {
+    animation: fadeIn 1s ease-in-out;
+  }
+  .lead-custom {
+    max-width: 450px;
+    opacity: 0.8;
+  }
+  .glass-card-home {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+    animation: fadeIn 1s ease-in-out;
+  }
+  .glass-card-home:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-5px);
+  }
+  .glass-card-home:hover .icon-arrow { transform: translateX(5px); }
+  .project-card-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  .project-text-wrapper {
+    flex-grow: 1;
+  }
+  .icon-arrow {
+    transition: transform 0.3s ease;
+    opacity: 0.7;
+  }
+  .btn-glass {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: white !important;
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+  .btn-glass:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+  }
+  @media (max-width: 991.98px) {
+    .hero-full-video {
+      height: auto;
+      min-height: 100vh;
+      padding-top: 120px;
+      padding-bottom: 4rem;
+      margin-top: 0;
+    }
+    .hero-text-content {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .lead-custom { margin: 0 auto; }
+  }
+</style>
+
+
+app/views/pages/projects.html.erb
+
+<div class="container section-padding">
+  <div class="text-center mb-5">
+    <h1 class="display-light mb-4">All Projects</h1>
+    <p class="lead lead-muted">A collection of my case studies and development work.</p>
+  </div>
+
+  <div class="d-flex justify-content-center gap-3 mb-5">
+    <button class="btn filter-btn active" data-filter="all" type="button">All</button>
+    <button class="btn filter-btn" data-filter="ux" type="button">UX Design</button>
+    <button class="btn filter-btn" data-filter="web" type="button">Web Dev</button>
+  </div>
+
+  <div class="row g-4">
+    <div class="col-md-6 project-item" data-category="ux">
+      <%= link_to bandcamp_project_path, class: "project-link" do %>
+        <div class="content-card h-100">
+          <img src="https://f4.bcbits.com/img/0027834469_0" class="card-img-top" alt="Bandcamp UX Audit" />
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="d-flex align-items-center mb-3">
+              <div class="project-icon project-icon-bc rounded-circle me-3 d-flex align-items-center justify-content-center"><span class="fw-bold">BC</span></div>
+              <div><h5 class="mb-1 fw-semibold">Bandcamp Redesign</h5><small class="text-muted">UX Audit & Prototype</small></div>
+            </div>
+            <p class="text-secondary flex-grow-1">Comprehensive UX audit and redesign concept that increased user satisfaction by 26.6%.</p>
+            <div class="d-flex justify-content-between align-items-center mt-auto"><span class="badge project-badge badge-ux px-3 py-2">UX Case Study</span><small class="text-muted fw-bold">1 year ago</small></div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="col-md-6 project-item" data-category="ux">
+      <%= link_to british_fencing_project_path, class: "project-link" do %>
+        <div class="content-card h-100">
+          <img src="https://freight.cargo.site/t/original/i/5b4cc062d685ba39a884774e058e39e1070f33430879e0af609e8a8bc4674a0f/006_Cardsort_Square_1.gif" class="card-img-top" alt="British Fencing Project" />
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="d-flex align-items-center mb-3">
+              <div class="project-icon project-icon-bf rounded-circle me-3 d-flex align-items-center justify-content-center"><span class="fw-bold">BF</span></div>
+              <div><h5 class="mb-1 fw-semibold">British Fencing</h5><small class="text-muted">Information Architecture</small></div>
+            </div>
+            <p class="text-secondary flex-grow-1">Complete IA overhaul improving member navigation and task success by 45%.</p>
+            <div class="d-flex justify-content-between align-items-center mt-auto"><span class="badge project-badge badge-ux px-3 py-2">UX Case Study</span><small class="text-muted fw-bold">4 months ago</small></div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="col-md-6 project-item" data-category="web">
+      <%= link_to plan_and_go_project_path, class: "project-link" do %>
+        <div class="content-card h-100">
+          <img src="https://giffiles.alphacoders.com/474/4748.gif" class="card-img-top" alt="Plan&Go Project" />
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="d-flex align-items-center mb-3">
+              <div class="project-icon project-icon-pg rounded-circle me-3 d-flex align-items-center justify-content-center"><span class="fw-bold">P&G</span></div>
+              <div><h5 class="mb-1 fw-semibold">Plan&Go</h5><small class="text-muted">Full-Stack Application</small></div>
+            </div>
+            <p class="text-secondary flex-grow-1">AI-powered travel planner built with React and Node.js, featuring intelligent itinerary generation.</p>
+            <div class="d-flex justify-content-between align-items-center mt-auto"><span class="badge project-badge badge-react px-3 py-2">Web Dev</span><small class="text-muted fw-bold">6 months ago</small></div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="col-md-6 project-item" data-category="web">
+      <%= link_to knowit_project_path, class: "project-link" do %>
+        <div class="content-card h-100">
+          <img src="https://i.giphy.com/WvuMTf88aV3FQ4odG5.webp" class="card-img-top" alt="KnowIt" />
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="d-flex align-items-center mb-3">
+              <div class="project-icon project-icon-ki rounded-circle me-3 d-flex align-items-center justify-content-center"><span class="fw-bold">KI</span></div>
+              <div><h5 class="mb-1 fw-semibold">KnowIt</h5><small class="text-muted">Learning Platform</small></div>
+            </div>
+            <p class="text-secondary flex-grow-1">Intelligent flashcard platform built with Ruby on Rails, featuring spaced repetition algorithms.</p>
+            <div class="d-flex justify-content-between align-items-center mt-auto"><span class="badge project-badge badge-rails px-3 py-2">Web Dev</span><small class="text-muted fw-bold">9 months ago</small></div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<style>
+  .project-link { text-decoration: none; }
+  .content-card { overflow: hidden; }
+  .card-img-top { height: 280px; object-fit: cover; }
+  .project-icon { width: 48px; height: 48px; color: white; flex-shrink: 0; }
+  .project-icon-bf { background: linear-gradient(45deg, #007aff, #5856d6); }
+  .project-icon-bc { background: linear-gradient(45deg, #1db584, #4ac0a6); }
+  .project-icon-pg { background: linear-gradient(45deg, #ff6b6b, #ff8e53); }
+  .project-icon-ki { background: linear-gradient(45deg, #af52de, #bf5af2); }
+  .project-badge { color: white; border-radius: 20px; font-weight: 500; letter-spacing: 0.5px; }
+  .badge-ux { background: linear-gradient(45deg, #34c759, #30d158); }
+  .badge-react { background: linear-gradient(45deg, #007aff, #5ac8fa); }
+  .badge-rails { background: linear-gradient(45deg, #af52de, #bf5af2); }
+  .filter-btn { transition: all 0.3s ease; border-radius: 50px; font-weight: 500; border: 2px solid #d2d2d7; color: #5a5a5a; padding: 0.5rem 1.5rem; background: white; }
+  .filter-btn.active, .filter-btn:hover { background: #1d1d1f !important; color: white !important; border-color: #1d1d1f !important; }
+  .project-item { transition: opacity 0.4s ease, transform 0.4s ease; display: block; }
+  .project-item.hide { opacity: 0; transform: scale(0.95); display: none; }
+</style>
+
+
+app/views/pages/projects/bandcamp.html.erb
+
+<% content_for :head do %>
+  <style>
+    .case-study-body { background-color: #f8f9fa; }
+    .scroll-nav { position: fixed; top: 50%; right: 2.5rem; transform: translateY(-50%); z-index: 10; }
+    .scroll-nav ul { list-style: none; padding: 0; margin: 0; }
+    .scroll-nav li { margin: 1.25rem 0; }
+    .scroll-nav a { display: block; width: 12px; height: 12px; background-color: #dee2e6; border-radius: 50%; transition: all 0.3s ease; position: relative; }
+    .scroll-nav a:hover { background-color: #adb5bd; transform: scale(1.2); }
+    .scroll-nav a.active { background-color: #0d6efd; transform: scale(1.5); }
+    .scroll-nav .tooltip-text { visibility: hidden; width: 120px; background-color: #343a40; color: #fff; text-align: center; border-radius: 6px; padding: 5px 0; position: absolute; z-index: 1; top: 50%; right: 175%; transform: translateY(-50%); opacity: 0; transition: opacity 0.3s; pointer-events: none; }
+    .scroll-nav a:hover .tooltip-text { visibility: visible; opacity: 1; }
+    #back-to-top-btn { position: fixed; bottom: 2rem; right: 2.5rem; width: 40px; height: 40px; background-color: #fff; color: #495057; border-radius: 50%; text-align: center; line-height: 40px; font-size: 1.2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: opacity 0.3s, transform 0.3s; opacity: 0; transform: translateY(10px); pointer-events: none; z-index: 10;}
+    #back-to-top-btn.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
+    #back-to-top-btn:hover { background-color: #f1f3f5; transform: translateY(-2px); }
+    .hero-gif { width: 300px; height: 300px; border-radius: 2rem; object-fit: cover; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07); }
+    .horizontal-scroll-wrapper { display: flex; overflow-x: auto; padding-bottom: 1.5rem; scrollbar-width: none; -ms-overflow-style: none; }
+    .horizontal-scroll-wrapper::-webkit-scrollbar { display: none; }
+    .scroll-item { flex: 0 0 320px; margin-right: 1.5rem; }
+    .other-project-card { display: block; text-decoration: none; }
+    .other-project-card .content-card { overflow: hidden; transition: all 0.3s ease; }
+    .other-project-card:hover .content-card { transform: translateY(-8px); box-shadow: var(--shadow-md); }
+    .other-project-card-image-wrapper { overflow: hidden; }
+    .other-project-card img { transition: transform 0.35s ease; height: 180px; width: 100%; object-fit: cover; }
+    .other-project-card:hover img { transform: scale(1.05); }
+    @media (max-width: 992px) {
+      .scroll-nav { display: none; }
+      .hero-gif { width: 220px; height: 220px; }
+      .hero-section-content { text-align: center; }
+      #back-to-top-btn { right: 1.5rem; bottom: 1.5rem; }
+      .scroll-item { flex-basis: 280px; }
+    }
+  </style>
+<% end %>
+
+<a id="back-to-top-btn" href="#"><i class="bi bi-arrow-up"></i></a>
+
+<nav class="scroll-nav">
+  <ul>
+    <li><a href="#intro" data-section="intro" class="active"><span class="tooltip-text">Intro</span></a></li>
+    <li><a href="#research" data-section="research"><span class="tooltip-text">Research</span></a></li>
+    <li><a href="#problem" data-section="problem"><span class="tooltip-text">Problem</span></a></li>
+    <li><a href="#solution" data-section="solution"><span class="tooltip-text">Solution</span></a></li>
+    <li><a href="#prototype" data-section="prototype"><span class="tooltip-text">Prototype</span></a></li>
+    <li><a href="#more-projects" data-section="more-projects"><span class="tooltip-text">More Projects</span></a></li>
+  </ul>
+</nav>
+
+<div class="case-study-body">
+  <div class="container section-padding">
+
+    <section class="mb-5 pb-5">
+      <div class="row align-items-center">
+        <div class="col-lg-7 hero-section-content">
+          <h1 class="display-light mb-3">Bandcamp Redesign</h1>
+          <p class="lead text-success fw-bold">SUS Score Increased By 18.5%</p>
+          <hr class="my-4">
+          <div class="row">
+            <div class="col-md-4 mb-3 mb-md-0">
+              <h6 class="text-muted text-uppercase fw-bold small">Toolkit</h6>
+              <p class="mb-0">Figma, Jira</p>
+            </div>
+            <div class="col-md-4 mb-3 mb-md-0">
+              <h6 class="text-muted text-uppercase fw-bold small">Timeline</h6>
+              <p class="mb-0">2 Weeks</p>
+            </div>
+            <div class="col-md-4">
+              <h6 class="text-muted text-uppercase fw-bold small">Team</h6>
+              <p class="mb-0">3 UX Designers</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 text-center mt-4 mt-lg-0">
+          <img src="https://f4.bcbits.com/img/0027834469_0" alt="Bandcamp App Redesign Interface" class="hero-gif">
+        </div>
+      </div>
+    </section>
+
+    <section id="intro" class="mb-5 animate__animated animate__fadeInUp">
+      <div class="content-card p-4 p-md-5">
+        <div class="d-flex align-items-start gap-3 mb-4">
+          <span class="h1 text-primary opacity-50">01</span>
+          <h2 class="display-6 mt-2">INTRO</h2>
+        </div>
+        <div class="text-secondary lead-sm">
+          <p>This document outlines a conceptual redesign of the Bandcamp mobile app. It follows a classic, robust UX design process, starting with research to identify a problem and concluding with a validated, high-fidelity prototype that demonstrates significant improvement.</p>
+          <p class="mt-3">The project's core objective was to enhance the user experience to increase engagement and satisfaction, while preserving Bandcamp's unique identity as a platform focused on directly supporting independent artists. The project successfully delivered a redesigned prototype that demonstrably improved usability.</p>
+          <ul class="list-unstyled mt-4">
+            <li><strong class="text-dark">Company:</strong> Bandcamp (Conceptual Redesign)</li>
+            <li><strong class="text-dark">Primary Metric:</strong> System Usability Scale (SUS)</li>
+            <li><strong class="text-dark">Key Result:</strong> Final SUS score of <strong>88/100</strong></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="research" class="mb-5 animate__animated animate__fadeInUp">
+      <div class="content-card p-4 p-md-5">
+        <div class="d-flex align-items-start gap-3 mb-4">
+          <span class="h1 text-danger opacity-50">02</span>
+          <h2 class="display-6 mt-2">RESEARCH</h2>
+        </div>
+        <p class="text-secondary lead-sm mb-4">The project began with a solid research phase combining quantitative and qualitative methods to establish a baseline and uncover user pain points.</p>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <h4 class="fw-semibold">Baseline Usability Testing</h4>
+            <p class="text-secondary">A baseline System Usability Scale (SUS) score of <strong>69.5</strong> was established. This score is considered "OK" or "Marginal," sitting just below the industry average of 68 and indicating clear room for improvement.</p>
+            <p class="text-secondary mt-2">Key findings from testing showed that core features like <strong>Bandcamp Radio</strong> and <strong>Daily</strong> were ignored, the <strong>UI felt bland</strong>, and the <strong>feed was perceived as irrelevant</strong> by a majority of users tested.</p>
+          </div>
+          <div class="col-lg-6">
+            <h4 class="fw-semibold">User Interviews</h4>
+            <p class="text-secondary">Interviews with fans and artists revealed a critical insight: users desire a closer connection to artists and their creative process, which they currently seek on other platforms like Instagram and YouTube.</p>
+            <p class="text-secondary mt-2">A core tension was identified: Bandcamp’s "algorithm-free" stance, while central to its brand, hinders music discovery for many users who are accustomed to algorithm-driven recommendations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="problem" class="mb-5 animate__animated animate__fadeInUp">
+      <div class="content-card p-4 p-md-5">
+        <div class="d-flex align-items-start gap-3 mb-4">
+          <span class="h1 text-info opacity-50">03</span>
+          <h2 class="display-6 mt-2">PROBLEM</h2>
+        </div>
+        <p class="text-secondary lead-sm mb-5">The research was effectively synthesized into user personas and a clear problem statement, ensuring the design process remained focused on user needs. The design centered on two key personas to represent both sides of the platform's community.</p>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="content-card p-4 h-100 d-flex flex-column">
+              <div class="d-flex align-items-center mb-3">
+                <img src="https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?q=80&w=400&auto=format&fit=crop" alt="Persona of Leon" class="rounded-circle me-3" style="width: 75px; height: 75px; object-fit: cover;">
+                <div>
+                  <h4 class="fw-semibold mb-0">Leon, 28</h4>
+                  <p class="text-secondary mb-0">The Fan</p>
+                </div>
+              </div>
+              <p class="text-secondary flex-grow-1"><strong class="text-dark">Bio:</strong> Leon loves discovering new music, especially from smaller artists. He finds big streaming platforms too repetitive and algorithm-heavy, and wants to feel closer to the people making the music he loves.</p>
+              <blockquote class="blockquote mt-auto border-start border-4 border-warning ps-3"><p class="mb-0 fst-italic small">"I want to feel connected to the artists and their creative process."</p></blockquote>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="content-card p-4 h-100 d-flex flex-column">
+              <div class="d-flex align-items-center mb-3">
+                <img src="https://images.unsplash.com/photo-1521337706264-a414f153a5ed?q=80&w=400&auto=format&fit=crop" alt="Persona of Emma" class="rounded-circle me-3" style="width: 75px; height: 75px; object-fit: cover;">
+                <div>
+                  <h4 class="fw-semibold mb-0">Emma, 25</h4>
+                  <p class="text-secondary mb-0">The Artist</p>
+                </div>
+              </div>
+              <p class="text-secondary flex-grow-1"><strong class="text-dark">Bio:</strong> Emma loves that Bandcamp gives her financial and creative control, but she wants better tools to actually engage her fans on the platform—beyond just selling them music and merch.</p>
+              <blockquote class="blockquote mt-auto border-start border-4 border-warning ps-3"><p class="mb-0 fst-italic small">"I need better ways to share my journey and connect with fans directly on Bandcamp."</p></blockquote>
+            </div>
+          </div>
+        </div>
+        <div class="bg-light p-4 rounded mt-5">
+          <h5 class="fw-bold text-center">Problem Statement</h5>
+          <p class="text-center text-secondary fst-italic mb-0">"How might we help Leon connect more with artists and discover new music — while giving Emma better tools to grow her fanbase on Bandcamp?"</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="solution" class="mb-5 animate__animated animate__fadeInUp">
+      <div class="content-card p-4 p-md-5">
+        <div class="d-flex align-items-start gap-3 mb-4">
+          <span class="h1 text-warning opacity-50">04</span>
+          <h2 class="display-6 mt-2">SOLUTION</h2>
+        </div>
+        <div class="row g-5">
+          <div class="col-lg-6">
+            <h4 class="fw-semibold">New Features & Redesigns</h4>
+            <p class="text-secondary">The proposed solution addresses the identified problems by revamping existing features and introducing new ones:</p>
+            <ul class="text-secondary mt-3">
+              <li><strong>Discovery Homepage:</strong> Makes finding new content the primary focus of the app.</li>
+              <li><strong>Revamped Artist Profiles:</strong> Gives artists more control to showcase their work.</li>
+              <li><strong>Refreshed Feed:</strong> Shifts the focus to meaningful updates from followed artists.</li>
+              <li><strong>New Feature: Trackfinder:</strong> An innovative, Tinder-style swiping feature for discovering track previews.</li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <h4 class="fw-semibold">Information Architecture & Validation</h4>
+            <p class="text-secondary">The navigation was streamlined and a brand refresh addressed the "bland UI" complaint. The project's strength lies in its iterative testing process:</p>
+            <ul class="text-secondary mt-3">
+              <li><strong>Greyscale Prototype Testing:</strong> Raised the SUS score significantly to <strong>80.5</strong>.</li>
+              <li><strong>High-Fidelity Prototype Testing:</strong> Validated the design choices, resulting in a final SUS score of <strong>88</strong>.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="prototype" class="mb-5 animate__animated animate__fadeInUp">
+      <div class="content-card p-4 p-md-5">
+        <div class="d-flex align-items-start gap-3 mb-4">
+          <span class="h1 text-success opacity-50">05</span>
+          <h2 class="display-6 mt-2">The Final Prototype</h2>
+        </div>
+        <p class="text-secondary lead-sm mb-4">The final prototype incorporates all iterations, resulting in a clean, modern design that doesn't lose Bandcamp’s core identity. Key highlights include a visual refresh, clearer UI, and custom artist profiles.</p>
+        <div class="content-card p-2">
+          <iframe style="border: none; border-radius: 0.8rem;" width="100%" height="600" src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/ETVVM3gFD5iUVy5CYvCPMN/Untitled?node-id=434-2014&starting-point-node-id=434%3A1239" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <%= render 'shared/other_projects' %>
+
+    <section id="impact" class="text-center">
+       <%= link_to "← Back to Projects", projects_path, class: "cta-button" %>
+    </section>
+  </div>
+</div>
+
+
+app/views/pages/projects/british_fencing.html.erb
+
+<% content_for :head do %>
+  <style>
+    .case-study-body { background-color: #f8f9fa; }
+    .scroll-nav { position: fixed; top: 50%; right: 2.5rem; transform: translateY(-50%); z-index: 10; }
+    .scroll-nav ul { list-style: none; padding: 0; margin: 0; }
+    .scroll-nav li { margin: 1.25rem 0; }
+    .scroll-nav a { display: block; width: 12px; height: 12px; background-color: #dee2e6; border-radius: 50%; transition: all 0.3s ease; position: relative; }
+    .scroll-nav a:hover { background-color: #adb5bd; transform: scale(1.2); }
+    .scroll-nav a.active { background-color: #0d6efd; transform: scale(1.5); }
+    .scroll-nav .tooltip-text { visibility: hidden; width: 120px; background-color: #343a40; color: #fff; text-align: center; border-radius: 6px; padding: 5px 0; position: absolute; z-index: 1; top: 50%; right: 175%; transform: translateY(-50%); opacity: 0; transition: opacity 0.3s; pointer-events: none; }
+    .scroll-nav a:hover .tooltip-text { visibility: visible; opacity: 1; }
+    #back-to-top-btn { position: fixed; bottom: 2rem; right: 2.5rem; width: 40px; height: 40px; background-color: #fff; color: #495057; border-radius: 50%; text-align: center; line-height: 40px; font-size: 1.2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: opacity 0.3s, transform 0.3s; opacity: 0; transform: translateY(10px); pointer-events: none; z-index: 10;}
+    #back-to-top-btn.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
+    #back-to-top-btn:hover { background-color: #f1f3f5; transform: translateY(-2px); }
+    .hero-gif { width: 300px; height: 300px; border-radius: 2rem; object-fit: cover; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07); }
+    @media (max-width: 992px) {
+      .scroll-nav { display: none; }
+      .hero-gif { width: 220px; height: 220px; }
+      .hero-section-content { text-align: center; }
+      #back-to-top-btn { right: 1.5rem; bottom: 1.5rem; }
+    }
+  </style>
+<% end %>
+
+<a id="back-to-top-btn" href="#"><i class="bi bi-arrow-up"></i></a>
+
+<nav class="scroll-nav">
+  <ul>
+    <li><a href="#intro" data-section="intro" class="active"><span class="tooltip-text">Intro</span></a></li>
+    <li><a href="#research" data-section="research"><span class="tooltip-text">Research</span></a></li>
+    <li><a href="#problem" data-section="problem"><span class="tooltip-text">Problem</span></a></li>
+    <li><a href="#validation" data-section="validation"><span class="tooltip-text">Validation</span></a></li>
+    <li><a href="#prototype" data-section="prototype"><span class="tooltip-text">Prototype</span></a></li>
+    <li><a href="#impact" data-section="impact"><span class="tooltip-text">Impact & CTA</span></a></li>
+  </ul>
+</nav>
+
+<div class="case-study-body">
+  <div class="container section-padding">
+
+    <section class="mb-5 pb-5">
+      <div class="row align-items-center">
+        <div class="col-lg-7 hero-section-content">
+          <h1 class="display-light mb-3">British Fencing</h1>
+          <p class="lead text-success fw-bold">Improved User Satisfaction By 146.3%</p>
+          <hr class="my-4">
+          <div class="row">
+            <div class="col-md-4 mb-3 mb-md-0">
+              <h6 class="text-muted text-uppercase fw-bold small">Toolkit</h6>
+              <p class="mb-0">Figma, Optimal Workshop</p>
+            </div>
+            <div class="col-md-4 mb-3 mb-md-0">
+              <h6 class="text-muted text-uppercase fw-bold small">Timeline</h6>
+              <p class="mb-0">3 Weeks</p>
+            </div>
+            <div class="col-md-4">
+              <h6 class="text-muted text-uppercase fw-bold small">Team</h6>
+              <p class="mb-0">UX Research Team</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 text-center mt-4 mt-lg-0">
+          <img src="https://freight.cargo.site/t/original/i/5b4cc062d685ba39a884774e058e39e1070f33430879e0af609e8a8bc4674a0f/006_Cardsort_Square_1.gif" alt="British Fencing Interface" class="hero-gif">
+        </div>
+      </div>
+    </section>
+
+    <section id="intro" class="mb-5 animate__animated animate__fadeInUp">
+      <div class="content-card p-4 p-md-5">
+        <div class="d-flex align-items-start gap-3 mb-4">
+          <span class="h1 text-primary opacity-50">01</span>
+          <h2 class="display-6 mt-2">Intro</h2>
+        </div>
+        <div class="text-secondary lead-sm">
+          <p>British Fencing approached us as their users consistently reported difficulties in navigating their website. It was cluttered, overwhelming and key info was buried within their site structure. Their primary goal wasn't a visual overhaul, but to research and outline the most efficient way for British Fencing to <strong>restructure their information</strong>, based on user insights. Providing a structure that they could confidently build upon for future digital projects.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="research" class="mb-5 animate__animated animate__fadeInUp">
+      <div class="content-card p-4 p-md-5">
+        <div class="d-flex align-items-start gap-3 mb-4">
+          <span class="h1 text-danger opacity-50">02</span>
+          <h2 class="display-6 mt-2">Research</h2>
+        </div>
+        <p class="text-secondary lead-sm mb-4">Our research phase combined qualitative and quantitative methods to uncover usability challenges. Our user group included competitive fencers, coaches, parents, and total beginners — helping us identify universal blockers and audience-specific struggles.</p>
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <h5 class="fw-semibold">Usability Testing</h5>
+            <p class="text-secondary small">Initial tests on the existing site revealed a <strong>33% task success rate</strong> and an average completion time of 3-4 minutes for simple tasks, resulting in a poor SUS score of 34/100.</p>
+          </div>
+          <div class="col-lg-4">
+            <h5 class="fw-semibold">User Interviews</h5>
+            <p class="text-secondary small">Interviews confirmed the quantitative data: 80% of users struggled to find key information, and 70% described the homepage as "overwhelming" and "cluttered."</p>
+          </div>
+          <div class="col-lg-4">
+            <h5 class="fw-semibold">Heuristic Evaluation</h5>
+            <p class="text-secondary small">An audit against Nielsen's heuristics highlighted critical issues in 'Consistency and Standards' and 'Recognition Rather Than Recall' due to confusing navigation labels and structure.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="problem" class="mb-5 animate__animated animate__fadeInUp">
+      <div class="content-card p-4 p-md-5">
+        <div class="d-flex align-items-start gap-3 mb-4">
+          <span class="h1 text-info opacity-50">03</span>
+          <h2 class="display-6 mt-2">Problem</h2>
+        </div>
+        <p class="text-secondary lead-sm mb-5">Our research was synthesized into a key persona, Tom, to represent our primary user group and ensure our solutions directly addressed his needs and frustrations.</p>
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-8">
+            <div class="content-card p-4 h-100">
+              <div class="d-flex align-items-center mb-3">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop" alt="Persona of Tom" class="rounded-circle me-3" style="width: 75px; height: 75px; object-fit: cover;">
+                <div>
+                  <h4 class="fw-semibold mb-0">Tom Smith, 32</h4>
+                  <p class="text-secondary mb-0">Competitive Fencer & Coach</p>
+                </div>
+              </div>
+              <p class="text-secondary"><strong class="text-dark">Bio:</strong> Tom is an experienced fencer and coach who uses the British Fencing website to find event schedules, rankings, and results. With a full-time job, he doesn't have much free time and needs to find information quickly.</p>
+              <blockquote class="blockquote mt-3 border-start border-4 border-warning ps-3"><p class="mb-0 fst-italic small">"Knowledge within fencing empowers me"</p></blockquote>
+            </div>
+          </div>
+        </div>
+        <div class="bg-light p-4 rounded mt-5">
+          <h5 class="fw-bold text-center">Problem Statement</h5>
+          <p class="text-center text-secondary fst-italic mb-0">"How might we help Tom save time using the British Fencing Website so that it becomes a source of joy rather than frustration?"</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="validation" class="mb-5 animate__animated animate__fadeInUp">
+      <div class="content-card p-4 p-md-5">
+        <div class="d-flex align-items-start gap-3 mb-4">
+          <span class="h1 text-warning opacity-50">04</span>
+          <h2 class="display-6 mt-2">Testing & Validation</h2>
+        </div>
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6">
+            <h4 class="fw-semibold">Card Sort & New Site Map</h4>
+            <p class="text-secondary">We conducted an <strong>open card sort</strong> with 21 participants to understand how users naturally group content. This allowed us to formulate a new, user-centric information architecture.</p>
+          </div>
+          <div class="col-lg-6">
+            <img src="https://framerusercontent.com/images/lKVzI1ENzeBM23Fhntu2Ay3SR8.png" alt="Card Sort Results" class="img-fluid rounded border">
+          </div>
+        </div>
+        <hr class="my-5">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <h4 class="fw-semibold">Tree Testing & Validation</h4>
+            <p class="text-secondary">To validate the new site map, we ran <strong>tree testing</strong> with 15 users. The results showed a dramatic improvement across all metrics.</p>
+            <ul class="list-unstyled mt-3 text-secondary">
+              <li>✅ <strong>Task Success Rate:</strong> Rose to 93% (from 33%)</li>
+              <li>⏱️ <strong>Avg. Completion Time:</strong> Reduced to 13.7s (from ~4 mins)</li>
+              <li>📈 <strong>SUS Score:</strong> Improved to 85/100 (from 34/100)</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <img src="https://framerusercontent.com/images/I0FnGvakGzuCQU737eJx3UC0y0.png" alt="Tree Test Results" class="img-fluid rounded border">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="prototype" class="mb-5 animate__animated animate__fadeInUp">
+      <div class="content-card p-4 p-md-5">
+        <div class="d-flex align-items-start gap-3 mb-4">
+          <span class="h1 text-success opacity-50">05</span>
+          <h2 class="display-6 mt-2">Prototype</h2>
+        </div>
+        <p class="text-secondary lead-sm mb-4">While a high-fidelity prototype wasn't a primary deliverable, we built a conceptual model to visualise how the new information architecture would translate into a functional navigation system, providing a clear blueprint for future development.</p>
+        <div class="content-card p-2">
+          <iframe style="border: none; border-radius: 0.8rem;" width="100%" height="450" src="https://embed.figma.com/proto/kOryuIf2B7whpqDxSVRCzg/Wireframes?node-id=466-1210&p=f&scaling=scale-down&content-scaling=fixed&page-id=466%3A1204&starting-point-node-id=466%3A1210&embed-host=share" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <%= render 'shared/other_projects' %>
+
+    <section id="impact" class="text-center">
+       <%= link_to "← Back to Projects", projects_path, class: "cta-button" %>
+    </section>
+  </div>
+</div>
+
+
+app/views/pages/projects/knowit.html.erb
+
+<% content_for :head do %>
+  <style>
+    .case-study-body { background-color: #f8f9fa; }
+    .scroll-nav { position: fixed; top: 50%; right: 2.5rem; transform: translateY(-50%); z-index: 10; }
+    .scroll-nav ul { list-style: none; padding: 0; margin: 0; }
+    .scroll-nav li { margin: 1.25rem 0; }
+    .scroll-nav a { display: block; width: 12px; height: 12px; background-color: #dee2e6; border-radius: 50%; transition: all 0.3s ease; position: relative; }
+    .scroll-nav a:hover { background-color: #adb5bd; transform: scale(1.2); }
+    .scroll-nav a.active { background-color: #0d6efd; transform: scale(1.5); }
+    .scroll-nav .tooltip-text { visibility: hidden; width: 120px; background-color: #343a40; color: #fff; text-align: center; border-radius: 6px; padding: 5px 0; position: absolute; z-index: 1; top: 50%; right: 175%; transform: translateY(-50%); opacity: 0; transition: opacity 0.3s; pointer-events: none; }
+    .scroll-nav a:hover .tooltip-text { visibility: visible; opacity: 1; }
+    #back-to-top-btn { position: fixed; bottom: 2rem; right: 2.5rem; width: 40px; height: 40px; background-color: #fff; color: #495057; border-radius: 50%; text-align: center; line-height: 40px; font-size: 1.2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: opacity 0.3s, transform 0.3s; opacity: 0; transform: translateY(10px); pointer-events: none; z-index: 10;}
+    #back-to-top-btn.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
+    #back-to-top-btn:hover { background-color: #f1f3f5; transform: translateY(-2px); }
+    .hero-gif { width: 300px; height: 300px; border-radius: 2rem; object-fit: cover; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07); }
+    @media (max-width: 992px) {
+      .scroll-nav { display: none; }
+      .hero-gif { width: 220px; height: 220px; }
+      .hero-section-content { text-align: center; }
+      #back-to-top-btn { right: 1.5rem; bottom: 1.5rem; }
+    }
+  </style>
+<% end %>
+
+<a id="back-to-top-btn" href="#"><i class="bi bi-arrow-up"></i></a>
+
+<nav class="scroll-nav">
+  <ul>
+    <li><a href="#overview" data-section="overview" class="active"><span class="tooltip-text">Overview</span></a></li>
+    <li><a href="#features" data-section="features"><span class="tooltip-text">Features</span></a></li>
+    <li><a href="#live-app" data-section="live-app"><span class="tooltip-text">Live App</span></a></li>
+  </ul>
+</nav>
+
+<div class="case-study-body">
+  <div class="container section-padding">
+
+    <section class="mb-5 pb-5">
+      <div class="row align-items-center">
+        <div class="col-lg-7 hero-section-content">
+          <h1 class="display-light mb-3">KnowIt</h1>
+          <p class="lead text-primary fw-bold">Short Sprint AI Quiz Generator</p>
+          <hr class="my-4">
+          <div class="row">
+            <div class="col-md-4 mb-3 mb-md-0">
+              <h6 class="text-muted text-uppercase fw-bold small">Toolkit</h6>
+              <p class="mb-0">Ruby on Rails, Devise</p>
+            </div>
+            <div class="col-md-4 mb-3 mb-md-0">
+              <h6 class="text-muted text-uppercase fw-bold small">Timeline</h6>
+              <p class="mb-0">2 Days</p>
+            </div>
+            <div class="col-md-4">
+              <h6 class="text-muted text-uppercase fw-bold small">Team</h6>
+              <p class="mb-0">Solo Project</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 text-center mt-4 mt-lg-0">
+          <img src="https://cdn.dribbble.com/users/1731253/screenshots/15013363/media/832bd01839a46e6656a09d0f3c0dbe30.gif" alt="KnowIt App Interface" class="hero-gif">
+        </div>
+      </div>
+    </section>
+
+    <section id="overview" class="mb-5 animate__animated animate__fadeInUp">
+      <div class="content-card p-4 p-md-5">
+        <div class="d-flex align-items-start gap-3 mb-4">
+          <span class="h1 text-primary opacity-50">01</span>
+          <h2 class="display-6 mt-2">OVERVIEW</h2>
+        </div>
+        <div class="text-secondary lead-sm">
+          <p>I spent two days working on an AI Quiz Generator, an app where the user can put in a topic of their choice for example Flags of the World, and get their quizzes graded in seconds. Users can also view a history of all of their quizzes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="mb-5 animate__animated animate__fadeInUp">
+      <div class="content-card p-4 p-md-5">
+        <div class="d-flex align-items-start gap-3 mb-4">
+          <span class="h1 text-danger opacity-50">02</span>
+          <h2 class="display-6 mt-2">FEATURES</h2>
+        </div>
+        <div class="row justify-content-center text-secondary">
+          <div class="col-lg-8">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">AI Integration (OpenAI)</li>
+              <li class="list-group-item">User Login Authentication (Devise)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <%= render 'shared/other_projects' %>
+
+    <section id="live-app" class="text-center">
+       <a href="https://aigame-13067f70e4a8.herokuapp.com" target="_blank" class="cta-button">Play Game →</a>
+    </section>
+
+
+  </div>
+</div>
+
+
+app/views/pages/projects/plan_and_go.html.erb
+
+<% content_for :head do %>
+  <style>
+    .case-study-body { background-color: #f8f9fa; }
+    .scroll-nav { position: fixed; top: 50%; right: 2.5rem; transform: translateY(-50%); z-index: 10; }
+    .scroll-nav ul { list-style: none; padding: 0; margin: 0; }
+    .scroll-nav li { margin: 1.25rem 0; }
+    .scroll-nav a { display: block; width: 12px; height: 12px; background-color: #dee2e6; border-radius: 50%; transition: all 0.3s ease; position: relative; }
+    .scroll-nav a:hover { background-color: #adb5bd; transform: scale(1.2); }
+    .scroll-nav a.active { background-color: #0d6efd; transform: scale(1.5); }
+    .scroll-nav .tooltip-text { visibility: hidden; width: 120px; background-color: #343a40; color: #fff; text-align: center; border-radius: 6px; padding: 5px 0; position: absolute; z-index: 1; top: 50%; right: 175%; transform: translateY(-50%); opacity: 0; transition: opacity 0.3s; pointer-events: none; }
+    .scroll-nav a:hover .tooltip-text { visibility: visible; opacity: 1; }
+    #back-to-top-btn { position: fixed; bottom: 2rem; right: 2.5rem; width: 40px; height: 40px; background-color: #fff; color: #495057; border-radius: 50%; text-align: center; line-height: 40px; font-size: 1.2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: opacity 0.3s, transform 0.3s; opacity: 0; transform: translateY(10px); pointer-events: none; z-index: 10;}
+    #back-to-top-btn.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
+    #back-to-top-btn:hover { background-color: #f1f3f5; transform: translateY(-2px); }
+    .hero-gif { width: 300px; height: 300px; border-radius: 2rem; object-fit: cover; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07); }
+    @media (max-width: 992px) {
+      .scroll-nav { display: none; }
+      .hero-gif { width: 220px; height: 220px; }
+      .hero-section-content { text-align: center; }
+      #back-to-top-btn { right: 1.5rem; bottom: 1.5rem; }
+    }
+  </style>
+<% end %>
+
+<a id="back-to-top-btn" href="#"><i class="bi bi-arrow-up"></i></a>
+
+<nav class="scroll-nav">
+  <ul>
+    <li><a href="#overview" data-section="overview" class="active"><span class="tooltip-text">Overview</span></a></li>
+    <li><a href="#features" data-section="features"><span class="tooltip-text">Features</span></a></li>
+    <li><a href="#live-app" data-section="live-app"><span class="tooltip-text">Live App</span></a></li>
+  </ul>
+</nav>
+
+<div class="case-study-body">
+  <div class="container section-padding">
+    <section class="mb-5 pb-5">
+      <div class="row align-items-center">
+        <div class="col-lg-7 hero-section-content">
+          <h1 class="display-light mb-3">PLAN & GO</h1>
+          <p class="lead text-primary fw-bold">AI-Powered Trip Generator</p>
+          <hr class="my-4">
+          <div class="row">
+            <div class="col-md-4 mb-3 mb-md-0">
+              <h6 class="text-muted text-uppercase fw-bold small">Toolkit</h6>
+              <p class="mb-0">Ruby on Rails, JS, Google APIs</p>
+            </div>
+            <div class="col-md-4 mb-3 mb-md-0">
+              <h6 class="text-muted text-uppercase fw-bold small">Timeline</h6>
+              <p class="mb-0">2 Week Sprint</p>
+            </div>
+            <div class="col-md-4">
+              <h6 class="text-muted text-uppercase fw-bold small">Team</h6>
+              <p class="mb-0">3 Developers</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 text-center mt-4 mt-lg-0">
+          <img src="https://giffiles.alphacoders.com/474/4748.gif" alt="Plan&Go App Interface" class="hero-gif">
+        </div>
+      </div>
+    </section>
+
+    <section id="overview" class="mb-5 animate__animated animate__fadeInUp">
+      <div class="content-card p-4 p-md-5">
+        <div class="d-flex align-items-start gap-3 mb-4">
+          <span class="h1 text-primary opacity-50">01</span>
+          <h2 class="display-6 mt-2">OVERVIEW</h2>
+        </div>
+        <div class="text-secondary lead-sm">
+          <p>In a 2-week sprint, I alongside two other junior developers built an app that takes the users preferences during onboarding and combines it with a prompt (budget, destination, dates).</p>
+          <p class="mt-3">AI then generates a series of activities based on the information received and presents it as an itinerary with pictures, estimated cost and start & end times for each activity.</p>
+          <p class="mt-3">The user can search for friends, and add them to their trips, subsequently both users can view this trip along with all other trips on their profile.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="mb-5 animate__animated animate__fadeInUp">
+      <div class="content-card p-4 p-md-5">
+        <div class="d-flex align-items-start gap-3 mb-4">
+          <span class="h1 text-danger opacity-50">02</span>
+          <h2 class="display-6 mt-2">FEATURES</h2>
+        </div>
+        <div class="row justify-content-center text-secondary">
+          <div class="col-lg-8">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">AI Integration (OpenAI)</li>
+              <li class="list-group-item">Google Maps & Places API for displaying images of activity locations.</li>
+              <li class="list-group-item">User authentication & Social Features</li>
+              <li class="list-group-item">Map Search using Geocoder API</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="live-app" class="text-center">
+       <a href="https://planandgo-ee80b50c6039.herokuapp.com" target="_blank" class="cta-button">View Live App →</a>
+    </section>
+        <%= render 'shared/other_projects' %>
+
+  </div>
+</div>
+
+
+app/views/shared/_navbar.html.erb
+
+<%
+# Defines the project list to be used in the navigation drawer.
+projects = [
+  { name: "Bandcamp Redesign", path: bandcamp_project_path },
+  { name: "British Fencing", path: british_fencing_project_path },
+  { name: "Plan & Go", path: plan_and_go_project_path },
+  { name: "KnowIt", path: knowit_project_path }
+]
+%>
+
+<nav class="navbar">
+  <div class="container-fluid px-4">
+    <%= link_to home_path, class: "navbar-brand", style: "text-decoration: none;" do %>
+      <div style="height: 44px; width: 124px; border-radius: 12px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+        <%= image_tag 'logo.jpg', style: "height: 100%; width: 100%; object-fit: cover;" %>
+      </div>
+    <% end %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <%= link_to "My Work", projects_path, class: "nav-link nav-main-link #{'active' if request.path.start_with?('/projects') && current_page?(projects_path)}" %>
+      </li>
+      <div class="project-links-wrapper">
+        <% projects.each do |project| %>
+          <li class="nav-item">
+            <%= link_to project[:name], project[:path], class: "nav-link nav-project-link #{'active' if current_page?(project[:path])}" %>
+          </li>
+        <% end %>
+      </div>
+      <li class="nav-item">
+        <%= link_to "About", about_path, class: "nav-link nav-main-link #{'active' if current_page?(about_path)}" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Contact Me", contact_path, class: "nav-link nav-main-link #{'active' if current_page?(contact_path)}" %>
+      </li>
+    </ul>
+    <div class="offcanvas-social-links">
+      <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+      <a href="#" class="social-icon"><i class="bi bi-dribbble"></i></a>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Main Navbar Styling */
+  .navbar {
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+    min-height: 88px;
+    transition: background 0.3s ease;
+  }
+
+  /* Default / Mobile (< 1001px) Style */
+  .navbar {
+    background: #121212;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Desktop (> 1000px) Style */
+  @media (min-width: 1001px) {
+    .navbar {
+      background: transparent;
+      border-bottom: none;
+    }
+  }
+
+  /* Burger Menu Button */
+  .navbar-toggler { border: none; }
+  .navbar-toggler:focus { box-shadow: none; }
+  .navbar-toggler-icon { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
+
+  /* Side Drawer Panel */
+  .offcanvas#offcanvasNavbar {
+    --bs-offcanvas-bg: #121212 !important;
+    --bs-offcanvas-color: white !important;
+    --bs-btn-close-color: white !important;
+    border-left: 1px solid rgba(255, 255, 255, 0.1) !important;
+  }
+  #offcanvasNavbar .offcanvas-header { min-height: 88px; align-items: center; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+  #offcanvasNavbar .offcanvas-body { display: flex; flex-direction: column; }
+  #offcanvasNavbar .offcanvas-title { color: white; opacity: 0.9; }
+
+  /* Drawer Links */
+  #offcanvasNavbar .navbar-nav { align-items: flex-start; gap: 0.25rem; }
+  #offcanvasNavbar .nav-link { color: white; opacity: 0.7; font-weight: 500; padding: 10px 20px; border-radius: 8px; transition: all 0.2s ease; width: 100%; }
+  #offcanvasNavbar .nav-link:hover { opacity: 1; background: rgba(255, 255, 255, 0.08); }
+  #offcanvasNavbar .nav-link.active { opacity: 1; font-weight: 600; background: rgba(255, 255, 255, 0.1); }
+  #offcanvasNavbar .project-links-wrapper { width: 100%; padding-left: 1.5rem; margin-bottom: 0.5rem; }
+  #offcanvasNavbar .nav-project-link { font-size: 0.95rem; opacity: 0.6; }
+  #offcanvasNavbar .nav-project-link.active { opacity: 1; font-weight: 500; background: rgba(255, 255, 255, 0.15); }
+  #offcanvasNavbar .nav-divider { border-color: rgba(255, 255, 255, 0.1); margin: 0.75rem 1.25rem; width: calc(100% - 2.5rem); }
+
+  /* Social Links at bottom of drawer */
+  #offcanvasNavbar .offcanvas-social-links { margin-top: auto; padding: 1rem 1.25rem; border-top: 1px solid rgba(255, 255, 255, 0.1); display: flex; justify-content: center; gap: 1.5rem; }
+  #offcanvasNavbar .social-icon { color: white; opacity: 0.6; font-size: 1.25rem; text-decoration: none; transition: all 0.2s ease; }
+  #offcanvasNavbar .social-icon:hover { opacity: 1; transform: scale(1.1); }
+</style>
+
+
+app/views/layouts/application.html.erb
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jordan G | UX Designer & Developer</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    <%= yield :head %>
+  </head>
+
+  <body class="<%= controller.action_name == 'bandcamp' ? '' : 'light-theme' %>">
+    <%= render 'shared/navbar' %>
+    <main>
+      <%= yield %>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
+
+
+app/javascript/custom_scripts.js
+
+function initializePortfolioScripts() {
+
+  // --- 1. Project Filtering Logic (for projects.html.erb) ---
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  if (filterButtons.length > 0) {
+    const projects = document.querySelectorAll(".project-item");
+    filterButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const filter = btn.dataset.filter;
+        filterButtons.forEach((button) => button.classList.remove("active"));
+        btn.classList.add("active");
+
+        projects.forEach((project) => {
+          const category = project.dataset.category;
+          const shouldShow = filter === "all" || category === filter;
+
+          if (shouldShow) {
+            project.style.display = 'block';
+          } else {
+            project.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+
+  // --- 2. Case Study Scrollspy, Tooltips, & Back to Top Logic ---
+  const scrollNav = document.querySelector('.scroll-nav');
+  if (scrollNav) {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.scroll-nav a');
+    const backToTopBtn = document.getElementById('back-to-top-btn');
+
+    const activateNavLink = (id) => {
+      navLinks.forEach(link => { link.classList.toggle('active', link.dataset.section === id); });
+    };
+
+    const handleScroll = () => {
+      let currentSectionId = '';
+      const scrollOffset = window.innerHeight * 0.4;
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (window.scrollY >= sectionTop - scrollOffset) { currentSectionId = section.getAttribute('id'); }
+      });
+      if (currentSectionId) {
+        activateNavLink(currentSectionId);
+      } else if (sections.length > 0) {
+        activateNavLink(sections[0].getAttribute('id'));
+      }
+
+      if (window.scrollY > 300) { backToTopBtn.classList.add('show'); }
+      else { backToTopBtn.classList.remove('show'); }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    handleScroll();
+
+    navLinks.forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetElement = document.querySelector(this.getAttribute('href'));
+        if (targetElement) { targetElement.scrollIntoView({ behavior: 'smooth' }); }
+      });
+    });
+
+    backToTopBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+}
+
+document.addEventListener("turbo:load", initializePortfolioScripts);
+
+
+config/routes.rb
+
+Rails.application.routes.draw do
+  root 'pages#home'
+
+  get 'home', to: 'pages#home'
+  get 'about', to: 'pages#about'
+  get 'projects', to: 'pages#projects'
+  get 'contact', to: 'pages#contact'
+
+  get 'projects/bandcamp', to: 'pages#bandcamp', as: :bandcamp_project
+  get 'projects/british-fencing', to: 'pages#british_fencing', as: :british_fencing_project
+  get 'projects/plan-and-go', to: 'pages#plan_and_go', as: :plan_and_go_project
+  get 'projects/knowit', to: 'pages#knowit', as: :knowit_project
+
+  get 'up' => 'rails/health#show', as: :rails_health_check
+end
+
+
+app/assets/stylesheets/application.css
+
+:root {
+  --light-background: #f8f9fa;
+  --card-background: #ffffff;
+  --text-primary: #212529;
+  --text-secondary: #6c757d;
+  --border-color: #dee2e6;
+  --shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 8px 25px rgba(0, 0, 0, 0.1);
+  --border-radius: 1rem;
+}
+
+body.light-theme {
+  background-color: var(--light-background);
+  color: var(--text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+main {
+  padding-top: 88px;
+}
+
+.section-padding {
+  padding: 5rem 0;
+}
+
+body.light-theme h1,
+body.light-theme h2,
+body.light-theme h3,
+body.light-theme h4,
+body.light-theme h5,
+body.light-theme h6 {
+  color: var(--text-primary);
+}
+
+.display-light {
+  font-weight: 300;
+  letter-spacing: -1.5px;
+}
+
+.lead-muted {
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.content-card {
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.content-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-md);
+}
+
+.cta-button {
+  background: #212529;
+  color: white !important;
+  padding: 14px 32px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  border: none;
+}
+.cta-button:hover {
+  background: #424242;
+  transform: translateY(-2px);
+}
+
+
+app/javascript/application.js
+
+// Configure your import map in config/importmap.rb. Read more: https://github.com/rails/importmap-rails
+import "@hotwired/turbo-rails"
+import "controllers"
+import "./custom_scripts"
+
+
+app/controllers/pages_controller.rb
+
+class PagesController < ApplicationController
+  def home
+  end
+
+  def about
+  end
+
+  def projects
+  end
+
+  def bandcamp
+    @project = { name: "Bandcamp Redesign" }
+    render 'pages/projects/bandcamp'
+  end
+
+  def british_fencing
+    @project = { name: "British Fencing" }
+    render 'pages/projects/british_fencing'
+  end
+
+  def plan_and_go
+    @project = { name: "Plan & Go" }
+    render 'pages/projects/plan_and_go'
+  end
+
+  def knowit
+    @project = { name: "KnowIt" }
+    render 'pages/projects/knowit'
+  end
+
+  def contact
+  end
+end
+
+
+app/controllers/application_controller.rb
+
+class ApplicationController < ActionController::Base
+  before_action :set_projects
+
+  private
+
+  def set_projects
+    @projects = [
+      { name: "Bandcamp Redesign", path: bandcamp_project_path },
+      { name: "British Fencing", path: british_fencing_project_path },
+      { name: "Plan & Go", path: plan_and_go_project_path },
+      { name: "KnowIt", path: knowit_project_path }
+    ]
+  end
+end
+
+
+config/application.rb
+
+require_relative "boot"
+
+require "rails/all"
+
+# Require the gems listed in Gemfile, including any gems
+# you've limited to :test, :development, or :production.
+Bundler.require(*Rails.groups)
+
+module Portfolionew
+  class Application < Rails::Application
+    # Initialize configuration defaults for originally generated Rails version.
+    config.load_defaults 7.1
+
+    # Please, add to the `ignore` list any other `lib` subdirectories that do
+    # not contain `.rb` files, or that should not be reloaded or eager loaded.
+    # Common ones are `templates`, `generators`, or `middleware`, for example.
+    config.autoload_lib(ignore: %w(assets tasks))
+
+    # Configuration for the application, engines, and railties goes here.
+    #
+    # These settings can be overridden in specific environments using the files
+    # in config/environments, which are processed later.
+    #
+    # config.time_zone = "Central Time (US & Canada)"
+    # config.eager_load_paths << Rails.root.join("extras")
+  end
+end
+
+

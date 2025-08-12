@@ -20,7 +20,7 @@ main {
 }
 
 .section-padding {
-  padding: 5rem 0;
+  padding: 5rem 1rem; /* Default padding with horizontal padding for mobile */
 }
 
 body.light-theme h1,
@@ -71,4 +71,15 @@ body.light-theme h6 {
 .cta-button:hover {
   background: #424242;
   transform: translateY(-2px);
+}
+
+/* Responsive adjustments for mobile padding */
+@media (max-width: 768px) {
+  .section-padding {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  main {
+    padding-top: 70px;
+  }
 }
