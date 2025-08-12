@@ -20,7 +20,7 @@ main {
 }
 
 .section-padding {
-  padding: 5rem 1rem; /* Default padding with horizontal padding for mobile */
+  padding: 5rem 1rem;
 }
 
 body.light-theme h1,
@@ -73,6 +73,17 @@ body.light-theme h6 {
   transform: translateY(-2px);
 }
 
+/* --- Styles for 'Other Projects' Partial --- */
+.horizontal-scroll-wrapper { display: flex; overflow-x: auto; padding-bottom: 1.5rem; scrollbar-width: none; -ms-overflow-style: none; }
+.horizontal-scroll-wrapper::-webkit-scrollbar { display: none; }
+.scroll-item { flex: 0 0 320px; margin-right: 1.5rem; }
+.other-project-card { display: block; text-decoration: none; }
+.other-project-card .content-card { overflow: hidden; }
+.other-project-card:hover .content-card { transform: translateY(-8px); box-shadow: var(--shadow-md); }
+.other-project-card-image-wrapper { overflow: hidden; }
+.other-project-card img { transition: transform 0.35s ease; height: 180px; width: 100%; object-fit: cover; }
+.other-project-card:hover img { transform: scale(1.05); }
+
 /* Responsive adjustments for mobile padding */
 @media (max-width: 768px) {
   .section-padding {
@@ -82,4 +93,5 @@ body.light-theme h6 {
   main {
     padding-top: 70px;
   }
+  .scroll-item { flex-basis: 280px; }
 }

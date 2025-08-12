@@ -13,6 +13,17 @@
     #back-to-top-btn.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
     #back-to-top-btn:hover { background-color: #f1f3f5; transform: translateY(-2px); }
     .hero-gif { width: 300px; height: 300px; border-radius: 2rem; object-fit: cover; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07); }
+
+    .quote-card {
+      background-color: #fff;
+      padding: 1.5rem;
+      border-left: 4px solid var(--bs-primary);
+    }
+    .quote-card p {
+      font-style: italic;
+      color: var(--text-secondary);
+    }
+
     @media (max-width: 992px) {
       .scroll-nav { display: none; }
       .hero-gif { width: 220px; height: 220px; }
@@ -47,7 +58,7 @@
           <div class="row">
             <div class="col-md-4 mb-3 mb-md-0">
               <h6 class="text-muted text-uppercase fw-bold small">Toolkit</h6>
-              <p class="mb-0">Figma, Optimal Workshop</p>
+              <p class="mb-0">Figma, Optimal Workshop, Jira, Ballpark, Useberry</p>
             </div>
             <div class="col-md-4 mb-3 mb-md-0">
               <h6 class="text-muted text-uppercase fw-bold small">Timeline</h6>
@@ -83,19 +94,58 @@
           <span class="h1 text-danger opacity-50">02</span>
           <h2 class="display-6 mt-2">Research</h2>
         </div>
-        <p class="text-secondary lead-sm mb-4">Our research phase combined qualitative and quantitative methods to uncover usability challenges. Our user group included competitive fencers, coaches, parents, and total beginners — helping us identify universal blockers and audience-specific struggles.</p>
-        <div class="row g-4">
-          <div class="col-lg-4">
-            <h5 class="fw-semibold">Usability Testing</h5>
-            <p class="text-secondary small">Initial tests on the existing site revealed a <strong>33% task success rate</strong> and an average completion time of 3-4 minutes for simple tasks, resulting in a poor SUS score of 34/100.</p>
+        <p class="text-secondary lead-sm mb-5">Our research phase combined qualitative and quantitative methods to uncover usability challenges. Our user group included competitive fencers, coaches, parents, and total beginners — helping us identify universal blockers and audience-specific struggles.</p>
+
+        <div class="mb-5">
+          <h4 class="fw-semibold">User Interviews</h4>
+          <p class="text-secondary mb-4">Interviews confirmed the quantitative data, revealing a deep frustration with the site's complexity and information architecture. Key themes emerged:</p>
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="quote-card h-100">
+                <p>"I didn't feel like the information that I need as a parent new to fencing, was well presented to me."</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="quote-card h-100">
+                <p>"It feels overcomplicated... they are trying to get too much information on one page."</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="quote-card h-100">
+                <p>"It feels like it's been put there by someone for their reasons with things that people might access for their own reasons."</p>
+              </div>
+            </div>
+             <div class="col-md-6">
+              <div class="quote-card h-100">
+                <p>"If I'm looking for something I'm going to use Google because the menu and the context menus beneath that, they're just really difficult to understand."</p>
+              </div>
+            </div>
           </div>
-          <div class="col-lg-4">
-            <h5 class="fw-semibold">User Interviews</h5>
-            <p class="text-secondary small">Interviews confirmed the quantitative data: 80% of users struggled to find key information, and 70% described the homepage as "overwhelming" and "cluttered."</p>
+        </div>
+
+        <hr class="my-5">
+
+        <div>
+          <h4 class="fw-semibold">Heuristic Evaluation</h4>
+          <p class="text-secondary mb-4">An audit against usability heuristics highlighted critical issues that aligned with user feedback.</p>
+          <div class="row g-4 align-items-center">
+            <div class="col-md-7">
+              <h6 class="fw-bold">Lack of Breadcrumb Navigation</h6>
+              <p class="text-secondary small">The site lacks breadcrumb navigation, which makes it difficult for users to know their current location, and making it harder to return to previous pages.</p>
+            </div>
+            <div class="col-md-5">
+              <img src="https://framerusercontent.com/images/5N2TN8GOf78LpBN7uXjRQI0l9Y.png" alt="Screenshot showing lack of breadcrumb navigation" class="img-fluid rounded border">
+            </div>
           </div>
-          <div class="col-lg-4">
-            <h5 class="fw-semibold">Heuristic Evaluation</h5>
-            <p class="text-secondary small">An audit against Nielsen's heuristics highlighted critical issues in 'Consistency and Standards' and 'Recognition Rather Than Recall' due to confusing navigation labels and structure.</p>
+          <hr class="my-4">
+          <div class="row g-4 align-items-center">
+            <div class="col-md-5">
+              <img src="https://framerusercontent.com/images/hN4hm3QbOSVgDpUdnQDlQRwixE.png" alt="Screenshot showing inconsistent navigation menus" class="img-fluid rounded border">
+            </div>
+            <div class="col-md-7">
+              <h6 class="fw-bold">Inconsistent Navigation Menus</h6>
+              <p class="text-secondary small">Two inconsistent navigation bars create an unpredictable journey for users, especially those unfamiliar with the site or people with limited technical skills.</p>
+            </div>
           </div>
         </div>
       </div>
