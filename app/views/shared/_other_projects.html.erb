@@ -1,0 +1,34 @@
+<section class="mb-5 pt-5 border-top animate__animated animate__fadeInUp">
+  <div class="text-center mb-5">
+    <h2 class="display-light">Explore Other Projects</h2>
+  </div>
+  <div class="horizontal-scroll-wrapper">
+    <% @projects.each do |project| %>
+      <% next if project[:name] == @project[:name] %>
+      <div class="scroll-item">
+        <%= link_to project[:path], class: "other-project-card" do %>
+          <div class="content-card h-100">
+            <div class="other-project-card-image-wrapper">
+              <%# Find the specific image URL for the project card %>
+              <% image_url = case project[:name]
+                            when "Bandcamp Redesign"
+                              "https://f4.bcbits.com/img/0027834469_0"
+                            when "British Fencing"
+                              "https://freight.cargo.site/t/original/i/5b4cc062d685ba39a884774e058e39e1070f33430879e0af609e8a8bc4674a0f/006_Cardsort_Square_1.gif"
+                            when "Plan & Go"
+                              "https://giffiles.alphacoders.com/474/4748.gif"
+                            when "KnowIt"
+                              "https://cdn.dribbble.com/users/1731253/screenshots/15013363/media/832bd01839a46e6656a09d0f3c0dbe30.gif"
+                            end %>
+              <img src="<%= image_url %>" alt="<%= project[:name] %>" />
+            </div>
+            <div class="card-body p-4">
+              <h5 class="fw-semibold text-dark"><%= project[:name] %></h5>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+    <div class="scroll-item" style="width: 1px;"></div>
+  </div>
+</section>

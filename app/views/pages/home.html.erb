@@ -1,156 +1,118 @@
-<section class="hero-split-screen">
-  <div class="hero-left">
-    <div class="video-overlay"></div>
-    <video autoplay muted loop class="hero-video">
-      <source src="<%= asset_path('birds.mp4') %>" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <div class="hero-content text-white">
-      <h1 class="display-3 text-light display-light mb-3" style="font-weight: 600; font-style: italic; letter-spacing: -0.05em; white-space: nowrap;">Hi, I'm Jordan</h1>
-      <p class="h3 fw-light mb-4">A UX designer that codes.</p>
-      <p class="lead lead-custom">
-        Passionate about creating digital experiences that balance innovation with usability.
-      </p>
-      <div class="mt-4">
-        <%= link_to "More about me", about_path, class: "cta-button-light" %>
+<section class="hero-full-video">
+  <div class="video-overlay"></div>
+  <video autoplay muted loop class="hero-video">
+    <source src="<%= asset_path('birds.mp4') %>" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="container h-100">
+    <div class="row h-100 align-items-center">
+      <div class="col-lg-6">
+        <div class="hero-text-content text-white">
+          <h1 class="display-3 text-light display-light mb-3" style="font-weight: 600; font-style: italic; letter-spacing: -0.05em; white-space: nowrap;">Hi, I'm Jordan</h1>
+          <p class="h3 fw-light mb-4">A UX designer that codes.</p>
+          <p class="lead lead-custom">
+            Passionate about creating digital experiences that balance innovation with usability.
+          </p>
+          <div class="mt-4">
+            <%= link_to "More about me", about_path, class: "btn-glass" %>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="hero-right">
-    <div class="hero-content">
-      <h3 class="mb-4 fw-light text-light">Selected Work</h3>
-      <div class="vstack gap-3">
-        <%= link_to bandcamp_project_path, class: "project-showcase-card" do %>
-          <img src="https://f4.bcbits.com/img/0027834469_0" alt="Bandcamp Project Image" class="project-card-image">
-          <div class="project-text-wrapper">
-            <h6 class="mb-1 text-light fw-semibold">Bandcamp Redesign</h6>
-            <small class="text-white-50 d-block mb-2">UX Audit & Prototype</small>
-            <span class="badge project-badge badge-ux">UX Case Study</span>
-          </div>
-          <i class="bi bi-arrow-right-short fs-4 icon-arrow ms-auto"></i>
-        <% end %>
+      <div class="col-lg-6">
+        <h4 class="fw-light text-light mb-4">Selected Work</h4>
+        <div class="vstack gap-3">
+          <%= link_to bandcamp_project_path, class: "glass-card-home" do %>
+            <img src="https://f4.bcbits.com/img/0027834469_0" alt="Bandcamp Project Image" class="project-card-image">
+            <div class="project-text-wrapper">
+              <h6 class="mb-1 text-light fw-semibold">Bandcamp Redesign</h6>
+              <small class="text-white-50">UX Case Study</small>
+            </div>
+            <i class="bi bi-arrow-right-short fs-4 icon-arrow ms-auto"></i>
+          <% end %>
 
-        <%= link_to british_fencing_project_path, class: "project-showcase-card" do %>
-          <img src="https://freight.cargo.site/t/original/i/5b4cc062d685ba39a884774e058e39e1070f33430879e0af609e8a8bc4674a0f/006_Cardsort_Square_1.gif" alt="British Fencing Project Image" class="project-card-image">
-          <div class="project-text-wrapper">
-            <h6 class="mb-1 text-light fw-semibold">British Fencing</h6>
-            <small class="text-white-50 d-block mb-2">Information Architecture</small>
-            <span class="badge project-badge badge-ux">UX Case Study</span>
-          </div>
-          <i class="bi bi-arrow-right-short fs-4 icon-arrow ms-auto"></i>
-        <% end %>
+          <%= link_to british_fencing_project_path, class: "glass-card-home" do %>
+            <img src="https://freight.cargo.site/t/original/i/5b4cc062d685ba39a884774e058e39e1070f33430879e0af609e8a8bc4674a0f/006_Cardsort_Square_1.gif" alt="British Fencing Project Image" class="project-card-image">
+            <div class="project-text-wrapper">
+              <h6 class="mb-1 text-light fw-semibold">British Fencing</h6>
+              <small class="text-white-50">Information Architecture</small>
+            </div>
+            <i class="bi bi-arrow-right-short fs-4 icon-arrow ms-auto"></i>
+          <% end %>
 
-        <%= link_to plan_and_go_project_path, class: "project-showcase-card" do %>
-          <img src="https://giffiles.alphacoders.com/474/4748.gif" alt="Plan&Go Project Image" class="project-card-image">
-          <div class="project-text-wrapper">
-            <h6 class="mb-1 text-light fw-semibold">Plan&Go</h6>
-            <small class="text-white-50 d-block mb-2">Full-Stack Application</small>
-            <span class="badge project-badge badge-react">Web Dev</span>
-          </div>
-          <i class="bi bi-arrow-right-short fs-4 icon-arrow ms-auto"></i>
-        <% end %>
-      </div>
-      <div class="text-center mt-5">
-        <%= link_to "More of my work", projects_path, class: "cta-button" %>
+          <%= link_to plan_and_go_project_path, class: "glass-card-home" do %>
+            <img src="https://giffiles.alphacoders.com/474/4748.gif" alt="Plan&Go Project Image" class="project-card-image">
+            <div class="project-text-wrapper">
+              <h6 class="mb-1 text-light fw-semibold">Plan&Go</h6>
+              <small class="text-white-50">Full-Stack Application</small>
+            </div>
+            <i class="bi bi-arrow-right-short fs-4 icon-arrow ms-auto"></i>
+          <% end %>
+        </div>
+        <div class="text-center mt-4">
+          <%= link_to "See all work", projects_path, class: "btn-glass" %>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <style>
-  /* Main hero container */
-  .hero-split-screen {
-    display: flex;
+  .hero-full-video {
     height: 100vh;
     width: 100%;
-    margin-top: -88px; /* Offset navbar height */
-  }
-
-  /* Left and Right Columns */
-  .hero-left {
-    flex: 0 0 42%; /* Adjusted from 35% */
-  }
-  .hero-right {
-    flex: 0 0 58%; /* Adjusted from 65% */
-  }
-  .hero-left, .hero-right {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 3rem;
-    position: relative;
-    overflow: hidden;
-  }
-
-  /* Left Column (Video) */
-  .hero-left {
-    background-color: #111;
+    padding: 2rem;
+    margin-top: -88px;
   }
   .hero-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: auto; /* Maintain aspect ratio */
-    min-width: 100%; /* Ensure it covers the width */
-    object-fit: cover;
-    z-index: 0;
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    object-fit: cover; z-index: 1;
   }
   .video-overlay {
     position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.6); z-index: 1;
+    background: rgba(0, 0, 0, 0.5); z-index: 2;
   }
-
-  /* Right Column (Projects) */
-  .hero-right {
-    background-color: #161616;
-    color: white;
-  }
-
-  /* Content inside columns */
-  .hero-content {
+  .hero-full-video .container {
     position: relative;
-    z-index: 2;
-    width: 100%;
-    max-width: 550px;
+    z-index: 3;
+  }
+  .hero-text-content {
+    animation: fadeIn 1s ease-in-out;
   }
   .lead-custom {
     max-width: 450px;
     opacity: 0.8;
   }
-
-  /* CTA Button on video side */
-  .cta-button-light {
-    background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2);
-    color: white !important; padding: 12px 28px; border-radius: 50px;
-    text-decoration: none; font-weight: 500; transition: all 0.3s ease; display: inline-block;
-  }
-  .cta-button-light:hover { background: rgba(255, 255, 255, 0.2); transform: translateY(-2px); }
-
-  /* Project Showcase Cards */
-  .project-showcase-card {
+  .glass-card-home {
     display: flex;
     align-items: center;
     gap: 1.25rem;
-    background: #1c1c1c;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 1rem;
     border-radius: 1rem;
     text-decoration: none;
     color: white;
     transition: all 0.3s ease;
+    animation: fadeIn 1s ease-in-out;
   }
-  .project-showcase-card:hover {
-    background: #2a2a2a;
-    transform: translateY(-4px);
-    border-color: rgba(255, 255, 255, 0.2);
+  .glass-card-home:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-5px);
   }
-  .project-showcase-card:hover .icon-arrow { transform: translateX(5px); }
+  .glass-card-home:hover .icon-arrow { transform: translateX(5px); }
   .project-card-image {
-    width: 60px;
-    height: 60px;
-    border-radius: 12px;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
     object-fit: cover;
     flex-shrink: 0;
   }
@@ -161,20 +123,35 @@
     transition: transform 0.3s ease;
     opacity: 0.7;
   }
-  .project-badge {
-    font-size: 0.75rem;
-    padding: 0.25rem 0.75rem;
-    border-radius: 20px;
+  .btn-glass {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: white !important;
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
     font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-block;
   }
-  .badge-ux { background: linear-gradient(45deg, #34c759, #30d158); color: white; }
-  .badge-react { background: linear-gradient(45deg, #007aff, #5ac8fa); color: white; }
-
-  /* Responsive adjustments */
+  .btn-glass:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+  }
   @media (max-width: 991.98px) {
-    .hero-split-screen { flex-direction: column; height: auto; margin-top: 0; }
-    .hero-left, .hero-right { flex-basis: auto !important; min-height: 90vh; }
-    .hero-left { padding-top: 120px; text-align: center; }
-    .lead-custom { margin-left: auto; margin-right: auto; }
+    .hero-full-video {
+      height: auto;
+      min-height: 100vh;
+      padding-top: 120px;
+      padding-bottom: 4rem;
+      margin-top: 0;
+    }
+    .hero-text-content {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .lead-custom { margin: 0 auto; }
   }
 </style>

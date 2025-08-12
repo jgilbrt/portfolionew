@@ -8,10 +8,10 @@ projects = [
 ]
 %>
 
-<nav class="navbar" style="background: rgba(18, 18, 18, 0.95); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding: 1rem 0; position: fixed; top: 0; width: 100%; z-index: 1030;">
+<nav class="navbar">
   <div class="container-fluid px-4">
     <%= link_to home_path, class: "navbar-brand", style: "text-decoration: none;" do %>
-      <div style="height: 44px; width: 124px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+      <div style="height: 44px; width: 124px; border-radius: 12px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
         <%= image_tag 'logo.jpg', style: "height: 100%; width: 100%; object-fit: cover;" %>
       </div>
     <% end %>
@@ -23,7 +23,7 @@ projects = [
 
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
   <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Navigation</h5>
+    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
@@ -31,7 +31,6 @@ projects = [
       <li class="nav-item">
         <%= link_to "My Work", projects_path, class: "nav-link nav-main-link #{'active' if request.path.start_with?('/projects') && current_page?(projects_path)}" %>
       </li>
-
       <div class="project-links-wrapper">
         <% projects.each do |project| %>
           <li class="nav-item">
@@ -39,9 +38,6 @@ projects = [
           </li>
         <% end %>
       </div>
-
-      <hr class="nav-divider">
-
       <li class="nav-item">
         <%= link_to "About", about_path, class: "nav-link nav-main-link #{'active' if current_page?(about_path)}" %>
       </li>
@@ -49,74 +45,67 @@ projects = [
         <%= link_to "Contact Me", contact_path, class: "nav-link nav-main-link #{'active' if current_page?(contact_path)}" %>
       </li>
     </ul>
+    <div class="offcanvas-social-links">
+      <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+      <a href="#" class="social-icon"><i class="bi bi-dribbble"></i></a>
+    </div>
   </div>
 </div>
 
 <style>
+  /* Main Navbar Styling */
+  .navbar {
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+    min-height: 88px;
+    transition: background 0.3s ease;
+  }
+
+  /* Default / Mobile (< 1001px) Style */
+  .navbar {
+    background: #121212;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Desktop (> 1000px) Style */
+  @media (min-width: 1001px) {
+    .navbar {
+      background: transparent;
+      border-bottom: none;
+    }
+  }
+
   /* Burger Menu Button */
   .navbar-toggler { border: none; }
   .navbar-toggler:focus { box-shadow: none; }
   .navbar-toggler-icon { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
 
   /* Side Drawer Panel */
-  .offcanvas {
-    background: rgba(18, 18, 18, 0.95);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    color: white;
-    border-left: 1px solid rgba(255, 255, 255, 0.1);
+  .offcanvas#offcanvasNavbar {
+    --bs-offcanvas-bg: #121212 !important;
+    --bs-offcanvas-color: white !important;
+    --bs-btn-close-color: white !important;
+    border-left: 1px solid rgba(255, 255, 255, 0.1) !important;
   }
-  .offcanvas-header {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
-  .offcanvas-title {
-    color: white;
-    opacity: 0.9;
-  }
-  .btn-close {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
-  }
+  #offcanvasNavbar .offcanvas-header { min-height: 88px; align-items: center; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+  #offcanvasNavbar .offcanvas-body { display: flex; flex-direction: column; }
+  #offcanvasNavbar .offcanvas-title { color: white; opacity: 0.9; }
 
   /* Drawer Links */
-  .navbar-nav {
-    align-items: flex-start;
-    gap: 0.25rem;
-  }
-  .nav-link {
-    color: white;
-    opacity: 0.7;
-    font-weight: 500;
-    padding: 10px 20px;
-    border-radius: 8px;
-    transition: all 0.2s ease;
-    width: 100%;
-  }
-  .nav-link:hover {
-    opacity: 1;
-    background: rgba(255, 255, 255, 0.08);
-  }
-  .nav-main-link.active {
-    opacity: 1;
-    font-weight: 600;
-    background: rgba(255, 255, 255, 0.1);
-  }
-  .project-links-wrapper {
-    width: 100%;
-    padding-left: 1.5rem;
-    margin-bottom: 0.5rem;
-  }
-  .nav-project-link {
-    font-size: 0.95rem;
-    opacity: 0.6;
-  }
-  .nav-project-link.active {
-    opacity: 1;
-    font-weight: 500;
-    background: rgba(255, 255, 255, 0.15); /* Darker highlight for selected project */
-  }
-  .nav-divider {
-    border-color: rgba(255, 255, 255, 0.1);
-    margin: 0.75rem 1.25rem;
-    width: calc(100% - 2.5rem);
-  }
+  #offcanvasNavbar .navbar-nav { align-items: flex-start; gap: 0.25rem; }
+  #offcanvasNavbar .nav-link { color: white; opacity: 0.7; font-weight: 500; padding: 10px 20px; border-radius: 8px; transition: all 0.2s ease; width: 100%; }
+  #offcanvasNavbar .nav-link:hover { opacity: 1; background: rgba(255, 255, 255, 0.08); }
+  #offcanvasNavbar .nav-link.active { opacity: 1; font-weight: 600; background: rgba(255, 255, 255, 0.1); }
+  #offcanvasNavbar .project-links-wrapper { width: 100%; padding-left: 1.5rem; margin-bottom: 0.5rem; }
+  #offcanvasNavbar .nav-project-link { font-size: 0.95rem; opacity: 0.6; }
+  #offcanvasNavbar .nav-project-link.active { opacity: 1; font-weight: 500; background: rgba(255, 255, 255, 0.15); }
+  #offcanvasNavbar .nav-divider { border-color: rgba(255, 255, 255, 0.1); margin: 0.75rem 1.25rem; width: calc(100% - 2.5rem); }
+
+  /* Social Links at bottom of drawer */
+  #offcanvasNavbar .offcanvas-social-links { margin-top: auto; padding: 1rem 1.25rem; border-top: 1px solid rgba(255, 255, 255, 0.1); display: flex; justify-content: center; gap: 1.5rem; }
+  #offcanvasNavbar .social-icon { color: white; opacity: 0.6; font-size: 1.25rem; text-decoration: none; transition: all 0.2s ease; }
+  #offcanvasNavbar .social-icon:hover { opacity: 1; transform: scale(1.1); }
 </style>

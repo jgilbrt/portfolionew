@@ -1,8 +1,6 @@
 <% content_for :head do %>
   <style>
     .case-study-body { background-color: #f8f9fa; }
-
-    /* --- Sticky Nav & Back to Top --- */
     .scroll-nav { position: fixed; top: 50%; right: 2.5rem; transform: translateY(-50%); z-index: 10; }
     .scroll-nav ul { list-style: none; padding: 0; margin: 0; }
     .scroll-nav li { margin: 1.25rem 0; }
@@ -14,29 +12,16 @@
     #back-to-top-btn { position: fixed; bottom: 2rem; right: 2.5rem; width: 40px; height: 40px; background-color: #fff; color: #495057; border-radius: 50%; text-align: center; line-height: 40px; font-size: 1.2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: opacity 0.3s, transform 0.3s; opacity: 0; transform: translateY(10px); pointer-events: none; z-index: 10;}
     #back-to-top-btn.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
     #back-to-top-btn:hover { background-color: #f1f3f5; transform: translateY(-2px); }
-
-    /* --- Hero Image --- */
-    .hero-gif {
-      width: 300px;
-      height: 300px;
-      border-radius: 2rem;
-      object-fit: cover;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
-    }
-
-    /* --- Other Projects --- */
+    .hero-gif { width: 300px; height: 300px; border-radius: 2rem; object-fit: cover; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07); }
     .horizontal-scroll-wrapper { display: flex; overflow-x: auto; padding-bottom: 1.5rem; scrollbar-width: none; -ms-overflow-style: none; }
     .horizontal-scroll-wrapper::-webkit-scrollbar { display: none; }
     .scroll-item { flex: 0 0 320px; margin-right: 1.5rem; }
-
     .other-project-card { display: block; text-decoration: none; }
     .other-project-card .content-card { overflow: hidden; transition: all 0.3s ease; }
     .other-project-card:hover .content-card { transform: translateY(-8px); box-shadow: var(--shadow-md); }
     .other-project-card-image-wrapper { overflow: hidden; }
     .other-project-card img { transition: transform 0.35s ease; height: 180px; width: 100%; object-fit: cover; }
     .other-project-card:hover img { transform: scale(1.05); }
-
-
     @media (max-width: 992px) {
       .scroll-nav { display: none; }
       .hero-gif { width: 220px; height: 220px; }
@@ -83,11 +68,6 @@
               <p class="mb-0">3 UX Designers</p>
             </div>
           </div>
-          <div class="mt-4">
-            <button id="summarize-btn" class="btn btn-outline-primary btn-sm">
-              <i class="bi bi-sparkles"></i> Summarise with AI
-            </button>
-          </div>
         </div>
         <div class="col-lg-5 text-center mt-4 mt-lg-0">
           <img src="https://f4.bcbits.com/img/0027834469_0" alt="Bandcamp App Redesign Interface" class="hero-gif">
@@ -95,197 +75,134 @@
       </div>
     </section>
 
-    <div id="case-study-content">
-      <section id="intro" class="mb-5 animate__animated animate__fadeInUp">
-        <div class="content-card p-4 p-md-5">
-          <div class="d-flex align-items-start gap-3 mb-4">
-            <span class="h1 text-primary opacity-50">01</span>
-            <h2 class="display-6 mt-2">INTRO</h2>
+    <section id="intro" class="mb-5 animate__animated animate__fadeInUp">
+      <div class="content-card p-4 p-md-5">
+        <div class="d-flex align-items-start gap-3 mb-4">
+          <span class="h1 text-primary opacity-50">01</span>
+          <h2 class="display-6 mt-2">INTRO</h2>
+        </div>
+        <div class="text-secondary lead-sm">
+          <p>This document outlines a conceptual redesign of the Bandcamp mobile app. It follows a classic, robust UX design process, starting with research to identify a problem and concluding with a validated, high-fidelity prototype that demonstrates significant improvement.</p>
+          <p class="mt-3">The project's core objective was to enhance the user experience to increase engagement and satisfaction, while preserving Bandcamp's unique identity as a platform focused on directly supporting independent artists. The project successfully delivered a redesigned prototype that demonstrably improved usability.</p>
+          <ul class="list-unstyled mt-4">
+            <li><strong class="text-dark">Company:</strong> Bandcamp (Conceptual Redesign)</li>
+            <li><strong class="text-dark">Primary Metric:</strong> System Usability Scale (SUS)</li>
+            <li><strong class="text-dark">Key Result:</strong> Final SUS score of <strong>88/100</strong></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="research" class="mb-5 animate__animated animate__fadeInUp">
+      <div class="content-card p-4 p-md-5">
+        <div class="d-flex align-items-start gap-3 mb-4">
+          <span class="h1 text-danger opacity-50">02</span>
+          <h2 class="display-6 mt-2">RESEARCH</h2>
+        </div>
+        <p class="text-secondary lead-sm mb-4">The project began with a solid research phase combining quantitative and qualitative methods to establish a baseline and uncover user pain points.</p>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <h4 class="fw-semibold">Baseline Usability Testing</h4>
+            <p class="text-secondary">A baseline System Usability Scale (SUS) score of <strong>69.5</strong> was established. This score is considered "OK" or "Marginal," sitting just below the industry average of 68 and indicating clear room for improvement.</p>
+            <p class="text-secondary mt-2">Key findings from testing showed that core features like <strong>Bandcamp Radio</strong> and <strong>Daily</strong> were ignored, the <strong>UI felt bland</strong>, and the <strong>feed was perceived as irrelevant</strong> by a majority of users tested.</p>
           </div>
-          <div class="text-secondary lead-sm">
-            <p>This document outlines a conceptual redesign of the Bandcamp mobile app. It follows a classic, robust UX design process, starting with research to identify a problem and concluding with a validated, high-fidelity prototype that demonstrates significant improvement.</p>
-            <p class="mt-3">The project's core objective was to enhance the user experience to increase engagement and satisfaction, while preserving Bandcamp's unique identity as a platform focused on directly supporting independent artists. The project successfully delivered a redesigned prototype that demonstrably improved usability.</p>
-            <ul class="list-unstyled mt-4">
-              <li><strong class="text-dark">Company:</strong> Bandcamp (Conceptual Redesign)</li>
-              <li><strong class="text-dark">Primary Metric:</strong> System Usability Scale (SUS)</li>
-              <li><strong class="text-dark">Key Result:</strong> Final SUS score of <strong>88/100</strong></li>
+          <div class="col-lg-6">
+            <h4 class="fw-semibold">User Interviews</h4>
+            <p class="text-secondary">Interviews with fans and artists revealed a critical insight: users desire a closer connection to artists and their creative process, which they currently seek on other platforms like Instagram and YouTube.</p>
+            <p class="text-secondary mt-2">A core tension was identified: Bandcamp’s "algorithm-free" stance, while central to its brand, hinders music discovery for many users who are accustomed to algorithm-driven recommendations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="problem" class="mb-5 animate__animated animate__fadeInUp">
+      <div class="content-card p-4 p-md-5">
+        <div class="d-flex align-items-start gap-3 mb-4">
+          <span class="h1 text-info opacity-50">03</span>
+          <h2 class="display-6 mt-2">PROBLEM</h2>
+        </div>
+        <p class="text-secondary lead-sm mb-5">The research was effectively synthesized into user personas and a clear problem statement, ensuring the design process remained focused on user needs. The design centered on two key personas to represent both sides of the platform's community.</p>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="content-card p-4 h-100 d-flex flex-column">
+              <div class="d-flex align-items-center mb-3">
+                <img src="https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?q=80&w=400&auto=format&fit=crop" alt="Persona of Leon" class="rounded-circle me-3" style="width: 75px; height: 75px; object-fit: cover;">
+                <div>
+                  <h4 class="fw-semibold mb-0">Leon, 28</h4>
+                  <p class="text-secondary mb-0">The Fan</p>
+                </div>
+              </div>
+              <p class="text-secondary flex-grow-1"><strong class="text-dark">Bio:</strong> Leon loves discovering new music, especially from smaller artists. He finds big streaming platforms too repetitive and algorithm-heavy, and wants to feel closer to the people making the music he loves.</p>
+              <blockquote class="blockquote mt-auto border-start border-4 border-warning ps-3"><p class="mb-0 fst-italic small">"I want to feel connected to the artists and their creative process."</p></blockquote>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="content-card p-4 h-100 d-flex flex-column">
+              <div class="d-flex align-items-center mb-3">
+                <img src="https://images.unsplash.com/photo-1521337706264-a414f153a5ed?q=80&w=400&auto=format&fit=crop" alt="Persona of Emma" class="rounded-circle me-3" style="width: 75px; height: 75px; object-fit: cover;">
+                <div>
+                  <h4 class="fw-semibold mb-0">Emma, 25</h4>
+                  <p class="text-secondary mb-0">The Artist</p>
+                </div>
+              </div>
+              <p class="text-secondary flex-grow-1"><strong class="text-dark">Bio:</strong> Emma loves that Bandcamp gives her financial and creative control, but she wants better tools to actually engage her fans on the platform—beyond just selling them music and merch.</p>
+              <blockquote class="blockquote mt-auto border-start border-4 border-warning ps-3"><p class="mb-0 fst-italic small">"I need better ways to share my journey and connect with fans directly on Bandcamp."</p></blockquote>
+            </div>
+          </div>
+        </div>
+        <div class="bg-light p-4 rounded mt-5">
+          <h5 class="fw-bold text-center">Problem Statement</h5>
+          <p class="text-center text-secondary fst-italic mb-0">"How might we help Leon connect more with artists and discover new music — while giving Emma better tools to grow her fanbase on Bandcamp?"</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="solution" class="mb-5 animate__animated animate__fadeInUp">
+      <div class="content-card p-4 p-md-5">
+        <div class="d-flex align-items-start gap-3 mb-4">
+          <span class="h1 text-warning opacity-50">04</span>
+          <h2 class="display-6 mt-2">SOLUTION</h2>
+        </div>
+        <div class="row g-5">
+          <div class="col-lg-6">
+            <h4 class="fw-semibold">New Features & Redesigns</h4>
+            <p class="text-secondary">The proposed solution addresses the identified problems by revamping existing features and introducing new ones:</p>
+            <ul class="text-secondary mt-3">
+              <li><strong>Discovery Homepage:</strong> Makes finding new content the primary focus of the app.</li>
+              <li><strong>Revamped Artist Profiles:</strong> Gives artists more control to showcase their work.</li>
+              <li><strong>Refreshed Feed:</strong> Shifts the focus to meaningful updates from followed artists.</li>
+              <li><strong>New Feature: Trackfinder:</strong> An innovative, Tinder-style swiping feature for discovering track previews.</li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <h4 class="fw-semibold">Information Architecture & Validation</h4>
+            <p class="text-secondary">The navigation was streamlined and a brand refresh addressed the "bland UI" complaint. The project's strength lies in its iterative testing process:</p>
+            <ul class="text-secondary mt-3">
+              <li><strong>Greyscale Prototype Testing:</strong> Raised the SUS score significantly to <strong>80.5</strong>.</li>
+              <li><strong>High-Fidelity Prototype Testing:</strong> Validated the design choices, resulting in a final SUS score of <strong>88</strong>.</li>
             </ul>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="research" class="mb-5 animate__animated animate__fadeInUp">
-        <div class="content-card p-4 p-md-5">
-          <div class="d-flex align-items-start gap-3 mb-4">
-            <span class="h1 text-danger opacity-50">02</span>
-            <h2 class="display-6 mt-2">RESEARCH</h2>
-          </div>
-          <p class="text-secondary lead-sm mb-4">The project began with a solid research phase combining quantitative and qualitative methods to establish a baseline and uncover user pain points.</p>
-          <div class="row g-4">
-            <div class="col-lg-6">
-              <h4 class="fw-semibold">Baseline Usability Testing</h4>
-              <p class="text-secondary">A baseline System Usability Scale (SUS) score of <strong>69.5</strong> was established. This score is considered "OK" or "Marginal," sitting just below the industry average of 68 and indicating clear room for improvement.</p>
-              <p class="text-secondary mt-2">Key findings from testing showed that core features like <strong>Bandcamp Radio</strong> and <strong>Daily</strong> were ignored, the <strong>UI felt bland</strong>, and the <strong>feed was perceived as irrelevant</strong> by a majority of users tested.</p>
-            </div>
-            <div class="col-lg-6">
-              <h4 class="fw-semibold">User Interviews</h4>
-              <p class="text-secondary">Interviews with fans and artists revealed a critical insight: users desire a closer connection to artists and their creative process, which they currently seek on other platforms like Instagram and YouTube.</p>
-              <p class="text-secondary mt-2">A core tension was identified: Bandcamp’s "algorithm-free" stance, while central to its brand, hinders music discovery for many users who are accustomed to algorithm-driven recommendations.</p>
-            </div>
-          </div>
+    <section id="prototype" class="mb-5 animate__animated animate__fadeInUp">
+      <div class="content-card p-4 p-md-5">
+        <div class="d-flex align-items-start gap-3 mb-4">
+          <span class="h1 text-success opacity-50">05</span>
+          <h2 class="display-6 mt-2">The Final Prototype</h2>
         </div>
-      </section>
+        <p class="text-secondary lead-sm mb-4">The final prototype incorporates all iterations, resulting in a clean, modern design that doesn't lose Bandcamp’s core identity. Key highlights include a visual refresh, clearer UI, and custom artist profiles.</p>
+        <div class="content-card p-2">
+          <iframe style="border: none; border-radius: 0.8rem;" width="100%" height="600" src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/ETVVM3gFD5iUVy5CYvCPMN/Untitled?node-id=434-2014&starting-point-node-id=434%3A1239" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
 
-      <section id="problem" class="mb-5 animate__animated animate__fadeInUp">
-        <div class="content-card p-4 p-md-5">
-          <div class="d-flex align-items-start gap-3 mb-4">
-            <span class="h1 text-info opacity-50">03</span>
-            <h2 class="display-6 mt-2">PROBLEM</h2>
-          </div>
-          <p class="text-secondary lead-sm mb-5">The research was effectively synthesized into user personas and a clear problem statement, ensuring the design process remained focused on user needs. The design centered on two key personas to represent both sides of the platform's community.</p>
-          <div class="row g-4">
-            <div class="col-lg-6">
-              <div class="content-card p-4 h-100 d-flex flex-column">
-                <div class="d-flex align-items-center mb-3">
-                  <img src="https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?q=80&w=400&auto=format&fit=crop" alt="Persona of Leon" class="rounded-circle me-3" style="width: 75px; height: 75px; object-fit: cover;">
-                  <div>
-                    <h4 class="fw-semibold mb-0">Leon, 28</h4>
-                    <p class="text-secondary mb-0">The Fan</p>
-                  </div>
-                </div>
-                <p class="text-secondary flex-grow-1"><strong class="text-dark">Bio:</strong> Leon loves discovering new music, especially from smaller artists. He finds big streaming platforms too repetitive and algorithm-heavy, and wants to feel closer to the people making the music he loves.</p>
-                <blockquote class="blockquote mt-auto border-start border-4 border-warning ps-3"><p class="mb-0 fst-italic small">"I want to feel connected to the artists and their creative process."</p></blockquote>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="content-card p-4 h-100 d-flex flex-column">
-                <div class="d-flex align-items-center mb-3">
-                  <img src="https://images.unsplash.com/photo-1521337706264-a414f153a5ed?q=80&w=400&auto=format&fit=crop" alt="Persona of Emma" class="rounded-circle me-3" style="width: 75px; height: 75px; object-fit: cover;">
-                  <div>
-                    <h4 class="fw-semibold mb-0">Emma, 25</h4>
-                    <p class="text-secondary mb-0">The Artist</p>
-                  </div>
-                </div>
-                <p class="text-secondary flex-grow-1"><strong class="text-dark">Bio:</strong> Emma loves that Bandcamp gives her financial and creative control, but she wants better tools to actually engage her fans on the platform—beyond just selling them music and merch.</p>
-                <blockquote class="blockquote mt-auto border-start border-4 border-warning ps-3"><p class="mb-0 fst-italic small">"I need better ways to share my journey and connect with fans directly on Bandcamp."</p></blockquote>
-              </div>
-            </div>
-          </div>
-          <div class="bg-light p-4 rounded mt-5">
-            <h5 class="fw-bold text-center">Problem Statement</h5>
-            <p class="text-center text-secondary fst-italic mb-0">"How might we help Leon connect more with artists and discover new music — while giving Emma better tools to grow her fanbase on Bandcamp?"</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="solution" class="mb-5 animate__animated animate__fadeInUp">
-        <div class="content-card p-4 p-md-5">
-          <div class="d-flex align-items-start gap-3 mb-4">
-            <span class="h1 text-warning opacity-50">04</span>
-            <h2 class="display-6 mt-2">SOLUTION</h2>
-          </div>
-          <div class="row g-5">
-            <div class="col-lg-6">
-              <h4 class="fw-semibold">New Features & Redesigns</h4>
-              <p class="text-secondary">The proposed solution addresses the identified problems by revamping existing features and introducing new ones:</p>
-              <ul class="text-secondary mt-3">
-                <li><strong>Discovery Homepage:</strong> Makes finding new content the primary focus of the app.</li>
-                <li><strong>Revamped Artist Profiles:</strong> Gives artists more control to showcase their work.</li>
-                <li><strong>Refreshed Feed:</strong> Shifts the focus to meaningful updates from followed artists.</li>
-                <li><strong>New Feature: Trackfinder:</strong> An innovative, Tinder-style swiping feature for discovering track previews.</li>
-              </ul>
-            </div>
-            <div class="col-lg-6">
-              <h4 class="fw-semibold">Information Architecture & Validation</h4>
-              <p class="text-secondary">The navigation was streamlined and a brand refresh addressed the "bland UI" complaint. The project's strength lies in its iterative testing process:</p>
-              <ul class="text-secondary mt-3">
-                <li><strong>Greyscale Prototype Testing:</strong> Raised the SUS score significantly to <strong>80.5</strong>.</li>
-                <li><strong>High-Fidelity Prototype Testing:</strong> Validated the design choices, resulting in a final SUS score of <strong>88</strong>.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="prototype" class="mb-5 animate__animated animate__fadeInUp">
-        <div class="content-card p-4 p-md-5">
-          <div class="d-flex align-items-start gap-3 mb-4">
-            <span class="h1 text-success opacity-50">05</span>
-            <h2 class="display-6 mt-2">The Final Prototype</h2>
-          </div>
-          <p class="text-secondary lead-sm mb-4">The final prototype incorporates all iterations, resulting in a clean, modern design that doesn't lose Bandcamp’s core identity. Key highlights include a visual refresh, clearer UI, and custom artist profiles.</p>
-          <div class="content-card p-2">
-            <iframe style="border: none; border-radius: 0.8rem;" width="100%" height="600" src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/ETVVM3gFD5iUVy5CYvCPMN/Untitled?node-id=434-2014&starting-point-node-id=434%3A1239" allowfullscreen></iframe>
-          </div>
-        </div>
-      </section>
-
-      <section id="more-projects" class="mb-5 pt-5 border-top animate__animated animate__fadeInUp">
-        <div class="text-center mb-5">
-          <h2 class="display-light">Explore Other Projects</h2>
-        </div>
-        <div class="horizontal-scroll-wrapper">
-          <div class="scroll-item">
-            <a href="#" class="other-project-card">
-              <div class="content-card h-100">
-                <div class="other-project-card-image-wrapper">
-                  <img src="https://freight.cargo.site/t/original/i/5b4cc062d685ba39a884774e058e39e1070f33430879e0af609e8a8bc4674a0f/006_Cardsort_Square_1.gif" alt="British Fencing Project" />
-                </div>
-                <div class="card-body p-4">
-                  <h5 class="fw-semibold text-dark">British Fencing</h5>
-                  <p class="text-secondary small">Complete IA overhaul improving member navigation and task success by 45%.</p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="scroll-item">
-            <a href="#" class="other-project-card">
-              <div class="content-card h-100">
-                <div class="other-project-card-image-wrapper">
-                  <img src="https://giffiles.alphacoders.com/474/4748.gif" alt="Plan&Go Project" />
-                </div>
-                <div class="card-body p-4">
-                  <h5 class="fw-semibold text-dark">Plan&Go</h5>
-                  <p class="text-secondary small">AI-powered travel planner built with React and Node.js for intelligent itinerary generation.</p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="scroll-item">
-            <a href="#" class="other-project-card">
-              <div class="content-card h-100">
-                <div class="other-project-card-image-wrapper">
-                  <img src="https://cdn.dribbble.com/users/1731253/screenshots/15013363/media/832bd01839a46e6656a09d0f3c0dbe30.gif" alt="KnowIt" />
-                </div>
-                <div class="card-body p-4">
-                  <h5 class="fw-semibold text-dark">KnowIt</h5>
-                  <p class="text-secondary small">Intelligent flashcard platform built with Ruby on Rails, featuring spaced repetition algorithms.</p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="scroll-item" style="width: 1px;"></div>
-        </div>
-      </section>
-    </div>
+    <%= render 'shared/other_projects' %>
 
     <section id="impact" class="text-center">
        <%= link_to "← Back to Projects", projects_path, class: "cta-button" %>
     </section>
-
-  </div>
-</div>
-
-<div class="modal fade" id="summaryModal" tabindex="-1" aria-labelledby="summaryModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="summaryModalLabel"><i class="bi bi-sparkles text-primary"></i> AI Summary</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body" id="summary-modal-body">
-        <p>Generating summary...</p>
-      </div>
-    </div>
   </div>
 </div>

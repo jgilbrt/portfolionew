@@ -6,9 +6,6 @@ Rails.application.routes.draw do
   get 'projects', to: 'pages#projects'
   get 'contact', to: 'pages#contact'
 
-  # Add this new route for the AI summary
-  post 'summarize', to: 'pages#summarize'
-
   get 'projects/bandcamp', to: 'pages#bandcamp', as: :bandcamp_project
   get 'projects/british-fencing', to: 'pages#british_fencing', as: :british_fencing_project
   get 'projects/plan-and-go', to: 'pages#plan_and_go', as: :plan_and_go_project

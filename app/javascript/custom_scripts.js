@@ -14,7 +14,6 @@ function initializePortfolioScripts() {
           const category = project.dataset.category;
           const shouldShow = filter === "all" || category === filter;
 
-          // Use a simple show/hide which is more robust with Turbo
           if (shouldShow) {
             project.style.display = 'block';
           } else {
@@ -25,38 +24,7 @@ function initializePortfolioScripts() {
     });
   }
 
-  // --- 2. AI Summarizer Logic (for case study pages with the button) ---
-  const summarizeBtn = document.getElementById('summarize-btn');
-  if (summarizeBtn) {
-    const contentToSummarize = document.getElementById('case-study-content');
-    const modalBody = document.getElementById('summary-modal-body');
-    const summaryModal = new bootstrap.Modal(document.getElementById('summaryModal'));
-    const csrfToken = document.querySelector("meta[name='csrf-token']").getAttribute("content");
-
-    summarizeBtn.addEventListener('click', async () => {
-      summarizeBtn.disabled = true;
-      summarizeBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Summarising...';
-      modalBody.innerHTML = '<p>Generating summary...</p>';
-      summaryModal.show();
-      try {
-        const response = await fetch('/summarize', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'X-CSRF-Token': csrfToken },
-          body: JSON.stringify({ text: contentToSummarize.innerText })
-        });
-        if (!response.ok) { throw new Error('Network response was not ok'); }
-        const data = await response.json();
-        modalBody.innerHTML = data.summary.replace(/\n/g, '<br>');
-      } catch (error) {
-        modalBody.innerHTML = '<p class="text-danger">Sorry, there was an error generating the summary.</p>';
-      } finally {
-        summarizeBtn.disabled = false;
-        summarizeBtn.innerHTML = '<i class="bi bi-sparkles"></i> Summarise with AI';
-      }
-    });
-  }
-
-  // --- 3. Case Study Scrollspy, Tooltips, & Back to Top Logic ---
+  // --- 2. Case Study Scrollspy, Tooltips, & Back to Top Logic ---
   const scrollNav = document.querySelector('.scroll-nav');
   if (scrollNav) {
     const sections = document.querySelectorAll('section[id]');
@@ -77,7 +45,6 @@ function initializePortfolioScripts() {
       if (currentSectionId) {
         activateNavLink(currentSectionId);
       } else if (sections.length > 0) {
-        // Activate the first link if we are at the top
         activateNavLink(sections[0].getAttribute('id'));
       }
 
@@ -87,7 +54,6 @@ function initializePortfolioScripts() {
 
     window.addEventListener('scroll', handleScroll, { passive: true });
 
-    // Trigger scroll handler on load to set initial state
     handleScroll();
 
     navLinks.forEach(anchor => {
@@ -105,5 +71,4 @@ function initializePortfolioScripts() {
   }
 }
 
-// Listen for Turbo to load a new page, ensuring scripts re-run on navigation
 document.addEventListener("turbo:load", initializePortfolioScripts);

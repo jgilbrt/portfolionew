@@ -1,8 +1,6 @@
 <% content_for :head do %>
   <style>
     .case-study-body { background-color: #f8f9fa; }
-
-    /* --- Sticky Nav & Back to Top --- */
     .scroll-nav { position: fixed; top: 50%; right: 2.5rem; transform: translateY(-50%); z-index: 10; }
     .scroll-nav ul { list-style: none; padding: 0; margin: 0; }
     .scroll-nav li { margin: 1.25rem 0; }
@@ -14,16 +12,7 @@
     #back-to-top-btn { position: fixed; bottom: 2rem; right: 2.5rem; width: 40px; height: 40px; background-color: #fff; color: #495057; border-radius: 50%; text-align: center; line-height: 40px; font-size: 1.2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: opacity 0.3s, transform 0.3s; opacity: 0; transform: translateY(10px); pointer-events: none; z-index: 10;}
     #back-to-top-btn.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
     #back-to-top-btn:hover { background-color: #f1f3f5; transform: translateY(-2px); }
-
-    /* --- Hero Image --- */
-    .hero-gif {
-      width: 300px;
-      height: 300px;
-      border-radius: 2rem;
-      object-fit: cover;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
-    }
-
+    .hero-gif { width: 300px; height: 300px; border-radius: 2rem; object-fit: cover; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07); }
     @media (max-width: 992px) {
       .scroll-nav { display: none; }
       .hero-gif { width: 220px; height: 220px; }
@@ -69,11 +58,6 @@
               <p class="mb-0">UX Research Team</p>
             </div>
           </div>
-          <div class="mt-4">
-            <button id="summarize-btn" class="btn btn-outline-primary btn-sm">
-              <i class="bi bi-sparkles"></i> Summarise with AI
-            </button>
-          </div>
         </div>
         <div class="col-lg-5 text-center mt-4 mt-lg-0">
           <img src="https://freight.cargo.site/t/original/i/5b4cc062d685ba39a884774e058e39e1070f33430879e0af609e8a8bc4674a0f/006_Cardsort_Square_1.gif" alt="British Fencing Interface" class="hero-gif">
@@ -81,135 +65,121 @@
       </div>
     </section>
 
-    <div id="case-study-content">
-      <section id="intro" class="mb-5 animate__animated animate__fadeInUp">
-        <div class="content-card p-4 p-md-5">
-          <div class="d-flex align-items-start gap-3 mb-4">
-            <span class="h1 text-primary opacity-50">01</span>
-            <h2 class="display-6 mt-2">Intro</h2>
+    <section id="intro" class="mb-5 animate__animated animate__fadeInUp">
+      <div class="content-card p-4 p-md-5">
+        <div class="d-flex align-items-start gap-3 mb-4">
+          <span class="h1 text-primary opacity-50">01</span>
+          <h2 class="display-6 mt-2">Intro</h2>
+        </div>
+        <div class="text-secondary lead-sm">
+          <p>British Fencing approached us as their users consistently reported difficulties in navigating their website. It was cluttered, overwhelming and key info was buried within their site structure. Their primary goal wasn't a visual overhaul, but to research and outline the most efficient way for British Fencing to <strong>restructure their information</strong>, based on user insights. Providing a structure that they could confidently build upon for future digital projects.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="research" class="mb-5 animate__animated animate__fadeInUp">
+      <div class="content-card p-4 p-md-5">
+        <div class="d-flex align-items-start gap-3 mb-4">
+          <span class="h1 text-danger opacity-50">02</span>
+          <h2 class="display-6 mt-2">Research</h2>
+        </div>
+        <p class="text-secondary lead-sm mb-4">Our research phase combined qualitative and quantitative methods to uncover usability challenges. Our user group included competitive fencers, coaches, parents, and total beginners — helping us identify universal blockers and audience-specific struggles.</p>
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <h5 class="fw-semibold">Usability Testing</h5>
+            <p class="text-secondary small">Initial tests on the existing site revealed a <strong>33% task success rate</strong> and an average completion time of 3-4 minutes for simple tasks, resulting in a poor SUS score of 34/100.</p>
           </div>
-          <div class="text-secondary lead-sm">
-            <p>British Fencing approached us as their users consistently reported difficulties in navigating their website. It was cluttered, overwhelming and key info was buried within their site structure. Their primary goal wasn't a visual overhaul, but to research and outline the most efficient way for British Fencing to <strong>restructure their information</strong>, based on user insights. Providing a structure that they could confidently build upon for future digital projects.</p>
+          <div class="col-lg-4">
+            <h5 class="fw-semibold">User Interviews</h5>
+            <p class="text-secondary small">Interviews confirmed the quantitative data: 80% of users struggled to find key information, and 70% described the homepage as "overwhelming" and "cluttered."</p>
+          </div>
+          <div class="col-lg-4">
+            <h5 class="fw-semibold">Heuristic Evaluation</h5>
+            <p class="text-secondary small">An audit against Nielsen's heuristics highlighted critical issues in 'Consistency and Standards' and 'Recognition Rather Than Recall' due to confusing navigation labels and structure.</p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="research" class="mb-5 animate__animated animate__fadeInUp">
-        <div class="content-card p-4 p-md-5">
-          <div class="d-flex align-items-start gap-3 mb-4">
-            <span class="h1 text-danger opacity-50">02</span>
-            <h2 class="display-6 mt-2">Research</h2>
-          </div>
-          <p class="text-secondary lead-sm mb-4">Our research phase combined qualitative and quantitative methods to uncover usability challenges. Our user group included competitive fencers, coaches, parents, and total beginners — helping us identify universal blockers and audience-specific struggles.</p>
-          <div class="row g-4">
-            <div class="col-lg-4">
-              <h5 class="fw-semibold">Usability Testing</h5>
-              <p class="text-secondary small">Initial tests on the existing site revealed a <strong>33% task success rate</strong> and an average completion time of 3-4 minutes for simple tasks, resulting in a poor SUS score of 34/100.</p>
-            </div>
-            <div class="col-lg-4">
-              <h5 class="fw-semibold">User Interviews</h5>
-              <p class="text-secondary small">Interviews confirmed the quantitative data: 80% of users struggled to find key information, and 70% described the homepage as "overwhelming" and "cluttered."</p>
-            </div>
-            <div class="col-lg-4">
-              <h5 class="fw-semibold">Heuristic Evaluation</h5>
-              <p class="text-secondary small">An audit against Nielsen's heuristics highlighted critical issues in 'Consistency and Standards' and 'Recognition Rather Than Recall' due to confusing navigation labels and structure.</p>
-            </div>
-          </div>
+    <section id="problem" class="mb-5 animate__animated animate__fadeInUp">
+      <div class="content-card p-4 p-md-5">
+        <div class="d-flex align-items-start gap-3 mb-4">
+          <span class="h1 text-info opacity-50">03</span>
+          <h2 class="display-6 mt-2">Problem</h2>
         </div>
-      </section>
-
-      <section id="problem" class="mb-5 animate__animated animate__fadeInUp">
-        <div class="content-card p-4 p-md-5">
-          <div class="d-flex align-items-start gap-3 mb-4">
-            <span class="h1 text-info opacity-50">03</span>
-            <h2 class="display-6 mt-2">Problem</h2>
-          </div>
-          <p class="text-secondary lead-sm mb-5">Our research was synthesized into a key persona, Tom, to represent our primary user group and ensure our solutions directly addressed his needs and frustrations.</p>
-          <div class="row g-4 justify-content-center">
-            <div class="col-lg-8">
-              <div class="content-card p-4 h-100">
-                <div class="d-flex align-items-center mb-3">
-                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop" alt="Persona of Tom" class="rounded-circle me-3" style="width: 75px; height: 75px; object-fit: cover;">
-                  <div>
-                    <h4 class="fw-semibold mb-0">Tom Smith, 32</h4>
-                    <p class="text-secondary mb-0">Competitive Fencer & Coach</p>
-                  </div>
+        <p class="text-secondary lead-sm mb-5">Our research was synthesized into a key persona, Tom, to represent our primary user group and ensure our solutions directly addressed his needs and frustrations.</p>
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-8">
+            <div class="content-card p-4 h-100">
+              <div class="d-flex align-items-center mb-3">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop" alt="Persona of Tom" class="rounded-circle me-3" style="width: 75px; height: 75px; object-fit: cover;">
+                <div>
+                  <h4 class="fw-semibold mb-0">Tom Smith, 32</h4>
+                  <p class="text-secondary mb-0">Competitive Fencer & Coach</p>
                 </div>
-                <p class="text-secondary"><strong class="text-dark">Bio:</strong> Tom is an experienced fencer and coach who uses the British Fencing website to find event schedules, rankings, and results. With a full-time job, he doesn't have much free time and needs to find information quickly.</p>
-                <blockquote class="blockquote mt-3 border-start border-4 border-warning ps-3"><p class="mb-0 fst-italic small">"Knowledge within fencing empowers me"</p></blockquote>
               </div>
-            </div>
-          </div>
-          <div class="bg-light p-4 rounded mt-5">
-            <h5 class="fw-bold text-center">Problem Statement</h5>
-            <p class="text-center text-secondary fst-italic mb-0">"How might we help Tom save time using the British Fencing Website so that it becomes a source of joy rather than frustration?"</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="validation" class="mb-5 animate__animated animate__fadeInUp">
-        <div class="content-card p-4 p-md-5">
-          <div class="d-flex align-items-start gap-3 mb-4">
-            <span class="h1 text-warning opacity-50">04</span>
-            <h2 class="display-6 mt-2">Testing & Validation</h2>
-          </div>
-          <div class="row g-4 align-items-center">
-            <div class="col-lg-6">
-              <h4 class="fw-semibold">Card Sort & New Site Map</h4>
-              <p class="text-secondary">We conducted an <strong>open card sort</strong> with 21 participants to understand how users naturally group content. This allowed us to formulate a new, user-centric information architecture.</p>
-            </div>
-            <div class="col-lg-6">
-              <img src="https://framerusercontent.com/images/lKVzI1ENzeBM23Fhntu2Ay3SR8.png" alt="Card Sort Results" class="img-fluid rounded border">
-            </div>
-          </div>
-          <hr class="my-5">
-          <div class="row g-4 align-items-center">
-            <div class="col-lg-6 order-lg-2">
-              <h4 class="fw-semibold">Tree Testing & Validation</h4>
-              <p class="text-secondary">To validate the new site map, we ran <strong>tree testing</strong> with 15 users. The results showed a dramatic improvement across all metrics.</p>
-              <ul class="list-unstyled mt-3 text-secondary">
-                <li>✅ <strong>Task Success Rate:</strong> Rose to 93% (from 33%)</li>
-                <li>⏱️ <strong>Avg. Completion Time:</strong> Reduced to 13.7s (from ~4 mins)</li>
-                <li>📈 <strong>SUS Score:</strong> Improved to 85/100 (from 34/100)</li>
-              </ul>
-            </div>
-            <div class="col-lg-6 order-lg-1">
-              <img src="https://framerusercontent.com/images/I0FnGvakGzuCQU737eJx3UC0y0.png" alt="Tree Test Results" class="img-fluid rounded border">
+              <p class="text-secondary"><strong class="text-dark">Bio:</strong> Tom is an experienced fencer and coach who uses the British Fencing website to find event schedules, rankings, and results. With a full-time job, he doesn't have much free time and needs to find information quickly.</p>
+              <blockquote class="blockquote mt-3 border-start border-4 border-warning ps-3"><p class="mb-0 fst-italic small">"Knowledge within fencing empowers me"</p></blockquote>
             </div>
           </div>
         </div>
-      </section>
-
-      <section id="prototype" class="mb-5 animate__animated animate__fadeInUp">
-        <div class="content-card p-4 p-md-5">
-          <div class="d-flex align-items-start gap-3 mb-4">
-            <span class="h1 text-success opacity-50">05</span>
-            <h2 class="display-6 mt-2">Prototype</h2>
-          </div>
-          <p class="text-secondary lead-sm mb-4">While a high-fidelity prototype wasn't a primary deliverable, we built a conceptual model to visualise how the new information architecture would translate into a functional navigation system, providing a clear blueprint for future development.</p>
-          <div class="content-card p-2">
-            <iframe style="border: none; border-radius: 0.8rem;" width="100%" height="450" src="https://embed.figma.com/proto/kOryuIf2B7whpqDxSVRCzg/Wireframes?node-id=466-1210&p=f&scaling=scale-down&content-scaling=fixed&page-id=466%3A1204&starting-point-node-id=466%3A1210&embed-host=share" allowfullscreen></iframe>
-          </div>
+        <div class="bg-light p-4 rounded mt-5">
+          <h5 class="fw-bold text-center">Problem Statement</h5>
+          <p class="text-center text-secondary fst-italic mb-0">"How might we help Tom save time using the British Fencing Website so that it becomes a source of joy rather than frustration?"</p>
         </div>
-      </section>
-
-      <section id="impact" class="text-center">
-         <%= link_to "← Back to Projects", projects_path, class: "cta-button" %>
-      </section>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="summaryModal" tabindex="-1" aria-labelledby="summaryModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="summaryModalLabel"><i class="bi bi-sparkles text-primary"></i> AI Summary</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body" id="summary-modal-body">
-        <p>Generating summary...</p>
+    </section>
+
+    <section id="validation" class="mb-5 animate__animated animate__fadeInUp">
+      <div class="content-card p-4 p-md-5">
+        <div class="d-flex align-items-start gap-3 mb-4">
+          <span class="h1 text-warning opacity-50">04</span>
+          <h2 class="display-6 mt-2">Testing & Validation</h2>
+        </div>
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6">
+            <h4 class="fw-semibold">Card Sort & New Site Map</h4>
+            <p class="text-secondary">We conducted an <strong>open card sort</strong> with 21 participants to understand how users naturally group content. This allowed us to formulate a new, user-centric information architecture.</p>
+          </div>
+          <div class="col-lg-6">
+            <img src="https://framerusercontent.com/images/lKVzI1ENzeBM23Fhntu2Ay3SR8.png" alt="Card Sort Results" class="img-fluid rounded border">
+          </div>
+        </div>
+        <hr class="my-5">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <h4 class="fw-semibold">Tree Testing & Validation</h4>
+            <p class="text-secondary">To validate the new site map, we ran <strong>tree testing</strong> with 15 users. The results showed a dramatic improvement across all metrics.</p>
+            <ul class="list-unstyled mt-3 text-secondary">
+              <li>✅ <strong>Task Success Rate:</strong> Rose to 93% (from 33%)</li>
+              <li>⏱️ <strong>Avg. Completion Time:</strong> Reduced to 13.7s (from ~4 mins)</li>
+              <li>📈 <strong>SUS Score:</strong> Improved to 85/100 (from 34/100)</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <img src="https://framerusercontent.com/images/I0FnGvakGzuCQU737eJx3UC0y0.png" alt="Tree Test Results" class="img-fluid rounded border">
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <section id="prototype" class="mb-5 animate__animated animate__fadeInUp">
+      <div class="content-card p-4 p-md-5">
+        <div class="d-flex align-items-start gap-3 mb-4">
+          <span class="h1 text-success opacity-50">05</span>
+          <h2 class="display-6 mt-2">Prototype</h2>
+        </div>
+        <p class="text-secondary lead-sm mb-4">While a high-fidelity prototype wasn't a primary deliverable, we built a conceptual model to visualise how the new information architecture would translate into a functional navigation system, providing a clear blueprint for future development.</p>
+        <div class="content-card p-2">
+          <iframe style="border: none; border-radius: 0.8rem;" width="100%" height="450" src="https://embed.figma.com/proto/kOryuIf2B7whpqDxSVRCzg/Wireframes?node-id=466-1210&p=f&scaling=scale-down&content-scaling=fixed&page-id=466%3A1204&starting-point-node-id=466%3A1210&embed-host=share" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <%= render 'shared/other_projects' %>
+
+    <section id="impact" class="text-center">
+       <%= link_to "← Back to Projects", projects_path, class: "cta-button" %>
+    </section>
   </div>
 </div>
