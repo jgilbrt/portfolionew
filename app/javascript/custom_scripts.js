@@ -1,5 +1,14 @@
 function initializePortfolioScripts() {
 
+  // --- Navbar Offcanvas Background Fix ---
+  const offcanvasNavbar = document.getElementById('offcanvasNavbar');
+  if (offcanvasNavbar) {
+    offcanvasNavbar.addEventListener('show.bs.offcanvas', event => {
+      // This runs when the drawer opens and overrides any inline styles from Bootstrap's JS
+      event.target.style.setProperty('background-color', '#121212', 'important');
+    });
+  }
+
   // --- 1. Project Filtering Logic (for projects.html.erb) ---
   const filterButtons = document.querySelectorAll(".filter-btn");
   if (filterButtons.length > 0) {
@@ -13,7 +22,7 @@ function initializePortfolioScripts() {
         projects.forEach((project) => {
           const category = project.dataset.category;
           const shouldShow = filter === "all" || category === filter;
-
+          
           if (shouldShow) {
             project.style.display = 'block';
           } else {
@@ -53,7 +62,7 @@ function initializePortfolioScripts() {
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-
+    
     handleScroll();
 
     navLinks.forEach(anchor => {
